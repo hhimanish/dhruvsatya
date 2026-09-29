@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Microscope, Milestone, Flame, Infinity } from "lucide-react";
+import { ArrowRight, Microscope, Milestone, Flame, Infinity as InfinityIcon } from "lucide-react";
 import { useRef } from "react";
 
 export default function MethodPage() {
@@ -41,7 +41,7 @@ export default function MethodPage() {
       title: "Sustained Execution",
       desc: "Transformation doesn't happen in a day. We implement robust follow-up mechanisms, coaching frameworks, and execution dashboards to ensure new behaviors become permanent habits.",
       image: "/images/Team Group.jpg",
-      icon: Infinity
+      icon: InfinityIcon
     }
   ];
 
