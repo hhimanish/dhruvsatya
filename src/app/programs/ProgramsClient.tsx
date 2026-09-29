@@ -99,7 +99,7 @@ export function ProgramsClient({ programs }: { programs: any[] }) {
                     </h3>
                     
                     <motion.div 
-                      className="relative w-full h-[450px] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] mt-8 hidden md:block group cursor-pointer"
+                      className="relative w-full h-64 md:h-[450px] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] mt-8 group cursor-pointer"
                       whileHover={{ scale: 1.03, y: -8 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >

@@ -87,7 +87,7 @@ export default function SolutionsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="group relative rounded-3xl overflow-hidden flex flex-col hover:-translate-y-4 transition-all duration-500 shadow-2xl h-[650px]"
+                className="group relative rounded-3xl overflow-hidden flex flex-col hover:-translate-y-4 transition-all duration-500 shadow-2xl h-auto min-h-[500px] md:h-[650px]"
               >
                 {/* Background Image that reveals on hover */}
                 <div className="absolute inset-0 z-0">

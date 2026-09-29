@@ -88,7 +88,7 @@ export default function InstitutionsPage() {
                 className="flex flex-col lg:flex-row items-center gap-16 group"
               >
                 {/* Image Half */}
-                <div className={`w-full lg:w-1/2 relative h-[400px] rounded-3xl overflow-hidden shadow-2xl ${idx % 2 !== 0 ? 'lg:order-last' : ''}`}>
+                <div className={`w-full lg:w-1/2 relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-2xl ${idx % 2 !== 0 ? 'lg:order-last' : ''}`}>
                   <Image 
                     src={item.image}
                     alt={item.title}

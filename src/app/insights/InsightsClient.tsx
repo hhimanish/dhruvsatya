@@ -48,7 +48,7 @@ export function InsightsClient({ insights }: { insights: any[] }) {
       </section>
 
       {/* The Hover Accordion Layout */}
-      <section className="relative w-full h-[80vh] md:h-[75vh] min-h-[600px] flex flex-col md:flex-row bg-brand-foundation">
+      <section className="relative w-full h-auto min-h-screen md:h-[75vh] md:min-h-[600px] flex flex-col md:flex-row bg-brand-foundation">
         {insights.map((article: any, index: number) => {
           const Icon = icons[index % icons.length];
           const isHovered = hoveredIndex === index;
@@ -57,7 +57,7 @@ export function InsightsClient({ insights }: { insights: any[] }) {
           return (
             <motion.div
               key={article.id}
-              className="relative flex-1 h-full border-b md:border-b-0 md:border-r border-white/10 overflow-hidden cursor-pointer group"
+              className="relative flex-1 min-h-[250px] md:min-h-0 h-full border-b md:border-b-0 md:border-r border-white/10 overflow-hidden cursor-pointer group"
               animate={{
                 flex: isHovered ? 4 : isAnyHovered ? 0.5 : 1,
               }}
