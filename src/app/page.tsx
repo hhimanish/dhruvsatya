@@ -17,7 +17,7 @@ export default function Home() {
         {/* Subtle grid background */}
         <div className="absolute inset-0 z-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03]" />
         <div className="container mx-auto max-w-5xl text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] mb-12 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] mb-12 tracking-tight">
             Organizations change when people change.
             <br className="hidden md:block" />
             <span className="text-gray-400">People change when perspective changes.</span>

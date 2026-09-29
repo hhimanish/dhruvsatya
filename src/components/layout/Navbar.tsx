@@ -48,7 +48,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 z-50">
           <span
-            className="font-display font-black text-2xl tracking-tighter text-white"
+            className={`font-display font-black text-2xl tracking-tighter ${mobileMenuOpen ? 'text-brand-foundation' : 'text-white'}`}
           >
             DHRUVSATYA
           </span>

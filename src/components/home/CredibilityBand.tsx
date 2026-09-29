@@ -52,16 +52,16 @@ export function CredibilityBand() {
   return (
     <section id="credibility-band" className="py-20 bg-brand-foundation border-b border-white/5 relative z-10">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-4 divide-x-0 md:divide-x divide-white/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 md:gap-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.id}
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col items-center justify-center text-center px-4"
+              className="flex flex-col items-center justify-center text-center px-4 pt-8 sm:pt-0"
             >
-              <div className="text-5xl md:text-7xl font-display font-black text-white mb-4 tracking-tighter">
+              <div className="text-4xl sm:text-4xl sm:text-5xl md:text-7xl font-display font-black text-white mb-4 tracking-tighter">
                 <Counter value={stat.value} inView={inView} />
                 <span className="text-brand-accent">{stat.suffix}</span>
               </div>

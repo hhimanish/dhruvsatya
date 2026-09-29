@@ -9,7 +9,7 @@ export default function GenericPage() {
       <Navbar />
       
       <section className="pt-40 pb-24 text-center px-6 min-h-[60vh] flex flex-col justify-center">
-        <h1 className="text-4xl md:text-6xl font-display font-medium text-brand-foundation mb-6">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-display font-medium text-brand-foundation mb-6">
           Coming Soon
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">

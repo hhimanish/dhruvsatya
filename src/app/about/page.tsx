@@ -51,7 +51,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-8 leading-[1.2]">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-8 leading-[1.2]">
               <span className="inline-block bg-brand-accent text-brand-foundation px-6 py-2 transform -skew-x-6 mb-4 shadow-[0_0_20px_rgba(252,163,17,0.3)]">
                 25 Years of Building
               </span>
@@ -182,7 +182,7 @@ export default function AboutPage() {
             <h2 className="text-sm font-semibold text-brand-accent tracking-widest uppercase mb-4">
               The Legacy
             </h2>
-            <h3 className="inline-block bg-brand-accent text-brand-foundation px-8 py-3 transform -skew-x-6 shadow-[0_0_20px_rgba(252,163,17,0.3)] text-4xl md:text-6xl font-display font-bold">
+            <h3 className="inline-block bg-brand-accent text-brand-foundation px-8 py-3 transform -skew-x-6 shadow-[0_0_20px_rgba(252,163,17,0.3)] text-3xl sm:text-4xl md:text-6xl font-display font-bold">
               Our Journey
             </h3>
           </motion.div>

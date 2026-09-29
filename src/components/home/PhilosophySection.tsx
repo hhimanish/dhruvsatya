@@ -53,7 +53,7 @@ export function PhilosophySection() {
                 <span className="w-8 h-[1px] bg-brand-accent mr-4"></span>
                 The DhruvSatya Way
               </h2>
-              <h3 className="text-4xl md:text-6xl font-display font-bold text-white mb-16 leading-[1.1]">
+              <h3 className="text-3xl sm:text-3xl sm:text-4xl md:text-6xl font-display font-bold text-white mb-16 leading-[1.1]">
                 Philosophy that drives <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-200">execution.</span>
               </h3>
             </motion.div>

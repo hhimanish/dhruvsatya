@@ -17,7 +17,7 @@ export default function FounderPage() {
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-brand-accent/5 to-transparent pointer-events-none" />
         <div className="container mx-auto px-6 md:px-12 relative z-10 flex flex-col md:flex-row items-center gap-16">
           <div className="w-full md:w-1/2">
-            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold mb-6 leading-tight">
               <span className="inline-block bg-brand-accent text-brand-foundation px-6 py-2 transform -skew-x-6 mb-2 shadow-[0_0_20px_rgba(252,163,17,0.3)]">
                 Meet the Mind Behind the
               </span>

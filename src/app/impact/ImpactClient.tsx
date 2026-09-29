@@ -49,7 +49,7 @@ export function ImpactClient({ caseStudies }: { caseStudies: any[] }) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6"
           >
             <span className="inline-block bg-brand-accent text-brand-foundation px-6 py-2 transform -skew-x-6 shadow-[0_0_20px_rgba(252,163,17,0.3)]">
               Proof of Transformation.

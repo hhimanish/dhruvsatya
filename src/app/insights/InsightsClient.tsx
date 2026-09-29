@@ -35,7 +35,7 @@ export function InsightsClient({ insights }: { insights: any[] }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 tracking-tight">
               <span className="inline-block bg-brand-accent text-brand-foundation px-8 py-2 -ml-8 transform -skew-x-6 shadow-[0_0_30px_rgba(252,163,17,0.2)]">
                 Think With Soumitra.
               </span>

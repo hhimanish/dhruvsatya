@@ -97,7 +97,7 @@ export default function AnalyzerPage() {
             <Sparkles className="w-4 h-4 text-brand-accent mr-2" />
             <span className="text-white/80 text-sm font-medium tracking-wider uppercase">AI Powered</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-white mb-6">
             Organizational <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-200">Diagnostics</span>
           </h1>
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto font-light">

@@ -27,7 +27,7 @@ export function DiagnosticTool() {
           <h2 className="text-sm font-semibold text-brand-accent tracking-[0.3em] uppercase mb-4">
             Start Your Journey
           </h2>
-          <h3 className="text-4xl md:text-6xl font-display font-bold text-white">
+          <h3 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-white">
             What are you trying to change?
           </h3>
         </div>
