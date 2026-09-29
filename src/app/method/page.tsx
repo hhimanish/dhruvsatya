@@ -150,7 +150,10 @@ export default function MethodPage() {
               <div key={i} className="w-screen h-screen flex items-center justify-center px-12 flex-shrink-0 relative">
                 
                 {/* Background Number Watermark */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[40vh] font-display font-black text-brand-secondary/30 pointer-events-none select-none z-0">
+                <div 
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[40vh] font-display font-black text-brand-secondary/30 pointer-events-none select-none z-0"
+                  aria-hidden="true"
+                >
                   0{i + 1}
                 </div>
 
@@ -162,10 +165,11 @@ export default function MethodPage() {
                       className="relative w-full min-h-[400px] lg:min-h-[500px] xl:min-h-[600px] aspect-square lg:aspect-[4/3] xl:aspect-video rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] group cursor-pointer bg-brand-foundation/5"
                       whileHover={{ scale: 1.03, y: -8 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                      aria-hidden="true"
                     >
                       <Image 
                         src={step.image}
-                        alt={step.title}
+                        alt=""
                         fill
                         sizes="50vw"
                         className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
@@ -184,7 +188,10 @@ export default function MethodPage() {
 
                   {/* Right Half: Content */}
                   <div className="w-1/2">
-                    <div className="w-20 h-20 bg-white shadow-xl rounded-2xl flex items-center justify-center mb-10 border border-brand-accent/20 transition-colors duration-500 hover:bg-brand-accent group">
+                    <div 
+                      className="w-20 h-20 bg-white shadow-xl rounded-2xl flex items-center justify-center mb-10 border border-brand-accent/20 transition-colors duration-500 hover:bg-brand-accent group"
+                      aria-hidden="true"
+                    >
                       <step.icon className="w-10 h-10 text-brand-accent group-hover:text-brand-foundation transition-colors duration-500" />
                     </div>
                     
@@ -193,7 +200,7 @@ export default function MethodPage() {
                     </h3>
                     
                     <div className="relative">
-                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-brand-accent to-transparent rounded-full" />
+                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-brand-accent to-transparent rounded-full" aria-hidden="true" />
                       <p className="text-gray-600 text-2xl leading-relaxed pl-8 font-light">
                         {step.desc}
                       </p>
@@ -209,10 +216,10 @@ export default function MethodPage() {
 
       {/* CTA */}
       <section className="py-32 bg-brand-foundation text-center px-6 relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0" aria-hidden="true">
           <Image 
             src="/images/Audiance.jpg"
-            alt="CTA Background"
+            alt=""
             fill
             className="object-cover opacity-10 mix-blend-luminosity grayscale"
           />
