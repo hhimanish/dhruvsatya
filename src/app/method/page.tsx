@@ -105,11 +105,12 @@ export default function MethodPage() {
 
               {/* Image */}
               <div className="w-full relative z-10">
-                <div className="relative w-full aspect-video md:aspect-[4/3] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
+                <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] bg-gray-100">
                   <Image 
                     src={step.image}
                     alt={step.title}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-brand-foundation/20 mix-blend-multiply opacity-50" />
@@ -158,7 +159,7 @@ export default function MethodPage() {
                   {/* Left Half: Photography with premium physics */}
                   <div className="w-1/2">
                     <motion.div 
-                      className="relative w-full lg:aspect-square rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] group cursor-pointer"
+                      className="relative w-full h-[60vh] max-h-[700px] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] group cursor-pointer bg-gray-100"
                       whileHover={{ scale: 1.03, y: -8 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
@@ -166,6 +167,7 @@ export default function MethodPage() {
                         src={step.image}
                         alt={step.title}
                         fill
+                        sizes="(min-width: 1024px) 50vw, 100vw"
                         className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
                       />
                       
