@@ -20,26 +20,26 @@ export default function MethodPage() {
 
   const steps = [
     {
-      title: "Empirical Diagnostics & Root-Cause Analysis",
-      desc: "We don't prescribe before we diagnose. We deploy rigorous behavioral and operational assessments across all organizational levels to isolate the systemic root causes of capability gaps.",
+      title: "Diagnostic Deep Dive",
+      desc: "We don't prescribe before we diagnose. We keep our ears to the ground, interacting with your team at all levels to understand the systemic root causes of your challenges, not just the symptoms.",
       image: "/images/Team deliberation 2.jpg",
       icon: Microscope
     },
     {
-      title: "Executive Alignment & Strategic Cohesion",
-      desc: "Based on empirical findings, we facilitate intensive C-suite interventions to establish a unified operational vision and mandate the required behavioral shifts for scale.",
+      title: "Strategic Alignment",
+      desc: "Based on our findings, we align the leadership team on a unified vision and the required behavioral shifts needed to achieve it.",
       image: "/images/DSC_9875.JPG",
       icon: Milestone
     },
     {
-      title: "Capability Building & Behavioral Architecture",
-      desc: "Our interventions are not theoretical lectures. We design immersive, high-stakes environments that accelerate skill acquisition, dismantle legacy paradigms, and foster profound cognitive shifts.",
+      title: "Experiential Intervention",
+      desc: "Our workshops are not lectures. They are immersive, high-energy, experiential environments designed to challenge paradigms and facilitate profound self-discovery.",
       image: "/images/FounderMethod.jpg",
       icon: Flame
     },
     {
-      title: "Performance Sustainment & Governance",
-      desc: "Transformation requires operationalization. We implement robust operating rhythms, coaching frameworks, and execution dashboards to ensure behavioral shifts become permanent corporate capabilities.",
+      title: "Sustained Execution",
+      desc: "Transformation doesn't happen in a day. We implement robust follow-up mechanisms, coaching frameworks, and execution dashboards to ensure new behaviors become permanent habits.",
       image: "/images/Team Group.jpg",
       icon: InfinityIcon
     }
@@ -76,7 +76,7 @@ export default function MethodPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
-              A proprietary, empirical framework engineered to bridge the gap between abstract strategic intent and world-class frontline execution. Scroll down to begin.
+              A proven, four-step methodology to bridge the gap between organizational capability and world-class execution. Scroll down to begin the journey.
             </p>
           </motion.div>
         </div>
@@ -230,7 +230,7 @@ export default function MethodPage() {
             Ready to experience the method?
           </h2>
           <p className="text-xl text-gray-400 mb-10 font-light">
-            Engage our expert advisory team to diagnose your organizational bottlenecks and operationalize your strategy.
+            Start a conversation with our experts to diagnose your organizational challenges.
           </p>
           <Link
             href="/contact"

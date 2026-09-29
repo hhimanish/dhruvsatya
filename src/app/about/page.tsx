@@ -61,7 +61,7 @@ export default function AboutPage() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
-              We are not just a training company. We are a strategic advisory and capability-building firm that aligns human capital with enterprise objectives to drive sustainable growth.
+              We are not just a training company. We are a catalyst for profound, systemic change that aligns human potential with strategic goals.
             </p>
           </motion.div>
         </div>
@@ -87,7 +87,7 @@ export default function AboutPage() {
                   The DhruvSatya Difference
                 </h2>
                 <h3 className="text-3xl md:text-5xl font-display font-bold text-brand-foundation mb-8 leading-tight">
-                  Why industry leaders partner with us.
+                  Why organizations trust us with their most valuable asset.
                 </h3>
                 
                 <motion.div 
@@ -110,12 +110,12 @@ export default function AboutPage() {
                 </motion.div>
 
                 <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                  Conventional capability-building focuses on superficial skill acquisition. We engineer structural interventions targeting the cognitive paradigms and behavioral models that dictate enterprise execution.
+                  Most training programs focus on surface-level skills. We go deeper. We focus on the underlying paradigms, beliefs, and mindsets that drive behavior. 
                 </p>
                 <div className="border-l-4 border-brand-accent pl-6 bg-gradient-to-r from-brand-ivory/80 to-transparent py-4 rounded-r-2xl relative overflow-hidden group">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-[1.5s] ease-in-out skew-x-12" />
                   <p className="text-gray-600 text-lg leading-relaxed relative z-10">
-                    When you systematically re-architect how a workforce perceives and executes its strategic mandate, you unlock unprecedented, measurable improvements in commercial output, operational resilience, and culture.
+                    When you change how a person sees their role, their capability to execute fundamentally shifts. That is why our interventions lead to measurable improvements in culture, safety, and revenue.
                   </p>
                 </div>
               </motion.div>

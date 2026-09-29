@@ -7,23 +7,23 @@ import Image from "next/image";
 const philosophies = [
   {
     id: "contribute",
-    title: "DRIVE VALUE.",
-    description: "True leadership is measured by systemic impact. We architect interventions that drive sustainable value across the enterprise ecosystem.",
+    title: "CONTRIBUTE.",
+    description: "Achievement without contribution is incomplete. Make the difference in your ecosystem.",
   },
   {
     id: "grounded",
-    title: "EMPIRICAL RIGOR.",
-    description: "We diagnose before we prescribe. Strategic agility requires an unflinching, data-backed understanding of operational realities.",
+    title: "STAY GROUNDED.",
+    description: "Keep your ears to the ground. The closer you are to reality, the better you understand what needs to change.",
   },
   {
     id: "challenge",
-    title: "CHALLENGE THE STATUS QUO.",
-    description: "Complacency destroys capability. We engineer environments that stress-test legacy paradigms and force intellectual growth.",
+    title: "CHALLENGE YOURSELF.",
+    description: "Surround yourself with people who are better than you. Even if you lose to them, your game improves.",
   },
   {
     id: "breakthrough",
-    title: "OPERATIONALIZE STRATEGY.",
-    description: "Vision without execution is hallucination. We bridge the gap between strategic intent and frontline execution.",
+    title: "BREAK THROUGH.",
+    description: "Life is working for you, not against you. Every challenge is an opportunity to break boundaries.",
   },
 ];
 
