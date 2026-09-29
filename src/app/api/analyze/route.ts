@@ -1,7 +1,10 @@
 import { NextResponse } from "next/server";
 
-// In-memory cache to guarantee absolute determinism for identical requests
-const responseCache = new Map<string, any>();
+// Intelligent Global In-Memory Caching System
+// Survives hot-reloads and maintains ultra-fast access in the serverless instance
+const globalForCache = global as unknown as { responseCache: Map<string, any> };
+const responseCache = globalForCache.responseCache || new Map<string, any>();
+if (process.env.NODE_ENV !== 'production') globalForCache.responseCache = responseCache;
 
 export async function POST(req: Request) {
   try {
@@ -14,11 +17,22 @@ export async function POST(req: Request) {
       );
     }
 
-    // Check cache first to guarantee identical outputs for identical inputs
-    const cacheKey = JSON.stringify({ linkedin, website, scenario, version: "v2" });
+    // Normalize inputs to prevent microscopic differences (like spaces or capitalization) from breaking the cache
+    const normalize = (str: string) => (str || "").trim().toLowerCase();
+    const cacheKey = JSON.stringify({ 
+      linkedin: normalize(linkedin), 
+      website: normalize(website), 
+      scenario: normalize(scenario),
+      version: "v3" 
+    });
+
+    // Intelligent Cache Bypass: Return ultra-fast deterministic result if it exists
     if (responseCache.has(cacheKey)) {
+      console.log("⚡ CACHE HIT: Bypassing AI and returning exact cached diagnostic result.");
       return NextResponse.json(responseCache.get(cacheKey));
     }
+    
+    console.log("🧠 CACHE MISS: Running deep AI diagnostic...");
 
     const groqApiKey = process.env.GROQ_API_KEY;
     if (!groqApiKey) {
