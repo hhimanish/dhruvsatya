@@ -84,26 +84,81 @@ export default function MethodPage() {
         </div>
       </section>
 
-      {/* Horizontal Scrolling Journey */}
-      <section ref={targetRef} className="relative h-[400vh] bg-brand-ivory/30">
+      {/* Mobile & Tablet: Beautiful Vertical Stack */}
+      <section className="block lg:hidden relative bg-brand-ivory/30 py-24 px-6 overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] pointer-events-none" />
+        
+        <div className="container mx-auto max-w-2xl relative z-10 space-y-32">
+          {steps.map((step, i) => (
+            <motion.div 
+              key={i} 
+              className="flex flex-col gap-10 relative"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              {/* Background Number Watermark */}
+              <div className="absolute -top-16 -left-10 text-[25vh] font-display font-black text-brand-secondary/10 pointer-events-none select-none z-0">
+                0{i + 1}
+              </div>
+
+              {/* Image */}
+              <div className="w-full relative z-10">
+                <div className="relative w-full aspect-video md:aspect-[4/3] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
+                  <Image 
+                    src={step.image}
+                    alt={step.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-brand-foundation/20 mix-blend-multiply opacity-50" />
+                  <div className="absolute inset-0 rounded-[2rem] border border-white/20 shadow-[inset_0_0_20px_rgba(255,255,255,0.1)]" />
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="w-full relative z-10">
+                <div className="w-16 h-16 bg-white shadow-xl rounded-2xl flex items-center justify-center mb-8 border border-brand-accent/20">
+                  <step.icon className="w-8 h-8 text-brand-accent" />
+                </div>
+                
+                <h3 className="text-3xl md:text-5xl font-display font-bold text-brand-foundation mb-6 leading-tight">
+                  {step.title}
+                </h3>
+                
+                <div className="relative">
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-brand-accent to-transparent rounded-full" />
+                  <p className="text-gray-600 text-lg md:text-2xl leading-relaxed pl-6 font-light">
+                    {step.desc}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Desktop: Horizontal Scrolling Journey */}
+      <section ref={targetRef} className="hidden lg:block relative h-[400vh] bg-brand-ivory/30">
         <div className="absolute inset-0 z-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] pointer-events-none" />
         
         <div className="sticky top-0 h-screen flex items-center overflow-hidden">
           <motion.div style={{ x }} className="flex w-[400vw]">
             {steps.map((step, i) => (
-              <div key={i} className="w-screen h-screen flex items-center justify-center px-6 md:px-12 flex-shrink-0 relative">
+              <div key={i} className="w-screen h-screen flex items-center justify-center px-12 flex-shrink-0 relative">
                 
                 {/* Background Number Watermark */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[40vh] font-display font-black text-brand-secondary/30 pointer-events-none select-none z-0">
                   0{i + 1}
                 </div>
 
-                <div className="max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-24 relative z-10">
+                <div className="max-w-7xl w-full mx-auto flex flex-row items-center gap-24 relative z-10">
                   
                   {/* Left Half: Photography with premium physics */}
-                  <div className="w-full lg:w-1/2">
+                  <div className="w-1/2">
                     <motion.div 
-                      className="relative w-full aspect-video md:aspect-[4/3] lg:aspect-square rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] group cursor-pointer"
+                      className="relative w-full lg:aspect-square rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] group cursor-pointer"
                       whileHover={{ scale: 1.03, y: -8 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
@@ -126,18 +181,18 @@ export default function MethodPage() {
                   </div>
 
                   {/* Right Half: Content */}
-                  <div className="w-full lg:w-1/2">
+                  <div className="w-1/2">
                     <div className="w-20 h-20 bg-white shadow-xl rounded-2xl flex items-center justify-center mb-10 border border-brand-accent/20 transition-colors duration-500 hover:bg-brand-accent group">
                       <step.icon className="w-10 h-10 text-brand-accent group-hover:text-brand-foundation transition-colors duration-500" />
                     </div>
                     
-                    <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-brand-foundation mb-8 leading-tight">
+                    <h3 className="text-6xl font-display font-bold text-brand-foundation mb-8 leading-tight">
                       {step.title}
                     </h3>
                     
                     <div className="relative">
                       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-brand-accent to-transparent rounded-full" />
-                      <p className="text-gray-600 text-xl md:text-2xl leading-relaxed pl-8 font-light">
+                      <p className="text-gray-600 text-2xl leading-relaxed pl-8 font-light">
                         {step.desc}
                       </p>
                     </div>
