@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-foundation: #0A1128; /* Deep Royal Navy: Trustful, Expert, Commanding */
+  --color-brand-accent: #FFD700; /* True Yellow: Joyful, Magnanimous, Assured */
+  --color-brand-secondary: #14213D; /* Lighter Navy for rhythm */
+  --color-brand-ivory: #F8FAFC; /* Crisp Assured White */
+  
+  --font-display: var(--font-display);
+  --font-sans: var(--font-inter);
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 font-sans antialiased selection:bg-brand-accent selection:text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-brand-foundation;
+  }
+}
