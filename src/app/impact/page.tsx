@@ -8,7 +8,7 @@ import { ImpactClient } from "./ImpactClient";
 
 async function getCaseStudies() {
   try {
-    const filePath = path.join(process.cwd(), '..', 'content', 'case-studies.json');
+    const filePath = path.join(process.cwd(), 'content', 'case-studies.json');
     const fileContents = await fs.readFile(filePath, 'utf8');
     return JSON.parse(fileContents);
   } catch (error) {

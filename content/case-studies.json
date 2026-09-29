@@ -1,0 +1,26 @@
+[
+  {
+    "id": "global-manufacturing-plant",
+    "client": "Leading Global Manufacturing Firm",
+    "industry": "Manufacturing",
+    "challenge": "Low plant productivity, high attrition, and a compliance-driven (rather than commitment-driven) safety culture.",
+    "solution": "Implemented the 'Skyrocketing Plant Productivity' intervention coupled with behavioral safety workshops for shift in-charges and floor managers.",
+    "results": [
+      "14% increase in overall plant productivity within 6 months.",
+      "Zero lost-time injuries reported over a 12-month period post-intervention.",
+      "Significant improvement in employee engagement scores."
+    ]
+  },
+  {
+    "id": "it-services-sales",
+    "client": "Top-Tier IT Services Company",
+    "industry": "Information Technology",
+    "challenge": "Stagnant revenue growth and low conversion rates in a highly competitive market.",
+    "solution": "Deployed the 'Triple Your Business Growth' certification program for the top 150 sales leaders, focusing on paradigm shifts and execution rigor.",
+    "results": [
+      "22% increase in new client acquisitions.",
+      "Sales cycle reduced by 18 days on average.",
+      "Shifted culture from order-taking to strategic consulting."
+    ]
+  }
+]

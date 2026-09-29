@@ -9,7 +9,7 @@ import { notFound } from "next/navigation";
 
 async function getInsight(id: string) {
   try {
-    const filePath = path.join(process.cwd(), '..', 'content', 'insights.json');
+    const filePath = path.join(process.cwd(), 'content', 'insights.json');
     const fileContents = await fs.readFile(filePath, 'utf8');
     const insights = JSON.parse(fileContents);
     return insights.find((article: any) => article.id === id) || null;

@@ -5,7 +5,7 @@ import { ProgramsClient } from "./ProgramsClient";
 // Fetch data on the server
 async function getPrograms() {
   try {
-    const filePath = path.join(process.cwd(), '..', 'content', 'programs.json');
+    const filePath = path.join(process.cwd(), 'content', 'programs.json');
     const fileContents = await fs.readFile(filePath, 'utf8');
     return JSON.parse(fileContents);
   } catch (error) {

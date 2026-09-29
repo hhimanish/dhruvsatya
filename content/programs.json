@@ -1,0 +1,74 @@
+[
+  {
+    "id": "awaken-your-giant-within",
+    "title": "Awaken Your Giant Within",
+    "category": "Motivation and Personal Transformation",
+    "description": "A transformational program designed to help individuals discover their true potential and break through self-imposed boundaries.",
+    "forWhom": "Individuals, executives, and leaders seeking profound personal and professional breakthroughs.",
+    "outcome": "Enhanced self-awareness, elevated confidence, and the mindset required to achieve world-class results.",
+    "format": "Experiential Workshop"
+  },
+  {
+    "id": "achieving-world-class",
+    "title": "Achieving World-Class",
+    "category": "Motivation and Personal Transformation",
+    "description": "A flagship program that challenges participants to raise their standards and adopt the habits of world-class performers.",
+    "forWhom": "High-potential employees, managers, and organizational leaders.",
+    "outcome": "A culture of excellence, improved execution, and sustained high performance.",
+    "format": "Interactive Seminar / Workshop"
+  },
+  {
+    "id": "catch-your-dreams",
+    "title": "Catch Your Dreams – The Goal Setting Workshop",
+    "category": "Motivation and Personal Transformation",
+    "description": "A highly practical workshop focused on defining clear, actionable goals and the strategies to achieve them.",
+    "forWhom": "Anyone looking to align their daily actions with their long-term vision.",
+    "outcome": "Clarity of purpose, actionable blueprints, and renewed motivation.",
+    "format": "Workshop"
+  },
+  {
+    "id": "transformational-leadership",
+    "title": "Transformational Leadership",
+    "category": "Leadership development and Managerial Effectiveness",
+    "description": "Develop leaders who inspire, challenge the status quo, and drive meaningful change within their organizations.",
+    "forWhom": "Senior executives, managers, and team leaders.",
+    "outcome": "Enhanced leadership capability, stronger team alignment, and improved organizational culture.",
+    "format": "Leadership Intervention"
+  },
+  {
+    "id": "vmosa-workshop",
+    "title": "The VMOSA Workshop",
+    "category": "Leadership development and Managerial Effectiveness",
+    "description": "A strategic workshop covering Vision, Mission, Objectives, Strategies, and Action Plan to align organizational direction.",
+    "forWhom": "Leadership teams and organizational heads.",
+    "outcome": "A unified strategic direction and a clear roadmap for execution.",
+    "format": "Strategic Workshop"
+  },
+  {
+    "id": "high-performance-leadership",
+    "title": "High Performance Leadership",
+    "category": "Leadership development and Managerial Effectiveness",
+    "description": "Focuses on the behaviors and mindsets necessary to lead high-performing teams consistently.",
+    "forWhom": "Current and emerging leaders.",
+    "outcome": "Improved decision-making, better team dynamics, and consistent achievement of KRAs.",
+    "format": "Leadership Program"
+  },
+  {
+    "id": "triple-your-business-growth",
+    "title": "Triple your Business Growth by building a World-Class Salesforce",
+    "category": "Sales and Marketing",
+    "description": "Our Sales Academy Certification Program designed to fundamentally transform sales capability and execution.",
+    "forWhom": "Sales leaders, managers, and sales teams.",
+    "outcome": "Significant revenue growth, improved conversion rates, and a high-performance sales culture.",
+    "format": "Certification Program"
+  },
+  {
+    "id": "skyrocketing-plant-productivity",
+    "title": "Skyrocketing Plant – Productivity",
+    "category": "Manufacturing Excellence",
+    "description": "A revolutionary dashboard-driven program that guarantees enhancement of plant productivity.",
+    "forWhom": "Plant heads, operations managers, and manufacturing teams.",
+    "outcome": "Guaranteed enhancement of plant productivity and operational efficiency.",
+    "format": "Consulting and Training Intervention"
+  }
+]
