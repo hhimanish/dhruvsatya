@@ -45,19 +45,17 @@ export default function OrganizationsPage() {
       
       {/* Cinematic Hero */}
       <section className="relative pt-40 pb-32 bg-brand-foundation text-white overflow-hidden">
-        <motion.div
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{ duration: 30, ease: "linear", repeat: Infinity }}
-          className="absolute inset-0 z-0"
-        >
+        <div className="absolute inset-0 w-full h-full animate-slow-zoom origin-center z-0">
           <Image 
             src="/images/Meeting.jpg"
             alt="Organizations Transformation"
             fill
+            sizes="100vw"
+            quality={60}
             className="object-cover opacity-30 mix-blend-luminosity"
             priority
           />
-        </motion.div>
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-brand-foundation via-brand-foundation/70 to-brand-foundation/30 z-0" />
         
         <div className="container mx-auto px-6 md:px-12 max-w-5xl text-center relative z-10">
@@ -104,18 +102,36 @@ export default function OrganizationsPage() {
                 className="flex flex-col lg:flex-row items-center gap-16 group"
               >
                 {/* Image Half */}
-                <div className={`w-full lg:w-1/2 relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-2xl ${idx % 2 !== 0 ? 'lg:order-last' : ''}`}>
-                  <Image 
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-brand-foundation/20 mix-blend-multiply transition-colors duration-500 group-hover:bg-brand-foundation/10" />
+                <div className={`w-full lg:w-1/2 relative h-[350px] md:h-[450px] rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] group cursor-pointer ${idx % 2 !== 0 ? 'lg:order-last' : ''}`}>
+                  <motion.div 
+                    className="absolute inset-0 w-full h-full"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                  >
+                    <Image 
+                      src={item.image}
+                      alt=""
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
+                    />
+                    
+                    {/* Vibrant Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-brand-foundation/40 via-transparent to-brand-accent/20 mix-blend-multiply opacity-70 group-hover:opacity-10 transition-opacity duration-700" />
+                    
+                    {/* Premium Light Shimmer / Sweep Effect */}
+                    <div className="absolute inset-0 -translate-x-[150%] bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:translate-x-[150%] transition-transform duration-[1.5s] ease-in-out transform -skew-x-12" />
+                    
+                    {/* Elegant Glass Border Glow */}
+                    <div className="absolute inset-0 rounded-[2.5rem] border-2 border-white/10 group-hover:border-brand-accent/50 transition-colors duration-500 shadow-[inset_0_0_20px_rgba(255,255,255,0.05)] group-hover:shadow-[inset_0_0_50px_rgba(252,163,17,0.3)] z-20" />
+                  </motion.div>
                   
-                  {/* Floating Icon Badge */}
-                  <div className="absolute top-6 left-6 w-16 h-16 bg-white/90 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-lg transform -translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                    <item.icon className="w-8 h-8 text-brand-accent" />
+                  {/* Floating Icon Badge with Glassmorphism */}
+                  <div 
+                    className="absolute top-8 left-8 w-20 h-20 bg-white/10 backdrop-blur-xl border border-white/30 rounded-3xl flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.2)] transform -translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 z-30 group-hover:bg-brand-accent/90 group-hover:border-brand-accent"
+                    aria-hidden="true"
+                  >
+                    <item.icon className="w-10 h-10 text-white" />
                   </div>
                 </div>
 
@@ -147,6 +163,8 @@ export default function OrganizationsPage() {
             src="/images/Audiance.jpg"
             alt="CTA Background"
             fill
+            sizes="100vw"
+            quality={60}
             className="object-cover opacity-10 mix-blend-luminosity grayscale"
           />
         </div>

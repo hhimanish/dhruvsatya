@@ -14,27 +14,17 @@ export function Hero() {
       
       {/* Photographic Background with Navy Blend */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <motion.div
-          animate={{
-            scale: [1.0, 1.25, 1.0],
-            x: ["0%", "-3%", "0%"],
-            y: ["0%", "2%", "0%"]
-          }}
-          transition={{
-            duration: 20,
-            ease: "easeInOut",
-            repeat: Infinity,
-          }}
-          className="absolute inset-0 w-full h-full"
-        >
+        <div className="absolute inset-0 w-full h-full animate-slow-zoom origin-center">
           <Image 
             src="/images/Audiance.jpg" 
             alt="DhruvSatya Audience" 
             fill 
+            sizes="100vw"
+            quality={60}
             className="object-cover opacity-50 mix-blend-luminosity"
             priority
           />
-        </motion.div>
+        </div>
         <motion.div 
           animate={{
             backgroundColor: [

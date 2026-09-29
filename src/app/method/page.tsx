@@ -51,19 +51,17 @@ export default function MethodPage() {
       
       {/* Cinematic Hero - Fresh Asset */}
       <section className="relative pt-40 pb-32 bg-brand-foundation text-white overflow-hidden">
-        <motion.div
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{ duration: 35, ease: "linear", repeat: Infinity }}
-          className="absolute inset-0 z-0"
-        >
+        <div className="absolute inset-0 w-full h-full animate-slow-zoom origin-center z-0">
           <Image 
             src="/images/Group1.jpg"
             alt="The DhruvSatya Method"
             fill
+            sizes="100vw"
+            quality={60}
             className="object-cover opacity-30 mix-blend-luminosity grayscale"
             priority
           />
-        </motion.div>
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-brand-foundation via-brand-foundation/80 to-brand-foundation/40 z-0" />
         
         <div className="container mx-auto px-6 md:px-12 max-w-5xl text-center relative z-10">
@@ -172,6 +170,7 @@ export default function MethodPage() {
                         alt=""
                         fill
                         sizes="50vw"
+                        quality={60}
                         className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
                       />
                       
@@ -221,6 +220,8 @@ export default function MethodPage() {
             src="/images/Audiance.jpg"
             alt=""
             fill
+            sizes="100vw"
+            quality={60}
             className="object-cover opacity-10 mix-blend-luminosity grayscale"
           />
         </div>

@@ -55,15 +55,15 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center space-x-5 xl:space-x-8 ml-8">
+        <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6 ml-6">
           {navLinks.map((link) => (
             <div key={link.name} className="relative group">
               <Link
                 href={link.href}
-                className="text-xs font-bold tracking-widest uppercase text-gray-300 hover:text-brand-accent transition-colors flex items-center gap-1"
+                className="text-[11px] xl:text-xs font-bold tracking-widest uppercase text-gray-300 hover:text-brand-accent transition-colors flex items-center gap-1 whitespace-nowrap"
               >
                 {link.name}
-                {link.dropdown && <ChevronDown className="w-4 h-4" />}
+                {link.dropdown && <ChevronDown className="w-4 h-4 ml-1" />}
               </Link>
               
               {/* Dropdown */}
@@ -84,7 +84,7 @@ export function Navbar() {
           ))}
           <Link
             href="/contact"
-            className="px-6 py-3 bg-brand-accent text-brand-foundation text-xs font-bold tracking-widest uppercase hover:bg-white transition-colors"
+            className="px-5 py-3 xl:px-6 bg-brand-accent text-brand-foundation text-[11px] xl:text-xs font-bold tracking-widest uppercase hover:bg-white transition-colors whitespace-nowrap"
           >
             START A CONVERSATION
           </Link>
