@@ -26,7 +26,7 @@ const getIcon = (id: string) => {
 // Category Image Mapping
 const categoryImages: Record<string, string> = {
   "Motivation and Personal Transformation": "/images/DSC_9993.JPG",
-  "Leadership development and Managerial Effectiveness": "/images/founder-portrait-new.png",
+  "Leadership development and Managerial Effectiveness": "/images/founder-portrait1.png",
   "Sales and Marketing": "/images/Conf.jpg",
   "Manufacturing Excellence": "/images/Group Pic.jpg"
 };
