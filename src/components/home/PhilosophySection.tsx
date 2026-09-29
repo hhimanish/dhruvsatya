@@ -69,7 +69,7 @@ export function PhilosophySection() {
                   <div className={`absolute inset-0 rounded-xl transition-all duration-500 ease-out ${active === phil.id ? 'bg-white/10 backdrop-blur-md border border-white/20 shadow-xl' : 'bg-transparent'}`} />
                   <div className={`px-6 py-5 flex items-center relative z-10`}>
                     <span className={`w-2 h-2 rounded-full mr-4 transition-all duration-300 ${active === phil.id ? 'bg-brand-accent shadow-[0_0_10px_rgba(252,163,17,0.8)] scale-100' : 'bg-white/20 scale-50'}`} />
-                    <h4 className={`text-2xl md:text-3xl font-display font-bold tracking-tight transition-colors duration-300 ${active === phil.id ? "text-brand-accent drop-shadow-md" : "text-white/40 group-hover:text-white/80"}`}>
+                    <h4 className={`text-2xl md:text-3xl font-display font-bold tracking-tight transition-colors duration-300 ${active === phil.id ? "text-brand-accent drop-shadow-md" : "text-white/60 group-hover:text-white"}`}>
                       {phil.title}
                     </h4>
                   </div>
