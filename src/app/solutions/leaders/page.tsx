@@ -12,22 +12,22 @@ export default function LeadersPage() {
     {
       id: "transformational",
       icon: Mountain,
-      title: "Transformational Leadership",
-      desc: "Moving beyond transactional management to inspire, challenge, and elevate teams to achieve world-class results.",
+      title: "Executive Leadership Capability",
+      desc: "Equipping senior leaders with the strategic agility and behavioral nuance required to navigate complexity and drive large-scale enterprise change.",
       image: "/images/Team Conference.jpg"
     },
     {
       id: "coaching",
       icon: BrainCircuit,
-      title: "Executive Coaching",
-      desc: "One-on-one interventions for CXOs and senior leaders to break through personal barriers and refine strategic decision-making.",
+      title: "C-Suite Advisory & Coaching",
+      desc: "Bespoke, high-impact advisory interventions designed to pressure-test executive decision-making and refine leadership presence.",
       image: "/images/Founder Potrait.jpg"
     },
     {
       id: "vmosa",
       icon: Compass,
-      title: "The VMOSA Framework",
-      desc: "Aligning leadership teams around Vision, Mission, Objectives, Strategies, and Action plans.",
+      title: "Strategic Operating Models (VMOSA)",
+      desc: "Deploying our proprietary Vision, Mission, Objectives, Strategies, and Action framework to translate abstract goals into executable mandates.",
       image: "/images/Meeting2.jpg"
     }
   ];
@@ -63,7 +63,7 @@ export default function LeadersPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
-              Leadership is not a title; it is a mindset and a series of deliberate actions. We help leaders build the resilience, clarity, and capability required to navigate complexity.
+              Leadership is not a title; it is the capability to operationalize vision. We equip executives with the behavioral frameworks required to navigate complexity and drive scale.
             </p>
           </motion.div>
         </div>
@@ -136,7 +136,7 @@ export default function LeadersPage() {
         </div>
         <div className="container mx-auto max-w-3xl relative z-10">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-10">
-            Ready to elevate your leadership?
+            Ready to elevate executive capability?
           </h2>
           <Link
             href="/contact"

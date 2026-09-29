@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 export function Hero() {
-  const titleWords = "Transformation Begins Within.".split(" ");
+  const titleWords = "Architecting High-Performance Enterprises.".split(" ");
 
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-brand-foundation text-brand-ivory pt-20">
@@ -98,7 +98,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="text-lg md:text-2xl text-gray-400 max-w-3xl mb-16 font-light leading-relaxed"
         >
-          We are the catalyst for profound, systemic change. We build world-class leaders, transform organizational cultures, and turn latent capability into unstoppable execution.
+          We partner with visionary organizations to operationalize strategy, unlock latent human capability, and architect high-performance cultures that drive sustainable enterprise value.
         </motion.p>
 
         <motion.div

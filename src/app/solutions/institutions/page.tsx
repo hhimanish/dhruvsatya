@@ -12,22 +12,22 @@ export default function InstitutionsPage() {
     {
       id: "faculty",
       icon: BookOpen,
-      title: "Faculty Development",
-      desc: "Empowering educators with the methodologies and mindsets needed to inspire students and foster a culture of academic excellence.",
+      title: "Academic Capability Building",
+      desc: "Empowering pedagogical leaders with advanced methodologies to foster a culture of academic rigor, innovation, and continuous improvement.",
       image: "/images/Team Con.jpg"
     },
     {
       id: "academic-leadership",
       icon: GraduationCap,
-      title: "Academic Leadership",
-      desc: "Developing Principals, Deans, and HODs to lead with vision, manage complexity, and drive institutional growth.",
+      title: "Institutional Leadership & Governance",
+      desc: "Developing Principals, Deans, and HODs to manage complex stakeholder environments, execute strategic mandates, and drive institutional growth.",
       image: "/images/Group Pic.jpg"
     },
     {
       id: "institutional-excellence",
       icon: Library,
-      title: "Institutional Excellence",
-      desc: "Systemic interventions designed to align institutional vision with operational realities, improving both culture and outcomes.",
+      title: "Systemic Institutional Transformation",
+      desc: "Aligning educational objectives with operational realities to elevate national rankings, optimize resource allocation, and maximize student outcomes.",
       image: "/images/Meeting.jpg"
     }
   ];
@@ -63,7 +63,7 @@ export default function InstitutionsPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
-              The quality of an educational institution cannot exceed the quality of its educators and leaders. We bring world-class transformation methodologies to the academic sector.
+              An institution's prestige is governed by the capability of its faculty and leadership. We deploy world-class organizational transformation frameworks to the academic sector.
             </p>
           </motion.div>
         </div>
@@ -137,7 +137,7 @@ export default function InstitutionsPage() {
         </div>
         <div className="container mx-auto max-w-3xl relative z-10">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-10">
-            Ready to transform your institution?
+            Ready to drive institutional excellence?
           </h2>
           <Link
             href="/contact"

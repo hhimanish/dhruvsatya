@@ -12,29 +12,29 @@ export default function OrganizationsPage() {
     {
       id: "culture",
       icon: Users,
-      title: "Culture & Organizational Development",
-      desc: "Transforming the DNA of your organization by aligning values, mindsets, and behaviors with your strategic objectives.",
+      title: "Organizational Design & Culture Transformation",
+      desc: "Aligning structural operating models with behavioral mindsets to foster agility, deep-rooted accountability, and high-performance execution across the enterprise.",
       image: "/images/Team Conference.jpg"
     },
     {
       id: "sales",
       icon: TrendingUp,
-      title: "Sales Excellence",
-      desc: "Our flagship 'Triple Your Business Growth' certification program to fundamentally shift sales capability and execution.",
+      title: "Commercial Excellence & Revenue Acceleration",
+      desc: "Our flagship intervention designed to fundamentally upgrade sales force capability, optimize the revenue engine, and drive sustainable top-line growth.",
       image: "/images/Motivate.jpg"
     },
     {
       id: "safety",
       icon: ShieldCheck,
-      title: "Behavioral Safety",
-      desc: "Moving beyond compliance to create a deeply rooted safety culture where safe behavior is driven by personal commitment.",
+      title: "Operational Resilience & Safety Culture",
+      desc: "Moving beyond standard compliance to embed a psychological and behavioral mandate for zero-harm operations and industrial resilience.",
       image: "/images/Group 2.jpg"
     },
     {
       id: "productivity",
       icon: Target,
-      title: "Plant Productivity",
-      desc: "A dashboard-driven intervention that guarantees the enhancement of manufacturing plant productivity.",
+      title: "Manufacturing Excellence & Asset Optimization",
+      desc: "Data-driven interventions engineered to eliminate waste, optimize plant utilization, and maximize frontline throughput.",
       image: "/images/East B.jpg"
     }
   ];
@@ -70,7 +70,7 @@ export default function OrganizationsPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
-              Organizations don't execute strategies; people do. We help build the culture, capability, and alignment required to turn strategy into sustained execution.
+              A company's strategy is only as robust as its people's ability to execute it. We architect resilient cultures that turn operational intent into enterprise value.
             </p>
           </motion.div>
         </div>
@@ -170,7 +170,7 @@ export default function OrganizationsPage() {
         </div>
         <div className="container mx-auto max-w-3xl relative z-10">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-10">
-            Ready to transform your organization?
+            Ready to architect a high-performance culture?
           </h2>
           <Link
             href="/contact"

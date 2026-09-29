@@ -61,7 +61,7 @@ export function ImpactClient({ caseStudies }: { caseStudies: any[] }) {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md"
           >
-            We measure our success by the tangible, sustained impact we create for our clients. Explore how we turn potential into world-class performance.
+            We measure our success strictly by the empirical, sustained commercial value we create for our clients. Explore how we operationalize potential into world-class execution.
           </motion.p>
         </div>
       </section>
@@ -174,7 +174,7 @@ export function ImpactClient({ caseStudies }: { caseStudies: any[] }) {
               Trusted by <span className="text-brand-accent">600+</span> Leading Organizations
             </h2>
             <p className="text-gray-400 mb-16 max-w-2xl mx-auto">
-              Our methodologies have been validated across every major industry, consistently delivering systemic transformation at scale.
+              Our proprietary capability-building frameworks have been validated across every major global industry, consistently driving systemic transformation at scale.
             </p>
             
             {/* Creative Typography Marquee */}
