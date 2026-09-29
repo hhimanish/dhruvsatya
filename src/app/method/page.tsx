@@ -159,7 +159,7 @@ export default function MethodPage() {
                   {/* Left Half: Photography with premium physics */}
                   <div className="w-1/2">
                     <motion.div 
-                      className="relative w-full aspect-[4/3] lg:aspect-square xl:aspect-[4/3] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] group cursor-pointer bg-brand-foundation/5"
+                      className="relative w-full min-h-[400px] lg:min-h-[500px] xl:min-h-[600px] aspect-square lg:aspect-[4/3] xl:aspect-video rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] group cursor-pointer bg-brand-foundation/5"
                       whileHover={{ scale: 1.03, y: -8 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
