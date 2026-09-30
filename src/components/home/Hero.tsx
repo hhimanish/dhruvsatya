@@ -10,7 +10,7 @@ export function Hero() {
   const titleWords = "Transformation Begins Within.".split(" ");
 
   return (
-    <section className="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-brand-foundation text-brand-ivory pt-20">
+    <section className="relative min-h-[100svh] pb-24 md:pb-0 w-full flex items-center justify-center overflow-hidden bg-brand-foundation text-brand-ivory pt-20">
       
       {/* Photographic Background with Navy Blend */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -66,9 +66,9 @@ export function Hero() {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="mb-8"
         >
-          <div className="inline-flex items-center px-4 py-2 border border-white/10 rounded-full bg-white/5 backdrop-blur-sm">
-            <span className="w-2 h-2 rounded-full bg-brand-accent mr-2 animate-pulse" />
-            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-300">
+          <div className="inline-flex items-center px-3 py-2 md:px-4 md:py-2 border border-white/10 rounded-xl md:rounded-full bg-white/5 backdrop-blur-sm">
+            <span className="w-2 h-2 rounded-full bg-brand-accent mr-2 animate-pulse flex-shrink-0" />
+            <span className="text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase text-gray-300 leading-snug">
               DhruvSatya Center for Personal Transformation
             </span>
           </div>

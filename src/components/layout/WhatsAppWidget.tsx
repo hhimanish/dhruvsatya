@@ -13,7 +13,7 @@ export function WhatsAppWidget() {
       transition={{ delay: 2, type: "spring", stiffness: 200, damping: 20 }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:shadow-[#25D366]/40 hover:shadow-lg transition-shadow flex items-center justify-center"
+      className="fixed bottom-[5rem] right-4 md:bottom-6 md:right-6 z-50 bg-[#25D366] text-white p-3 md:p-4 rounded-full shadow-2xl hover:shadow-[#25D366]/40 hover:shadow-lg transition-shadow flex items-center justify-center"
       aria-label="Chat on WhatsApp"
     >
       <svg
