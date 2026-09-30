@@ -92,6 +92,8 @@ export default function InstitutionsPage() {
                     alt={item.title}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
+                    quality={70}
+                    priority={idx === 0}
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-brand-foundation/20 mix-blend-multiply transition-colors duration-500 group-hover:bg-brand-foundation/10" />
