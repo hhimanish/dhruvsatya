@@ -47,7 +47,8 @@ export function Navbar() {
   }, [mobileMenuOpen]);
 
   return (
-    <header
+    <>
+      <header
       className={`fixed top-0 w-full z-[100] transition-all duration-300 ${
         isScrolled
           ? "bg-brand-foundation/95 backdrop-blur-md shadow-lg border-b border-white/5 py-4"
@@ -57,9 +58,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 z-50">
-          <span
-            className={`font-display font-black text-2xl tracking-tighter ${mobileMenuOpen ? 'text-brand-foundation' : 'text-white'}`}
-          >
+          <span className="font-display font-black text-2xl tracking-tighter text-white">
             DHRUVSATYA
           </span>
         </Link>
@@ -103,23 +102,39 @@ export function Navbar() {
         {/* Mobile Toggle */}
         <button
           className="lg:hidden z-[100] text-white"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle Menu"
+          onClick={() => setMobileMenuOpen(true)}
+          aria-label="Open Menu"
         >
-          {mobileMenuOpen ? <X className="w-6 h-6 text-brand-foundation" /> : <Menu className="w-6 h-6" />}
+          <Menu className="w-6 h-6" />
         </button>
       </div>
 
-      {/* Mobile Nav */}
+    </header>
+
+      {/* Mobile Nav Overlay (Moved outside header to avoid backdrop-filter issues) */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 bg-white z-[90] flex flex-col pt-24 px-6 pb-[calc(1.5rem+env(safe-area-inset-bottom))] overflow-y-auto"
+            className="fixed inset-0 bg-white z-[150] flex flex-col pt-6 pb-[calc(1.5rem+env(safe-area-inset-bottom))] overflow-y-auto"
           >
-            <div className="flex flex-col space-y-6">
+            {/* Overlay Header */}
+            <div className="container mx-auto px-6 md:px-12 flex justify-between items-center mb-8">
+              <span className="font-display font-black text-2xl tracking-tighter text-brand-foundation">
+                DHRUVSATYA
+              </span>
+              <button
+                className="text-brand-foundation"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close Menu"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            <div className="flex flex-col space-y-6 px-6 md:px-12">
               {navLinks.map((link) => (
                 <div key={link.name} className="flex flex-col space-y-3">
                   <Link
@@ -147,7 +162,7 @@ export function Navbar() {
               ))}
             </div>
             
-            <div className="mt-auto pt-8">
+            <div className="mt-auto pt-8 px-6 md:px-12">
               <Link
                 href="/contact"
                 className="block w-full text-center px-6 py-4 bg-brand-foundation text-white text-lg font-medium hover:bg-brand-accent transition-colors rounded-full"
@@ -159,6 +174,6 @@ export function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
