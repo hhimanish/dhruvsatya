@@ -11,7 +11,7 @@ const navLinks = [
     name: "Solutions",
     href: "/solutions",
     dropdown: [
-      { name: "For Organizations", href: "/solutions/organizations" },
+      { name: "For Organisations", href: "/solutions/organisations" },
       { name: "For Leaders", href: "/solutions/leaders" },
       { name: "For Institutions", href: "/solutions/institutions" },
     ],
@@ -29,12 +29,22 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <header
@@ -107,7 +117,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 bg-white z-40 flex flex-col pt-24 px-6 pb-6 overflow-y-auto"
+            className="fixed inset-0 bg-white z-40 flex flex-col pt-24 px-6 pb-[calc(1.5rem+env(safe-area-inset-bottom))] overflow-y-auto"
           >
             <div className="flex flex-col space-y-6">
               {navLinks.map((link) => (

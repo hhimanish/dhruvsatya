@@ -17,8 +17,8 @@ export default function AboutPage() {
   const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   const milestones = [
-    { year: "1999", title: "The Foundation", desc: "Started with a vision to bring world-class transformation to Indian organizations." },
-    { year: "2010", title: "National Award", desc: "Recognized for excellence in training and organizational development." },
+    { year: "1999", title: "The Foundation", desc: "Started with a vision to bring world-class transformation to Indian organisations." },
+    { year: "2010", title: "National Award", desc: "Recognized for excellence in training and organisational development." },
     { year: "2015", title: "ISO Certification", desc: "Achieved ISO 9001:2015 for quality management in consulting." },
     { year: "2024", title: "600,000+ Lives", desc: "Crossed the milestone of impacting over 6 lac individuals across industries." },
   ];
@@ -36,7 +36,7 @@ export default function AboutPage() {
           className="absolute inset-0 z-0"
         >
           <Image 
-            src="/images/Group 2.jpg"
+            src="/images/group-2.jpg"
             alt="DhruvSatya Transformation Legacy"
             fill
             className="object-cover opacity-60"
@@ -53,11 +53,11 @@ export default function AboutPage() {
           >
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-8 leading-[1.2]">
               <span className="inline-block bg-brand-accent text-brand-foundation px-6 py-2 transform -skew-x-6 mb-4 shadow-[0_0_20px_rgba(252,163,17,0.3)]">
-                25 Years of Building
+                25+ Years of Building
               </span>
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-                World-Class Organizations.
+                World-Class Organisations.
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
@@ -87,7 +87,7 @@ export default function AboutPage() {
                   The DhruvSatya Difference
                 </h2>
                 <h3 className="text-3xl md:text-5xl font-display font-bold text-brand-foundation mb-8 leading-tight">
-                  Why organizations trust us with their most valuable asset.
+                  Why organisations trust us with their most valuable asset.
                 </h3>
                 
                 <motion.div 
@@ -110,7 +110,7 @@ export default function AboutPage() {
                 </motion.div>
 
                 <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                  Most training programs focus on surface-level skills. We go deeper. We focus on the underlying paradigms, beliefs, and mindsets that drive behavior. 
+                  Most training programs focus on surface-level skills. We go deeper. We focus on the underlying paradigms, beliefs, and mindsets that drive behaviour. 
                 </p>
                 <div className="border-l-4 border-brand-accent pl-6 bg-gradient-to-r from-brand-ivory/80 to-transparent py-4 rounded-r-2xl relative overflow-hidden group">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-[1.5s] ease-in-out skew-x-12" />
@@ -129,8 +129,8 @@ export default function AboutPage() {
                 {[
                   { icon: ShieldCheck, title: "ISO 9001:2015", text: "Certified for rigorous quality management in consulting." },
                   { icon: Trophy, title: "National Award", text: "Recognized nationally for absolute training excellence." },
-                  { icon: Users, title: "600+ Clients", text: "Trusted implicitly by industry-leading organizations." },
-                  { icon: Award, title: "40+ Years", text: "Founder's unmatched legacy of leadership and vision." },
+                  { icon: Users, title: "600+ Clients", text: "Trusted implicitly by industry-leading organisations." },
+                  { icon: Award, title: "40 Years", text: "Founder's personal 40 years of unmatched leadership experience." },
                 ].map((item, i) => (
                   <motion.div 
                     key={i} 
@@ -164,7 +164,7 @@ export default function AboutPage() {
       <section className="py-32 px-6 bg-brand-foundation text-white relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/Audiance.jpg"
+            src="/images/audience.jpg"
             alt="DhruvSatya Journey"
             fill
             className="object-cover opacity-30 mix-blend-overlay"

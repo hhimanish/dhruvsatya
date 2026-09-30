@@ -27,7 +27,7 @@ export default function FounderPage() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-10 max-w-lg font-light leading-relaxed">
-              Soumitra Chatterjee has consulted over 600 organizations and impacted more than 600,000 lives across India and overseas.
+              Soumitra Chatterjee has consulted over 600 organisations and impacted more than 600,000 lives across India and overseas.
             </p>
             <Link 
               href="#journey"
@@ -82,10 +82,10 @@ export default function FounderPage() {
                 The Experience
               </h3>
               <h4 className="text-3xl font-display font-medium text-brand-foundation mb-6">
-                40 Years of Leadership & Transformation
+                40 Years of Personal Experience in Leadership & Transformation
               </h4>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                As the Managing Director and founder of DhruvSatya Center for Personal Transformation, Soumitra Chatterjee brings over 40 years of corporate and institutional experience. He has served key organizations in senior management positions, including at the board level.
+                As the Managing Director and founder of DhruvSatya Center for Personal Transformation, Soumitra Chatterjee brings 40 years of personal corporate and institutional experience. He has served key organisations in senior management positions, including at the board level.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 He is mentored by some of the world's top coaches, including Tony Robbins, T. Harv Eker, Mac Attram, and Alex Mendosian. His approach bridges world-class transformational methodologies with the realities of Indian business and education.
@@ -127,7 +127,7 @@ export default function FounderPage() {
       <section className="py-24 bg-brand-foundation text-center text-white px-6">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-5xl font-display font-medium mb-8">
-            Bring this thinking to your organization.
+            Bring this thinking to your organisation.
           </h2>
           <Link
             href="/contact"

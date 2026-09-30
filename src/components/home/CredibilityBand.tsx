@@ -1,41 +1,42 @@
 "use client";
 
-import { motion, animate } from "framer-motion";
+import { motion, animate, useReducedMotion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 
 const stats = [
   { id: 1, value: 25, label: "Years of Experience", suffix: "+" },
-  { id: 2, value: 600, label: "Organizations Served", suffix: "+" },
+  { id: 2, value: 600, label: "Organisations Served", suffix: "+" },
   { id: 3, value: 300, label: "Institutions Transformed", suffix: "+" },
-  { id: 4, value: 6, label: "People Transformed", suffix: "L+" },
+  { id: 4, value: 600000, label: "People Transformed", suffix: "+" },
 ];
 
 function Counter({ value, inView }: { value: number; inView: boolean }) {
   const nodeRef = useRef<HTMLSpanElement>(null);
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
-    if (inView && nodeRef.current) {
+    if (inView && nodeRef.current && !prefersReducedMotion) {
       const controls = animate(0, value, {
         duration: 2.5,
         ease: "easeOut",
         onUpdate(latest) {
           if (nodeRef.current) {
-            nodeRef.current.textContent = Math.round(latest).toString();
+            nodeRef.current.textContent = new Intl.NumberFormat('en-IN').format(Math.round(latest));
           }
         },
       });
       return () => controls.stop();
     }
-  }, [value, inView]);
+  }, [value, inView, prefersReducedMotion]);
 
-  return <span ref={nodeRef}>0</span>;
+  // SSR renders the final value so it's not "0" in the HTML
+  return <span ref={nodeRef} className="tabular-nums inline-block">{new Intl.NumberFormat('en-IN').format(value)}</span>;
 }
 
 export function CredibilityBand() {
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
-    // Simple intersection observer to trigger animation
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) setInView(true);
@@ -61,7 +62,7 @@ export function CredibilityBand() {
               transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="flex flex-col items-center justify-center text-center px-4 pt-8 sm:pt-0"
             >
-              <div className="text-4xl sm:text-4xl sm:text-5xl md:text-7xl font-display font-black text-white mb-4 tracking-tighter">
+              <div className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-black text-white mb-4 tracking-tighter flex items-center justify-center">
                 <Counter value={stat.value} inView={inView} />
                 <span className="text-brand-accent">{stat.suffix}</span>
               </div>

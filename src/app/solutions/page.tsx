@@ -10,12 +10,12 @@ import { motion } from "framer-motion";
 export default function SolutionsPage() {
   const pathways = [
     {
-      title: "For Organizations",
+      title: "For Organisations",
       desc: "Transform your culture, enhance execution, and drive systemic operational excellence.",
-      href: "/solutions/organizations",
+      href: "/solutions/organisations",
       icon: Building2,
       image: "/images/Meeting.jpg",
-      features: ["Culture Transformation", "Sales Excellence", "Behavioral Safety", "Plant Productivity"]
+      features: ["Culture Transformation", "Sales Excellence", "Behavioural Safety", "Plant Productivity"]
     },
     {
       title: "For Leaders",
@@ -30,7 +30,7 @@ export default function SolutionsPage() {
       desc: "Elevate educational institutions by developing leadership capabilities in educators and administrators.",
       href: "/solutions/institutions",
       icon: GraduationCap,
-      image: "/images/Group Pic.jpg",
+      image: "/images/group-pic.jpg",
       features: ["Faculty Development", "Academic Leadership", "Institutional Excellence"]
     }
   ];
@@ -69,7 +69,7 @@ export default function SolutionsPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
-              Choose the path that aligns with your current challenge. Our methodologies are tailored for organizational scale, leadership depth, and institutional impact.
+              Choose the path that aligns with your current challenge. Our methodologies are tailored for organisational scale, leadership depth, and institutional impact.
             </p>
           </motion.div>
         </div>

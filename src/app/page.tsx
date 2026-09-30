@@ -1,9 +1,16 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/home/Hero";
 import { CredibilityBand } from "@/components/home/CredibilityBand";
-import { DiagnosticTool } from "@/components/home/DiagnosticTool";
-import { PhilosophySection } from "@/components/home/PhilosophySection";
 import { Footer } from "@/components/layout/Footer";
+import dynamic from 'next/dynamic';
+
+const DiagnosticTool = dynamic(() => import('@/components/home/DiagnosticTool').then(mod => mod.DiagnosticTool), {
+  loading: () => <div className="h-screen bg-brand-foundation animate-pulse" />
+});
+
+const PhilosophySection = dynamic(() => import('@/components/home/PhilosophySection').then(mod => mod.PhilosophySection), {
+  loading: () => <div className="h-[50vh] bg-white animate-pulse" />
+});
 
 export default function Home() {
   return (
@@ -18,7 +25,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03]" />
         <div className="container mx-auto max-w-5xl text-center relative z-10">
           <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] mb-12 tracking-tight">
-            Organizations change when people change.
+            Organisations change when people change.
             <br className="hidden md:block" />
             <span className="text-gray-400">People change when perspective changes.</span>
             <br className="hidden md:block" />

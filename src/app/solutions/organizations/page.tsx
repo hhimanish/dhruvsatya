@@ -7,14 +7,14 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, TrendingUp, ShieldCheck, Users, Target } from "lucide-react";
 
-export default function OrganizationsPage() {
+export default function OrganisationsPage() {
   const offerings = [
     {
       id: "culture",
       icon: Users,
-      title: "Culture & Organizational Development",
-      desc: "Transforming the DNA of your organization by aligning values, mindsets, and behaviors with your strategic objectives.",
-      image: "/images/Team Conference.jpg"
+      title: "Culture & Organisational Development",
+      desc: "Transforming the DNA of your organisation by aligning values, mindsets, and behaviours with your strategic objectives.",
+      image: "/images/team-conference.jpg"
     },
     {
       id: "sales",
@@ -26,16 +26,16 @@ export default function OrganizationsPage() {
     {
       id: "safety",
       icon: ShieldCheck,
-      title: "Behavioral Safety",
-      desc: "Moving beyond compliance to create a deeply rooted safety culture where safe behavior is driven by personal commitment.",
-      image: "/images/Group 2.jpg"
+      title: "Behavioural Safety",
+      desc: "Moving beyond compliance to create a deeply rooted safety culture where safe behaviour is driven by personal commitment.",
+      image: "/images/group-2.jpg"
     },
     {
       id: "productivity",
       icon: Target,
       title: "Plant Productivity",
       desc: "A dashboard-driven intervention that guarantees the enhancement of manufacturing plant productivity.",
-      image: "/images/East B.jpg"
+      image: "/images/east-b.jpg"
     }
   ];
 
@@ -48,7 +48,7 @@ export default function OrganizationsPage() {
         <div className="absolute inset-0 w-full h-full animate-slow-zoom origin-center z-0">
           <Image 
             src="/images/Meeting.jpg"
-            alt="Organizations Transformation"
+            alt="Organisations Transformation"
             fill
             sizes="100vw"
             quality={60}
@@ -66,11 +66,11 @@ export default function OrganizationsPage() {
           >
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-8">
               <span className="inline-block bg-brand-accent text-brand-foundation px-6 py-2 transform -skew-x-6 shadow-[0_0_20px_rgba(252,163,17,0.3)]">
-                For Organizations.
+                For Organisations.
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
-              Organizations don't execute strategies; people do. We help build the culture, capability, and alignment required to turn strategy into sustained execution.
+              Organisations don't execute strategies; people do. We help build the culture, capability, and alignment required to turn strategy into sustained execution.
             </p>
           </motion.div>
         </div>
@@ -86,7 +86,7 @@ export default function OrganizationsPage() {
               Strategic Interventions
             </h2>
             <h3 className="text-4xl md:text-5xl font-display font-bold text-brand-foundation">
-              Areas of Organizational Impact
+              Areas of Organisational Impact
             </h3>
           </div>
 
@@ -99,7 +99,7 @@ export default function OrganizationsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8 }}
-                className="flex flex-col lg:flex-row items-center gap-16 group"
+                className="flex flex-col lg:flex-row items-center gap-16 group scroll-mt-32"
               >
                 {/* Image Half */}
                 <div className={`w-full lg:w-1/2 relative h-[350px] md:h-[450px] rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] group cursor-pointer ${idx % 2 !== 0 ? 'lg:order-last' : ''}`}>
@@ -160,7 +160,7 @@ export default function OrganizationsPage() {
       <section className="py-32 bg-brand-foundation text-center px-6 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/Audiance.jpg"
+            src="/images/audience.jpg"
             alt="CTA Background"
             fill
             sizes="100vw"
@@ -170,7 +170,7 @@ export default function OrganizationsPage() {
         </div>
         <div className="container mx-auto max-w-3xl relative z-10">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-10">
-            Ready to transform your organization?
+            Ready to transform your organisation?
           </h2>
           <Link
             href="/contact"

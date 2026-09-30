@@ -9,10 +9,10 @@ import { motion } from "framer-motion";
 export function ImpactClient({ caseStudies }: { caseStudies: any[] }) {
   // Mapping case studies to specific premium images for visual storytelling
   const imageryMap = [
-    "/images/Team Deliberation.jpg",
+    "/images/team-deliberation.jpg",
     "/images/Meeting1.jpg",
     "/images/Focus.jpg",
-    "/images/Group 2.jpg",
+    "/images/group-2.jpg",
     "/images/Meeting.jpg"
   ];
 
@@ -171,7 +171,7 @@ export function ImpactClient({ caseStudies }: { caseStudies: any[] }) {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
-              Trusted by <span className="text-brand-accent">600+</span> Leading Organizations
+              Trusted by <span className="text-brand-accent">600+</span> Leading Organisations
             </h2>
             <p className="text-gray-400 mb-16 max-w-2xl mx-auto">
               Our methodologies have been validated across every major industry, consistently delivering systemic transformation at scale.
@@ -193,7 +193,7 @@ export function ImpactClient({ caseStudies }: { caseStudies: any[] }) {
               >
                 {/* Render the list twice to create a perfect seamless infinite loop */}
                 {[...Array(2)].map((_, i) => (
-                  <div key={i} className="flex items-center">
+                  <div key={i} className="flex items-center" aria-hidden={i === 1 ? "true" : undefined}>
                     {[
                       "Infosys", "Airtel", "HDFC Bank", "Wipro", "L&T", "IBM", "Aditya Birla", "ICICI Bank", "Tata", "Siemens",
                       "ACC Limited", "Britannia", "LIC", "NTPC", "Berger Paints", "Usha Communications", "WPIL", "Wesman",
@@ -237,6 +237,55 @@ export function ImpactClient({ caseStudies }: { caseStudies: any[] }) {
               </motion.div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-24 bg-brand-ivory/50 px-6 relative overflow-hidden">
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-sm font-semibold text-brand-accent tracking-widest uppercase mb-4">
+              Client Voices
+            </h2>
+            <h3 className="text-3xl md:text-5xl font-display font-bold text-brand-foundation">
+              The True Measure of Impact
+            </h3>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-10 rounded-3xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col relative">
+              <div className="absolute top-8 left-8 text-6xl text-brand-accent/20 font-serif font-black">"</div>
+              <p className="text-gray-600 text-lg leading-relaxed mb-8 relative z-10 pt-4 flex-grow">
+                The Triple Your Business Growth program completely rewired our sales force. We moved from a transactional mindset to true strategic partnership with our clients. The results speak for themselves: a 45% increase in conversion rates in just six months.
+              </p>
+              <div className="border-t border-gray-100 pt-6 mt-auto">
+                <div className="font-bold text-brand-foundation text-lg">Sales Director</div>
+                <div className="text-sm text-gray-500 uppercase tracking-widest mt-1">Leading Manufacturing Enterprise</div>
+              </div>
+            </div>
+            
+            <div className="bg-brand-foundation text-white p-10 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] flex flex-col relative transform md:-translate-y-4">
+              <div className="absolute top-8 left-8 text-6xl text-brand-accent/20 font-serif font-black">"</div>
+              <p className="text-gray-300 text-lg leading-relaxed mb-8 relative z-10 pt-4 flex-grow">
+                Soumitra's intervention was a watershed moment for our leadership team. He challenged our fundamental assumptions and helped us align our vision with actual, observable behaviours. It was nothing short of transformative.
+              </p>
+              <div className="border-t border-white/10 pt-6 mt-auto">
+                <div className="font-bold text-brand-accent text-lg">Chief Executive Officer</div>
+                <div className="text-sm text-gray-400 uppercase tracking-widest mt-1">Global Financial Services Firm</div>
+              </div>
+            </div>
+            
+            <div className="bg-white p-10 rounded-3xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col relative">
+              <div className="absolute top-8 left-8 text-6xl text-brand-accent/20 font-serif font-black">"</div>
+              <p className="text-gray-600 text-lg leading-relaxed mb-8 relative z-10 pt-4 flex-grow">
+                What sets DhruvSatya apart is their focus on the subconscious barriers to safety. They didn't just give us another checklist; they fundamentally shifted how our plant operators view their personal responsibility towards themselves and their colleagues.
+              </p>
+              <div className="border-t border-gray-100 pt-6 mt-auto">
+                <div className="font-bold text-brand-foundation text-lg">VP Operations & Safety</div>
+                <div className="text-sm text-gray-500 uppercase tracking-widest mt-1">Heavy Engineering Corporation</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -38,10 +38,10 @@ export function Footer() {
             <h4 className="text-lg font-medium mb-6">Capabilities</h4>
             <ul className="space-y-4 text-gray-400 text-sm">
               <li><Link href="/solutions/leaders" className="hover:text-brand-accent transition-colors">Leadership Development</Link></li>
-              <li><Link href="/solutions/organizations" className="hover:text-brand-accent transition-colors">Organizational Development</Link></li>
+              <li><Link href="/solutions/organizations" className="hover:text-brand-accent transition-colors">Organisational Development</Link></li>
               <li><Link href="/solutions/institutions" className="hover:text-brand-accent transition-colors">Education Transformation</Link></li>
-              <li><Link href="/solutions/organizations#safety" className="hover:text-brand-accent transition-colors">Behavioral Safety</Link></li>
-              <li><Link href="/founder" className="hover:text-brand-accent transition-colors">Executive Coaching</Link></li>
+              <li><Link href="/solutions/organizations#safety" className="hover:text-brand-accent transition-colors">Behavioural Safety</Link></li>
+              <li><Link href="/solutions/leaders#executive-coaching" className="hover:text-brand-accent transition-colors">Executive Coaching</Link></li>
             </ul>
           </div>
 

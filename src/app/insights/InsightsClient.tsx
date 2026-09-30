@@ -11,8 +11,8 @@ import { ArrowRight, BookOpen, Lightbulb, Sparkles, Telescope, Compass, Rocket }
 const images = [
   "/images/Focus.jpg",
   "/images/Personal.jpg",
-  "/images/Group 2.jpg",
-  "/images/Profic Pic.jpg",
+  "/images/group-2.jpg",
+  "/images/profic-pic.jpg",
   "/images/Meeting2.jpg",
   "/images/Meeting.jpg"
 ];
@@ -41,7 +41,7 @@ export function InsightsClient({ insights }: { insights: any[] }) {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-2xl leading-relaxed font-light">
-              Perspectives, frameworks, and deep dives into the mechanics of leadership, organizational culture, and human potential.
+              Perspectives, frameworks, and deep dives into the mechanics of leadership, organisational culture, and human potential.
             </p>
           </motion.div>
         </div>
@@ -90,12 +90,22 @@ export function InsightsClient({ insights }: { insights: any[] }) {
                   <Icon className="w-6 h-6" />
                 </motion.div>
 
-                {/* Category (Vertical on desktop unless hovered) */}
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-8 h-[2px] bg-brand-accent" />
-                  <span className={`text-xs font-bold tracking-widest text-brand-accent uppercase ${!isHovered && 'hidden md:block md:[writing-mode:vertical-rl] md:rotate-180 md:absolute md:top-10 md:right-10 md:w-auto md:h-auto'}`}>
-                    {article.category}
-                  </span>
+                {/* Category & Meta (Vertical on desktop unless hovered) */}
+                <div className={`flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mb-4 ${!isHovered && 'hidden md:flex md:flex-col md:items-end md:gap-2 md:[writing-mode:vertical-rl] md:rotate-180 md:absolute md:top-10 md:right-10 md:w-auto md:h-auto'}`}>
+                  <div className="flex items-center gap-2 md:gap-4">
+                    <div className="w-8 h-[2px] bg-brand-accent hidden md:block" />
+                    <span className="text-xs font-bold tracking-widest text-brand-accent uppercase">
+                      {article.category}
+                    </span>
+                  </div>
+                  
+                  {/* Meta (Author and Date) visible on hover or mobile */}
+                  <div className={`flex items-center text-xs text-gray-300 font-medium ${!isHovered && 'md:hidden'}`}>
+                    <span className="mr-2">•</span>
+                    <span>{article.author}</span>
+                    <span className="mx-2">•</span>
+                    <span>{new Date(article.date).toLocaleDateString('en-IN', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                  </div>
                 </div>
 
                 {/* Title */}

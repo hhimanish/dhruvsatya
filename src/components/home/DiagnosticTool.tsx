@@ -7,9 +7,9 @@ import Link from "next/link";
 
 const options = [
   { id: "leadership", label: "Leadership Capability", href: "/solutions/leaders" },
-  { id: "culture", label: "Organizational Culture", href: "/solutions/organizations" },
-  { id: "sales", label: "Sales & Execution", href: "/solutions/organizations#sales" },
-  { id: "safety", label: "Behavioral Safety", href: "/solutions/organizations#safety" },
+  { id: "culture", label: "Organisational Culture", href: "/solutions/organisations" },
+  { id: "sales", label: "Sales & Execution", href: "/solutions/organisations#sales" },
+  { id: "safety", label: "Behavioural Safety", href: "/solutions/organisations#safety" },
   { id: "institutions", label: "Institutional Excellence", href: "/solutions/institutions" },
   { id: "personal", label: "My Own Leadership", href: "/founder" },
 ];

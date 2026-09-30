@@ -6,6 +6,8 @@ import { CheckCircle2 } from "lucide-react";
 
 import { ImpactClient } from "./ImpactClient";
 
+export const revalidate = 3600; // ISR revalidate every hour
+
 async function getCaseStudies() {
   try {
     const filePath = path.join(process.cwd(), 'content', 'case-studies.json');

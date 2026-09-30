@@ -83,7 +83,7 @@ export function PhilosophySection() {
             <div className="relative w-full aspect-square md:aspect-[4/3] border border-white/10 p-10 md:p-16 flex flex-col justify-center overflow-hidden">
               
               <Image 
-                src="/images/Team Conference.jpg"
+                src="/images/team-conference.jpg"
                 alt="DhruvSatya Team Deliberation"
                 fill
                 className="object-cover opacity-40 mix-blend-luminosity"

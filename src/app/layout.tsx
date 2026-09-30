@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import { CookieConsent } from "@/components/layout/CookieConsent";
+import { WhatsAppWidget } from "@/components/layout/WhatsAppWidget";
+import { BackToTop } from "@/components/layout/BackToTop";
+import { SkipLink } from "@/components/layout/SkipLink";
+import NextTopLoader from 'nextjs-toploader';
 import "./globals.css";
 
 const inter = Inter({
@@ -15,8 +19,12 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://thecpt.co.in'),
   title: "DhruvSatya | Center for Personal Transformation",
   description: "Transforming Lives | Reinventing Organisations | Generating Breakthroughs. 25 years of world-class training and consulting.",
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: "DhruvSatya | Center for Personal Transformation",
     description: "Transforming Lives | Reinventing Organisations | Generating Breakthroughs.",
@@ -43,8 +51,19 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${montserrat.variable} antialiased font-sans bg-brand-foundation text-brand-ivory`}
+        className={`${inter.variable} ${montserrat.variable} antialiased font-sans bg-brand-foundation text-brand-ivory overflow-x-hidden w-full`}
       >
+        <NextTopLoader
+          color="#FFD700"
+          initialPosition={0.08}
+          crawlSpeed={200}
+          height={3}
+          crawl={true}
+          showSpinner={false}
+          easing="ease"
+          speed={200}
+          shadow="0 0 10px #FFD700,0 0 5px #FFD700"
+        />
         {/* JSON-LD Structured Data for Enterprise SEO */}
         <script
           type="application/ld+json"
@@ -63,8 +82,13 @@ export default function RootLayout({
             })
           }}
         />
-        {children}
+        <SkipLink />
+        <div id="main-content" className="min-h-screen">
+          {children}
+        </div>
         <CookieConsent />
+        <WhatsAppWidget />
+        <BackToTop />
       </body>
     </html>
   );

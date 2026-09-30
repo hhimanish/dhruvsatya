@@ -10,13 +10,13 @@ export function Hero() {
   const titleWords = "Transformation Begins Within.".split(" ");
 
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-brand-foundation text-brand-ivory pt-20">
+    <section className="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-brand-foundation text-brand-ivory pt-20">
       
       {/* Photographic Background with Navy Blend */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 w-full h-full animate-slow-zoom origin-center">
           <Image 
-            src="/images/Audiance.jpg" 
+            src="/images/audience.jpg" 
             alt="DhruvSatya Audience" 
             fill 
             sizes="100vw"
@@ -98,7 +98,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="text-lg md:text-2xl text-gray-400 max-w-3xl mb-16 font-light leading-relaxed"
         >
-          We are the catalyst for profound, systemic change. We build world-class leaders, transform organizational cultures, and turn latent capability into unstoppable execution.
+          We are the catalyst for profound, systemic change. We build world-class leaders, transform organisational cultures, and turn latent capability into unstoppable execution.
         </motion.p>
 
         <motion.div

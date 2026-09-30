@@ -7,6 +7,8 @@ import Image from "next/image";
 import { ArrowLeft, Calendar, User, Clock } from "lucide-react";
 import { notFound } from "next/navigation";
 
+export const revalidate = 3600; // ISR revalidate every hour
+
 async function getInsight(id: string) {
   try {
     const filePath = path.join(process.cwd(), 'content', 'insights.json');
@@ -88,26 +90,32 @@ export default async function InsightArticlePage({ params }: { params: Promise<{
               {article.excerpt}
             </p>
             
-            {/* Placeholder body content since the JSON only has excerpts */}
-            <p className="mb-8 text-gray-600 leading-relaxed">
-              When we observe the patterns of high-performing individuals and organizations, a distinct truth emerges: transformation is rarely the result of a single tactical shift. Rather, it is the culmination of systemic, psychological, and behavioral alignment. In addressing the core issues highlighted in this insight, we must first look at the foundational beliefs that drive our daily execution.
-            </p>
+            {/* Map through dynamic content paragraphs */}
+            {article.content && article.content.slice(0, 3).map((paragraph: string, idx: number) => (
+              <p key={idx} className="mb-8 text-gray-600 leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
             
             <h2 className="text-3xl font-display font-bold text-brand-foundation mt-12 mb-6">
-              The Architecture of Change
+              {article.subheading || "The Architecture of Change"}
             </h2>
             
-            <p className="mb-8 text-gray-600 leading-relaxed">
-              Most interventions fail because they attempt to modify the output without reprogramming the source code. Whether you are leading a Fortune 500 company or striving for personal mastery, the mechanics remain identical. You cannot out-strategize a flawed belief system. The very essence of the DhruvSatya methodology dictates that sustainable results demand rigorous introspection followed by relentless, disciplined action.
-            </p>
+            {article.content && article.content.slice(3, 5).map((paragraph: string, idx: number) => (
+              <p key={`mid-${idx}`} className="mb-8 text-gray-600 leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
             
             <blockquote className="border-l-4 border-brand-accent pl-6 py-2 my-12 bg-white/50 rounded-r-lg italic text-xl md:text-2xl font-serif text-brand-foundation/80">
-              "You cannot out-strategize a flawed belief system. Sustainable results demand rigorous introspection followed by relentless, disciplined action."
+              "{article.quote}"
             </blockquote>
             
-            <p className="mb-8 text-gray-600 leading-relaxed">
-              As leaders, our primary responsibility is to curate environments where both safety and high expectations coexist. This requires emotional intelligence, absolute clarity of vision, and the courage to dismantle what no longer serves the ultimate goal. Moving forward, the organizations that dominate their sectors will be those that treat culture not as an HR initiative, but as the ultimate operational strategy.
-            </p>
+            {article.content && article.content.slice(5).map((paragraph: string, idx: number) => (
+              <p key={`end-${idx}`} className="mb-8 text-gray-600 leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
           </article>
           
           {/* Share / Action */}

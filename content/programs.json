@@ -29,7 +29,7 @@
   {
     "id": "transformational-leadership",
     "title": "Transformational Leadership",
-    "category": "Leadership development and Managerial Effectiveness",
+    "category": "Leadership Development and Managerial Effectiveness",
     "description": "Develop leaders who inspire, challenge the status quo, and drive meaningful change within their organizations.",
     "forWhom": "Senior executives, managers, and team leaders.",
     "outcome": "Enhanced leadership capability, stronger team alignment, and improved organizational culture.",
@@ -38,7 +38,7 @@
   {
     "id": "vmosa-workshop",
     "title": "The VMOSA Workshop",
-    "category": "Leadership development and Managerial Effectiveness",
+    "category": "Leadership Development and Managerial Effectiveness",
     "description": "A strategic workshop covering Vision, Mission, Objectives, Strategies, and Action Plan to align organizational direction.",
     "forWhom": "Leadership teams and organizational heads.",
     "outcome": "A unified strategic direction and a clear roadmap for execution.",
@@ -47,7 +47,7 @@
   {
     "id": "high-performance-leadership",
     "title": "High Performance Leadership",
-    "category": "Leadership development and Managerial Effectiveness",
+    "category": "Leadership Development and Managerial Effectiveness",
     "description": "Focuses on the behaviors and mindsets necessary to lead high-performing teams consistently.",
     "forWhom": "Current and emerging leaders.",
     "outcome": "Improved decision-making, better team dynamics, and consistent achievement of KRAs.",
@@ -55,7 +55,7 @@
   },
   {
     "id": "triple-your-business-growth",
-    "title": "Triple your Business Growth by building a World-Class Salesforce",
+    "title": "Triple Your Business Growth by Building a World-Class Salesforce",
     "category": "Sales and Marketing",
     "description": "Our Sales Academy Certification Program designed to fundamentally transform sales capability and execution.",
     "forWhom": "Sales leaders, managers, and sales teams.",
@@ -64,7 +64,7 @@
   },
   {
     "id": "skyrocketing-plant-productivity",
-    "title": "Skyrocketing Plant – Productivity",
+    "title": "Skyrocketing Plant Productivity",
     "category": "Manufacturing Excellence",
     "description": "A revolutionary dashboard-driven program that guarantees enhancement of plant productivity.",
     "forWhom": "Plant heads, operations managers, and manufacturing teams.",

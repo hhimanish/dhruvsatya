@@ -16,12 +16,25 @@ export default function ContactPage() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting) return;
+
+    // Mock rate limiting
+    const lastSubmit = localStorage.getItem("contact_submit_time");
+    if (lastSubmit && Date.now() - parseInt(lastSubmit) < 60000) {
+      setErrorMsg("Please wait a minute before submitting another request.");
+      return;
+    }
+
     setIsSubmitting(true);
+    setErrorMsg("");
+
     // Simulate API call
     setTimeout(() => {
+      localStorage.setItem("contact_submit_time", Date.now().toString());
       setIsSubmitting(false);
       setSubmitted(true);
     }, 1500);
@@ -41,7 +54,7 @@ export default function ContactPage() {
                 Let's talk about what needs to change.
               </h1>
               <p className="text-xl text-gray-300 mb-12 max-w-md leading-relaxed">
-                Whether you're looking to transform your organization's culture, boost leadership capability, or drive operational excellence, we're here to help.
+                Whether you're looking to transform your organisation's culture, boost leadership capability, or drive operational excellence, we're here to help.
               </p>
               
               <div className="space-y-8">
@@ -95,6 +108,12 @@ export default function ContactPage() {
                     Request a Consultation
                   </h3>
                   
+                  {errorMsg && (
+                    <div className="p-4 bg-red-50 text-red-600 rounded-lg text-sm mb-6 border border-red-100" role="alert">
+                      {errorMsg}
+                    </div>
+                  )}
+
                   <div className="space-y-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
@@ -121,7 +140,7 @@ export default function ContactPage() {
                         />
                       </div>
                       <div>
-                        <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">Organization</label>
+                        <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">Organisation</label>
                         <input 
                           type="text" 
                           id="company"
@@ -141,7 +160,7 @@ export default function ContactPage() {
                         onChange={(e) => setFormState({...formState, intent: e.target.value})}
                       >
                         <option value="leadership">Leadership Development</option>
-                        <option value="culture">Organizational Culture</option>
+                        <option value="culture">Organisational Culture</option>
                         <option value="sales">Sales Excellence</option>
                         <option value="institutional">Institutional Transformation</option>
                         <option value="coaching">Executive Coaching</option>

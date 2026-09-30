@@ -22,12 +22,12 @@ export default function MethodPage() {
     {
       title: "Diagnostic Deep Dive",
       desc: "We don't prescribe before we diagnose. We keep our ears to the ground, interacting with your team at all levels to understand the systemic root causes of your challenges, not just the symptoms.",
-      image: "/images/Team deliberation 2.jpg",
+      image: "/images/team-deliberation-2.jpg",
       icon: Microscope
     },
     {
       title: "Strategic Alignment",
-      desc: "Based on our findings, we align the leadership team on a unified vision and the required behavioral shifts needed to achieve it.",
+      desc: "Based on our findings, we align the leadership team on a unified vision and the required behavioural shifts needed to achieve it.",
       image: "/images/DSC_9875.JPG",
       icon: Milestone
     },
@@ -39,8 +39,8 @@ export default function MethodPage() {
     },
     {
       title: "Sustained Execution",
-      desc: "Transformation doesn't happen in a day. We implement robust follow-up mechanisms, coaching frameworks, and execution dashboards to ensure new behaviors become permanent habits.",
-      image: "/images/Team Group.jpg",
+      desc: "Transformation doesn't happen in a day. We implement robust follow-up mechanisms, coaching frameworks, and execution dashboards to ensure new behaviours become permanent habits.",
+      image: "/images/team-group.jpg",
       icon: InfinityIcon
     }
   ];
@@ -76,7 +76,7 @@ export default function MethodPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
-              A proven, four-step methodology to bridge the gap between organizational capability and world-class execution. Scroll down to begin the journey.
+              A proven, four-step methodology to bridge the gap between organisational capability and world-class execution. Scroll down to begin the journey.
             </p>
           </motion.div>
         </div>
@@ -217,7 +217,7 @@ export default function MethodPage() {
       <section className="py-32 bg-brand-foundation text-center px-6 relative overflow-hidden">
         <div className="absolute inset-0 z-0" aria-hidden="true">
           <Image 
-            src="/images/Audiance.jpg"
+            src="/images/audience.jpg"
             alt=""
             fill
             sizes="100vw"
@@ -230,7 +230,7 @@ export default function MethodPage() {
             Ready to experience the method?
           </h2>
           <p className="text-xl text-gray-400 mb-10 font-light">
-            Start a conversation with our experts to diagnose your organizational challenges.
+            Start a conversation with our experts to diagnose your organisational challenges.
           </p>
           <Link
             href="/contact"

@@ -26,9 +26,9 @@ const getIcon = (id: string) => {
 // Category Image Mapping
 const categoryImages: Record<string, string> = {
   "Motivation and Personal Transformation": "/images/DSC_9993.JPG",
-  "Leadership development and Managerial Effectiveness": "/images/founder-portrait1.png",
+  "Leadership Development and Managerial Effectiveness": "/images/founder-portrait1.png",
   "Sales and Marketing": "/images/Conf.jpg",
-  "Manufacturing Excellence": "/images/Group Pic.jpg"
+  "Manufacturing Excellence": "/images/group-pic.jpg"
 };
 
 export function ProgramsClient({ programs }: { programs: any[] }) {
@@ -90,10 +90,10 @@ export function ProgramsClient({ programs }: { programs: any[] }) {
                 {/* Sticky Left Column: Category Image & Title */}
                 <div className="w-full lg:w-5/12">
                   <div className="sticky top-32 space-y-8">
-                    <h2 className="text-sm font-semibold text-brand-accent tracking-widest uppercase flex items-center">
-                      <span className="w-8 h-[2px] bg-brand-accent mr-4" />
+                    <span className="block text-xs font-bold text-gray-400 tracking-widest uppercase flex items-center">
+                      <span className="w-8 h-[2px] bg-gray-400 mr-4" />
                       Domain of Impact
-                    </h2>
+                    </span>
                     <h3 className="text-4xl md:text-5xl font-display font-bold text-brand-foundation leading-tight">
                       {category}
                     </h3>
@@ -181,7 +181,7 @@ export function ProgramsClient({ programs }: { programs: any[] }) {
       <section className="py-32 bg-brand-foundation text-center px-6 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/Audiance.jpg"
+            src="/images/audience.jpg"
             alt="CTA Background"
             fill
             className="object-cover opacity-10 mix-blend-luminosity grayscale"
@@ -192,7 +192,7 @@ export function ProgramsClient({ programs }: { programs: any[] }) {
             Not sure which program is right for you?
           </h2>
           <p className="text-xl text-gray-400 mb-10 font-light">
-            Our experts can help assess your needs and design a custom intervention tailored specifically for your organization's challenges.
+            Our experts can help assess your needs and design a custom intervention tailored specifically for your organisation's challenges.
           </p>
           <Link
             href="/contact"

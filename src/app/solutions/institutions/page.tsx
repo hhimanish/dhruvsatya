@@ -14,14 +14,14 @@ export default function InstitutionsPage() {
       icon: BookOpen,
       title: "Faculty Development",
       desc: "Empowering educators with the methodologies and mindsets needed to inspire students and foster a culture of academic excellence.",
-      image: "/images/Team Con.jpg"
+      image: "/images/team-con.jpg"
     },
     {
       id: "academic-leadership",
       icon: GraduationCap,
       title: "Academic Leadership",
       desc: "Developing Principals, Deans, and HODs to lead with vision, manage complexity, and drive institutional growth.",
-      image: "/images/Group Pic.jpg"
+      image: "/images/group-pic.jpg"
     },
     {
       id: "institutional-excellence",
@@ -40,7 +40,7 @@ export default function InstitutionsPage() {
       <section className="relative pt-40 pb-32 bg-brand-foundation text-white overflow-hidden">
         <div className="absolute inset-0 w-full h-full animate-slow-zoom origin-center z-0">
           <Image 
-            src="/images/Group Pic.jpg"
+            src="/images/group-pic.jpg"
             alt="Educational Institutions Transformation"
             fill
             sizes="100vw"
@@ -127,7 +127,7 @@ export default function InstitutionsPage() {
       <section className="py-32 bg-brand-foundation text-center px-6 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/Audiance.jpg"
+            src="/images/audience.jpg"
             alt="CTA Background"
             fill
             sizes="100vw"

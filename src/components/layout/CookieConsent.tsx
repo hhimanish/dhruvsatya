@@ -10,7 +10,7 @@ export function CookieConsent() {
     // Check if user has already consented
     const hasConsented = localStorage.getItem("ds_cookie_consent");
     if (!hasConsented) {
-      setIsVisible(true);
+      setTimeout(() => setIsVisible(true), 0);
     }
   }, []);
 
@@ -33,7 +33,7 @@ export function CookieConsent() {
             <div className="flex-1">
               <h3 className="text-white font-display font-bold text-lg mb-2">We value your privacy</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                We use strictly necessary cookies to ensure our website functions perfectly. By clicking "Accept", you agree to our use of cookies for analytics and a personalized enterprise experience in accordance with global data governance standards.
+                We use strictly necessary cookies to ensure our website functions perfectly. By clicking &quot;Accept&quot;, you agree to our use of cookies for analytics and a personalized enterprise experience in accordance with global data governance standards.
               </p>
             </div>
             <div className="flex gap-4 flex-shrink-0 w-full md:w-auto">

@@ -42,13 +42,13 @@ export async function POST(req: Request) {
       );
     }
 
-    const systemPrompt = `You are a world-class Organizational Transformation Expert and Diagnostic Analyst for DhruvSatya (a premium organizational consulting firm). 
-Your task is to analyze the provided company inputs (LinkedIn profile insights, website context, and a specific scenario) and perform a comprehensive diagnostic scan across ALL non-technical organizational parameters.
+    const systemPrompt = `You are a world-class Organisational Transformation Expert and Diagnostic Analyst for DhruvSatya (a premium organisational consulting firm). 
+Your task is to analyze the provided company inputs (LinkedIn profile insights, website context, and a specific scenario) and perform a comprehensive diagnostic scan across ALL non-technical organisational parameters.
 
 Consider a wide range of parameters including, but not limited to:
 - Training & Development (T&D)
 - Change Management
-- Organizational Transformation
+- Organisational Transformation
 - Employee Motivation & Bonding
 - Leadership & Executive Coaching
 - Cultural Alignment & Values
@@ -63,7 +63,7 @@ After your comprehensive analysis, you MUST select ONLY the TOP 4 MOST URGENTLY 
 
 Respond ONLY with a valid JSON object using the following exact schema:
 {
-  "executiveSummary": "A high-level 2-3 sentence summary of the organization's current state and critical gaps.",
+  "executiveSummary": "A high-level 2-3 sentence summary of the organisation's current state and critical gaps.",
   "metrics": [
     {
       "category": "<Name of the 1st most urgent parameter (e.g. Leadership Development)>",
@@ -93,7 +93,7 @@ Respond ONLY with a valid JSON object using the following exact schema:
   "strategicAdvantage": "A concluding statement on how addressing these specific top 4 gaps will unlock world-class performance."
 }`;
 
-    const userPrompt = `Please analyze the following organizational context:
+    const userPrompt = `Please analyze the following organisational context:
 LinkedIn/Social Context: ${linkedin || "Not provided"}
 Website/Industry Context: ${website || "Not provided"}
 Specific Scenario/Challenges: ${scenario || "Not provided"}

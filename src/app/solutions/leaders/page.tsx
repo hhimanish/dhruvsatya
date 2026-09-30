@@ -14,14 +14,14 @@ export default function LeadersPage() {
       icon: Mountain,
       title: "Transformational Leadership",
       desc: "Moving beyond transactional management to inspire, challenge, and elevate teams to achieve world-class results.",
-      image: "/images/Team Conference.jpg"
+      image: "/images/team-conference.jpg"
     },
     {
-      id: "coaching",
+      id: "executive-coaching",
       icon: BrainCircuit,
       title: "Executive Coaching",
       desc: "One-on-one interventions for CXOs and senior leaders to break through personal barriers and refine strategic decision-making.",
-      image: "/images/Founder Potrait.jpg"
+      image: "/images/founder-potrait.jpg"
     },
     {
       id: "vmosa",
@@ -82,7 +82,7 @@ export default function LeadersPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="group relative rounded-3xl overflow-hidden flex flex-col hover:-translate-y-4 transition-all duration-500 shadow-2xl h-auto min-h-[450px] md:h-[550px]"
+                className="group relative rounded-3xl overflow-hidden flex flex-col hover:-translate-y-4 transition-all duration-500 shadow-2xl h-auto min-h-[450px] md:h-[550px] scroll-mt-32"
               >
                 {/* Background Image that reveals on hover */}
                 <div className="absolute inset-0 z-0">
@@ -126,7 +126,7 @@ export default function LeadersPage() {
       <section className="py-32 bg-brand-foundation text-center px-6 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/Audiance.jpg"
+            src="/images/audience.jpg"
             alt="CTA Background"
             fill
             sizes="100vw"

@@ -32,6 +32,15 @@ export default function AnalyzerPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (loading) return;
+
+    // Mock rate limiting
+    const lastAnalyze = localStorage.getItem("analyzer_submit_time");
+    if (lastAnalyze && Date.now() - parseInt(lastAnalyze) < 60000) {
+      setError("Please wait a minute before running another diagnostic to prevent rate limits.");
+      return;
+    }
+
     if (!formData.linkedin && !formData.website && !formData.scenario) {
       setError("Please provide at least one input for the AI to analyze.");
       return;
@@ -42,6 +51,7 @@ export default function AnalyzerPage() {
     setReport(null);
 
     try {
+      localStorage.setItem("analyzer_submit_time", Date.now().toString());
       const res = await fetch("/api/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -98,10 +108,10 @@ export default function AnalyzerPage() {
             <span className="text-white/80 text-sm font-medium tracking-wider uppercase">AI Powered</span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-white mb-6">
-            Organizational <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-200">Diagnostics</span>
+            Organisational <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-200">Diagnostics</span>
           </h1>
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto font-light">
-            Instantly analyze your organizational footprint to uncover hidden gaps in training, change management, and team motivation.
+            Instantly analyze your organisational footprint to uncover hidden gaps in training, change management, and team motivation.
           </p>
         </motion.div>
 
