@@ -74,7 +74,7 @@ export function Hero() {
           </div>
         </motion.div>
 
-        <h1 className="text-4xl sm:text-5xl md:text-8xl lg:text-[8rem] font-display font-black leading-[0.9] tracking-tighter mb-10 overflow-hidden">
+        <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[8rem] font-display font-black leading-[0.9] tracking-tighter mb-8 md:mb-10 overflow-hidden flex flex-wrap justify-center">
           {titleWords.map((word, index) => (
             <motion.span
               key={index}
@@ -85,7 +85,7 @@ export function Hero() {
                 delay: index * 0.1,
                 ease: [0.16, 1, 0.3, 1] 
               }}
-              className="inline-block mr-4 md:mr-8 last:mr-0 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500"
+              className="inline-block mr-3 md:mr-8 last:mr-0 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500 pb-2"
             >
               {word}
             </motion.span>
@@ -105,33 +105,33 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto"
+          className="flex flex-col sm:flex-row gap-4 md:gap-6 w-full sm:w-auto px-4 sm:px-0"
         >
           <Link
             href="/contact"
-            className="group relative inline-flex items-center justify-center px-10 py-5 bg-brand-accent text-brand-foundation font-bold text-sm tracking-wider uppercase overflow-hidden"
+            className="group relative inline-flex items-center justify-center px-6 py-4 md:px-10 md:py-5 bg-brand-accent text-brand-foundation font-bold text-xs md:text-sm tracking-wider uppercase overflow-hidden"
           >
             <span className="absolute inset-0 w-full h-full bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-[0.16,1,0.3,1]" />
             <span className="relative flex items-center">
               START A CONVERSATION
-              <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2 md:ml-3 group-hover:translate-x-1 transition-transform" />
             </span>
           </Link>
           <Link
             href="/method"
-            className="group inline-flex items-center justify-center px-10 py-5 bg-transparent border border-white/20 text-white font-bold text-sm tracking-wider uppercase hover:bg-white/5 transition-colors"
+            className="group inline-flex items-center justify-center px-6 py-4 md:px-10 md:py-5 bg-transparent border border-white/20 text-white font-bold text-xs md:text-sm tracking-wider uppercase hover:bg-white/5 transition-colors"
           >
             EXPLORE THE METHOD
           </Link>
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator (Hidden on mobile to prevent dock collision) */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+        className="hidden md:flex absolute bottom-10 left-1/2 transform -translate-x-1/2 flex-col items-center"
       >
         <span className="text-[10px] uppercase tracking-widest text-gray-500 mb-4 rotate-90">Scroll</span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-brand-accent to-transparent" />

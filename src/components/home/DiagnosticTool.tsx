@@ -18,7 +18,7 @@ export function DiagnosticTool() {
   const [selected, setSelected] = useState<string | null>(null);
 
   return (
-    <section className="py-32 bg-brand-foundation text-white border-y border-white/5 relative">
+    <section className="py-20 md:py-32 bg-brand-foundation text-white border-y border-white/5 relative">
       {/* Decorative gradient */}
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-brand-accent/5 to-transparent pointer-events-none" />
       
