@@ -48,7 +48,7 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-[100] transition-all duration-300 ${
         isScrolled
           ? "bg-brand-foundation/95 backdrop-blur-md shadow-lg border-b border-white/5 py-4"
           : "bg-transparent py-6"
@@ -102,7 +102,7 @@ export function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="lg:hidden z-50 text-white"
+          className="lg:hidden z-[100] text-white"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle Menu"
         >
@@ -117,7 +117,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 bg-white z-40 flex flex-col pt-24 px-6 pb-[calc(1.5rem+env(safe-area-inset-bottom))] overflow-y-auto"
+            className="fixed inset-0 bg-white z-[90] flex flex-col pt-24 px-6 pb-[calc(1.5rem+env(safe-area-inset-bottom))] overflow-y-auto"
           >
             <div className="flex flex-col space-y-6">
               {navLinks.map((link) => (

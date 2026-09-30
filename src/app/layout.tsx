@@ -4,6 +4,7 @@ import { CookieConsent } from "@/components/layout/CookieConsent";
 import { WhatsAppWidget } from "@/components/layout/WhatsAppWidget";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { SkipLink } from "@/components/layout/SkipLink";
+import { DockMenu } from "@/components/layout/DockMenu";
 import NextTopLoader from 'nextjs-toploader';
 import "./globals.css";
 
@@ -87,6 +88,7 @@ export default function RootLayout({
           {children}
         </div>
         <CookieConsent />
+        <DockMenu />
         <WhatsAppWidget />
         <BackToTop />
       </body>
