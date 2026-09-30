@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   const staticRoutes = [
-    '', '/about', '/solutions', '/solutions/organizations', '/solutions/leaders',
+    '', '/about', '/solutions', '/solutions/organisations', '/solutions/leaders',
     '/solutions/institutions', '/programs', '/method', '/founder', '/impact',
     '/analyzer', '/insights', '/contact', '/privacy', '/terms', '/sitemap'
   ].map((route) => ({
