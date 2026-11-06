@@ -1,6 +1,8 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/home/Hero";
 import { CredibilityBand } from "@/components/home/CredibilityBand";
+import { FeaturedSolutions } from "@/components/home/FeaturedSolutions";
+import { FeaturedPrograms } from "@/components/home/FeaturedPrograms";
 import { Footer } from "@/components/layout/Footer";
 import dynamic from 'next/dynamic';
 
@@ -42,10 +44,10 @@ export default function Home() {
         </div>
       </section>
 
+      <FeaturedSolutions />
+      <FeaturedPrograms />
       <DiagnosticTool />
       <PhilosophySection />
-      
-      {/* Placeholder for Solutions, Programs, Founder, Impact */}
       
       <Footer />
     </main>

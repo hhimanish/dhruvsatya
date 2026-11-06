@@ -5,150 +5,262 @@ import { Footer } from "@/components/layout/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, TrendingUp, ShieldCheck, Users, Target } from "lucide-react";
+import {
+  ArrowRight,
+  TrendingUp,
+  ShieldCheck,
+  Users,
+  Target,
+  Layers,
+  Sparkles,
+  CheckCircle2,
+  PhoneCall,
+  ArrowUpRight,
+  BarChart3,
+  Building2
+} from "lucide-react";
 
 export default function OrganisationsPage() {
   const offerings = [
     {
       id: "culture",
       icon: Users,
-      title: "Culture & Organisational Development",
-      desc: "Transforming the DNA of your organisation by aligning values, mindsets, and behaviours with your strategic objectives.",
-      image: "/images/team-conference.jpg"
+      title: "Culture Transformation & Mindset Alignment",
+      tagline: "Organisations change when people change. Transformation begins within.",
+      desc: "Transform the invisible operating system of your company. We dismantle disengagement, align collective values with corporate vision, and foster deep psychological ownership across every tier of the workforce.",
+      image: "/images/team-conference.jpg",
+      deliverables: [
+        "Diagnostic Culture & Engagement Audits",
+        "Values Alignment & Leadership Modeling",
+        "Employee Mindset Shift & Resilience Building",
+        "Breaking Interdepartmental Silos & Friction"
+      ],
+      relatedProgram: "Culture & Team Synergy Interventions"
+    },
+    {
+      id: "execution",
+      icon: Target,
+      title: "Execution Excellence & Accountability",
+      tagline: "Drive Strategy into Action. Deliver Results Consistently.",
+      desc: "Most corporate strategies fail not in formulation, but in day-to-day execution. We instill the rigorous operational rhythms, KRA/KPI governance scorecards, and non-negotiable peer accountability required to hit enterprise milestones on schedule.",
+      image: "/images/Meeting1.jpg",
+      deliverables: [
+        "Cascading Corporate OKRs into Daily Sprints",
+        "Weekly Execution Cadence & Bottleneck Removal",
+        "Objective KRA & KPI Tracking Frameworks",
+        "Time Mastery & Deep Work Focus for Teams"
+      ],
+      relatedProgram: "Execution Excellence & Managerial Skill Development"
+    },
+    {
+      id: "managerial",
+      icon: Layers,
+      title: "Managerial Capability Pipeline (MSD)",
+      tagline: "Build Confident Managers. Engaged Teams. Stronger Results.",
+      desc: "Individual contributors promoted to management often burn out due to lack of coaching and delegation skills. Our Managerial Skill Development (MSD) curriculum builds world-class people managers who plan, delegate, coach, and govern performance.",
+      image: "/images/Meeting.jpg",
+      deliverables: [
+        "Transitioning from Doer to Empowering Leader",
+        "The Art of Delegation Without Quality Loss",
+        "Conducting Courageous Performance Reviews",
+        "Giving Feedback that Inspires Continuous Growth"
+      ],
+      relatedProgram: "Managerial Skill Development (MSD)"
     },
     {
       id: "sales",
       icon: TrendingUp,
-      title: "Sales Excellence",
-      desc: "Our flagship 'Triple Your Business Growth' certification program to fundamentally shift sales capability and execution.",
-      image: "/images/Motivate.jpg"
+      title: "Commercial & Sales Acceleration",
+      tagline: "Triple Your Business Growth by Building a World-Class Salesforce.",
+      desc: "Shift your sales organization from transactional commodity pitching into elite consultative advisory. We instill scientific pipeline qualification, diagnostic discovery questioning, value framing, and high-integrity deal closure.",
+      image: "/images/Motivate.jpg",
+      deliverables: [
+        "Consultative Value Selling & Needs Discovery",
+        "Defending Margins & Overcoming Price Resistance",
+        "Win-Win Negotiation Frameworks (BATNA/ZOPA)",
+        "Sales Academy Continuous Capability Certification"
+      ],
+      relatedProgram: "Triple Your Business Growth Sales Academy"
     },
     {
       id: "safety",
       icon: ShieldCheck,
-      title: "Behavioural Safety",
-      desc: "Moving beyond compliance to create a deeply rooted safety culture where safe behaviour is driven by personal commitment.",
-      image: "/images/group-2.jpg"
+      title: "Behaviour Based Safety (BBS) & Zero Harm",
+      tagline: "Safety isn't just a priority; it's our daily behavior.",
+      desc: "Field-tested across India's largest oil refineries, petrochemical terminals, and manufacturing plants (IOCL, HPCL, BPCL). We transform safety from mechanical compliance into voluntary, peer-driven behavioral vigilance to achieve zero incidents.",
+      image: "/images/group-2.jpg",
+      deliverables: [
+        "Observation & Peer Intervention Protocols",
+        "Hazard Spotting & Risk Normalization Elimination",
+        "Supervisor Safety Leadership & Safe Pledges",
+        "Near-Miss Reporting & Positive Reinforcement"
+      ],
+      relatedProgram: "Behaviour Based Safety (BBS)"
     },
     {
-      id: "productivity",
-      icon: Target,
-      title: "Plant Productivity",
-      desc: "A dashboard-driven intervention that guarantees the enhancement of manufacturing plant productivity.",
-      image: "/images/east-b.jpg"
+      id: "compliance",
+      icon: Building2,
+      title: "Workplace Inclusion & Statutory Governance",
+      tagline: "Dignity, Equity, and Zero Tolerance Safeguards.",
+      desc: "Move beyond tick-the-box legal compliance to build an authentic culture of mutual respect. Comprehensive statutory coverage under the POSH Act, specialized IC committee inquiries, and actionable Diversity, Equity & Inclusion (DE&I) practices.",
+      image: "/images/DSC_9993.JPG",
+      deliverables: [
+        "POSH Mandatory Awareness for All Employees",
+        "Specialized Legal Inquiry Clinics for IC Members",
+        "Unconscious Bias & Cross-Generational Synergy",
+        "Psychological Safety & Harassment-Free Protocols"
+      ],
+      relatedProgram: "POSH & DE&I Interventions"
     }
   ];
 
   return (
-    <main className="flex min-h-screen flex-col bg-white">
+    <main className="flex min-h-screen flex-col bg-brand-foundation text-brand-ivory selection:bg-brand-accent selection:text-brand-foundation">
       <Navbar />
-      
+
       {/* Cinematic Hero */}
-      <section className="relative pt-40 pb-32 bg-brand-foundation text-white overflow-hidden">
-        <div className="absolute inset-0 w-full h-full animate-slow-zoom origin-center z-0">
-          <Image 
+      <section className="relative pt-40 pb-32 bg-brand-foundation overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
             src="/images/Meeting.jpg"
-            alt="Organisations Transformation"
+            alt="Enterprise Transformation"
             fill
-            sizes="100vw"
-            quality={60}
-            className="object-cover opacity-30 mix-blend-luminosity"
+            className="object-cover opacity-20 mix-blend-luminosity scale-105"
             priority
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-foundation/90 via-brand-foundation/80 to-brand-foundation z-10" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-foundation via-brand-foundation/70 to-brand-foundation/30 z-0" />
-        
-        <div className="container mx-auto px-6 md:px-12 max-w-5xl text-center relative z-10">
+
+        <div className="container mx-auto px-6 md:px-12 max-w-6xl text-center relative z-20">
           <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8"
+          >
+            <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
+            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-gray-300">
+              Enterprise Capability Solutions
+            </span>
+          </motion.div>
+
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-black tracking-tight leading-[1.05] mb-8"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-8">
-              <span className="inline-block bg-brand-accent text-brand-foundation px-6 py-2 transform -skew-x-6 shadow-[0_0_20px_rgba(252,163,17,0.3)]">
-                For Organisations.
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
-              Organisations don't execute strategies; people do. We help build the culture, capability, and alignment required to turn strategy into sustained execution.
-            </p>
-          </motion.div>
+            Transforming the DNA of <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-amber-200 to-brand-accent">
+              Modern Enterprises.
+            </span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed mb-12"
+          >
+            Organisations don&apos;t execute strategies; people do. We partner with forward-thinking enterprises to build the culture, capability, and execution discipline required for sustainable growth.
+          </motion.p>
+
+          <div className="flex flex-wrap justify-center gap-4 text-xs font-semibold uppercase tracking-wider text-gray-300">
+            <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10">700+ Enterprises Partnered</span>
+            <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10">25+ Industrial Sectors</span>
+            <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10">Kirkpatrick ROI Model</span>
+          </div>
         </div>
       </section>
 
-      {/* Dynamic Offerings - Split Layout */}
-      <section className="py-32 px-6 bg-brand-ivory/30 relative">
-        <div className="absolute inset-0 z-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03]" />
-        
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="text-center mb-24">
-            <h2 className="text-sm font-semibold text-brand-accent tracking-widest uppercase mb-4">
-              Strategic Interventions
+      {/* Offerings Showcase */}
+      <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-brand-foundation via-[#0c121e] to-brand-foundation relative">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-accent mb-3 block">
+              Core Intervention Domains
+            </span>
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+              Strategic Areas of Organizational Impact
             </h2>
-            <h3 className="text-4xl md:text-5xl font-display font-bold text-brand-foundation">
-              Areas of Organisational Impact
-            </h3>
+            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+              Every intervention is engineered to dismantle operational inertia and embed self-sustaining behavioral habits.
+            </p>
           </div>
 
-          <div className="space-y-24">
+          <div className="space-y-16">
             {offerings.map((item, idx) => (
-              <motion.div 
+              <motion.div
                 key={item.id}
                 id={item.id}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8 }}
-                className="flex flex-col lg:flex-row items-center gap-16 group scroll-mt-32"
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className={`flex flex-col ${
+                  idx % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                } gap-12 items-center bg-white/[0.02] border border-white/10 rounded-3xl p-8 md:p-12 hover:border-brand-accent/40 transition-all duration-500`}
               >
-                {/* Image Half */}
-                <div className={`w-full lg:w-1/2 relative h-[350px] md:h-[450px] rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] group cursor-pointer ${idx % 2 !== 0 ? 'lg:order-last' : ''}`}>
-                  <motion.div 
-                    className="absolute inset-0 w-full h-full"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                  >
-                    <Image 
-                      src={item.image}
-                      alt=""
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
-                    />
-                    
-                    {/* Vibrant Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-brand-foundation/40 via-transparent to-brand-accent/20 mix-blend-multiply opacity-70 group-hover:opacity-10 transition-opacity duration-700" />
-                    
-                    {/* Premium Light Shimmer / Sweep Effect */}
-                    <div className="absolute inset-0 -translate-x-[150%] bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:translate-x-[150%] transition-transform duration-[1.5s] ease-in-out transform -skew-x-12" />
-                    
-                    {/* Elegant Glass Border Glow */}
-                    <div className="absolute inset-0 rounded-[2.5rem] border-2 border-white/10 group-hover:border-brand-accent/50 transition-colors duration-500 shadow-[inset_0_0_20px_rgba(255,255,255,0.05)] group-hover:shadow-[inset_0_0_50px_rgba(252,163,17,0.3)] z-20" />
-                  </motion.div>
-                  
-                  {/* Floating Icon Badge with Glassmorphism */}
-                  <div 
-                    className="absolute top-8 left-8 w-20 h-20 bg-white/10 backdrop-blur-xl border border-white/30 rounded-3xl flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.2)] transform -translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 z-30 group-hover:bg-brand-accent/90 group-hover:border-brand-accent"
-                    aria-hidden="true"
-                  >
-                    <item.icon className="w-10 h-10 text-white" />
+                {/* Visual Half */}
+                <div className="w-full lg:w-1/2 relative h-72 sm:h-96 rounded-2xl overflow-hidden group">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-foundation via-brand-foundation/60 to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
+                    <div className="w-12 h-12 rounded-xl bg-brand-accent text-brand-foundation flex items-center justify-center shadow-lg">
+                      <item.icon className="w-6 h-6" />
+                    </div>
+                    <span className="text-xs font-bold uppercase tracking-wider text-white bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
+                      Enterprise Impact
+                    </span>
                   </div>
                 </div>
 
                 {/* Content Half */}
                 <div className="w-full lg:w-1/2">
-                  <h4 className="text-3xl md:text-4xl font-display font-bold text-brand-foundation mb-6 group-hover:text-brand-accent transition-colors duration-300">
+                  <div className="text-xs font-bold uppercase tracking-widest text-brand-accent mb-2">
+                    {item.tagline}
+                  </div>
+                  <h3 className="text-2xl md:text-4xl font-display font-bold text-white mb-4">
                     {item.title}
-                  </h4>
-                  <p className="text-gray-600 text-xl leading-relaxed mb-10 pl-6 border-l-4 border-brand-accent">
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-300 leading-relaxed mb-8">
                     {item.desc}
                   </p>
-                  <Link 
-                    href="/programs" 
-                    className="inline-flex items-center px-8 py-4 bg-brand-foundation text-white font-medium rounded-full hover:bg-brand-accent transition-all duration-300 hover:shadow-lg"
-                  >
-                    VIEW RELATED PROGRAMS <ArrowRight className="w-5 h-5 ml-3" />
-                  </Link>
+
+                  <div className="mb-8">
+                    <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">
+                      Core Framework Deliverables
+                    </div>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {item.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} className="text-xs text-gray-300 flex items-center gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-brand-accent flex-shrink-0" />
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="flex flex-wrap items-center gap-4">
+                    <Link
+                      href="/programs"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-accent text-brand-foundation text-xs font-black uppercase tracking-wider hover:bg-white transition-all shadow-lg"
+                    >
+                      View Related Programs
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold uppercase tracking-wider hover:bg-white/10 transition-all"
+                    >
+                      Inquire for Your Team
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -156,29 +268,32 @@ export default function OrganisationsPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-32 bg-brand-foundation text-center px-6 relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="/images/audience.jpg"
-            alt="CTA Background"
-            fill
-            sizes="100vw"
-            quality={60}
-            className="object-cover opacity-10 mix-blend-luminosity grayscale"
-          />
-        </div>
-        <div className="container mx-auto max-w-3xl relative z-10">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-10">
-            Ready to transform your organisation?
+      {/* Enterprise Consultation CTA */}
+      <section className="py-24 px-6 md:px-12 bg-gradient-to-r from-brand-foundation via-[#161f33] to-brand-foundation border-t border-white/10 text-center">
+        <div className="container mx-auto max-w-4xl">
+          <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-accent mb-4 block">
+            Co-Create Your Capability Roadmap
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-6">
+            Equip Your Organization to Outperform
           </h2>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-10 py-5 bg-brand-accent text-brand-foundation font-bold rounded-full hover:bg-white transition-colors text-lg"
-          >
-            START THE CONVERSATION
-            <ArrowRight className="w-6 h-6 ml-3" />
-          </Link>
+          <p className="text-gray-300 text-base md:text-xl font-light mb-10 max-w-2xl mx-auto">
+            Schedule an executive discovery session to align your corporate objectives with our tailored intervention blueprints.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="w-full sm:w-auto px-8 py-4 bg-brand-accent text-brand-foundation font-display font-black text-sm uppercase tracking-widest rounded-full hover:bg-white hover:text-brand-foundation transition-all shadow-xl shadow-brand-accent/20"
+            >
+              Request Enterprise Consultation
+            </Link>
+            <Link
+              href="/solutions"
+              className="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/20 text-white font-display font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white/10 transition-all"
+            >
+              Explore Other Pathways
+            </Link>
+          </div>
         </div>
       </section>
 

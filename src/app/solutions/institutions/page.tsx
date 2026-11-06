@@ -5,119 +5,209 @@ import { Footer } from "@/components/layout/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, BookOpen, GraduationCap, Library } from "lucide-react";
+import {
+  ArrowRight,
+  BookOpen,
+  GraduationCap,
+  Library,
+  Sparkles,
+  CheckCircle2,
+  ArrowUpRight,
+  Award,
+  Users2,
+  School
+} from "lucide-react";
 
 export default function InstitutionsPage() {
-  const offerings = [
+  const institutionalPillars = [
     {
-      id: "faculty",
+      id: "fdp",
       icon: BookOpen,
-      title: "Faculty Development",
-      desc: "Empowering educators with the methodologies and mindsets needed to inspire students and foster a culture of academic excellence.",
-      image: "/images/team-con.jpg"
+      title: "Faculty Development Programs (FDP)",
+      tagline: "Empower Educators. Transform Classrooms. Inspire Minds.",
+      desc: "The quality of an academic institution cannot exceed the quality of its teachers. Having partnered with over 300+ educational institutions across India, our FDP interventions equip professors and lecturers with modern experiential pedagogies, empathetic student mentorship, and commanding classroom presence.",
+      image: "/images/team-con.jpg",
+      cohort: "Engineering, MBA & Degree College Faculty",
+      deliverables: [
+        "Transitioning from Rote Lectures to Case-Based Engagement",
+        "Empathetic Mentorship for Gen Z Students",
+        "Vocal Dynamics, Body Language & Classroom Poise",
+        "Aligning Research & Pedagogy with NAAC/NBA Standards"
+      ]
     },
     {
-      id: "academic-leadership",
+      id: "leadership",
       icon: GraduationCap,
-      title: "Academic Leadership",
-      desc: "Developing Principals, Deans, and HODs to lead with vision, manage complexity, and drive institutional growth.",
-      image: "/images/group-pic.jpg"
+      title: "Academic Leadership & Governance",
+      tagline: "Visionary Institutional Building for Deans & Principals.",
+      desc: "Designed specifically for educational trustees, directors, principals, and heads of departments (HODs). We help academic administrators transition from bureaucratic firefighting into strategic institution builders who cultivate research excellence and faculty pride.",
+      image: "/images/group-pic.jpg",
+      cohort: "Trustees, Directors, Principals & HODs",
+      deliverables: [
+        "Strategic Roadmapping for Institutional Differentiation",
+        "Breaking Inter-Departmental Academic Silos",
+        "Industry-Academia Strategic Research Partnerships",
+        "Faculty Performance Governance & Talent Retention"
+      ]
     },
     {
-      id: "institutional-excellence",
-      icon: Library,
-      title: "Institutional Excellence",
-      desc: "Systemic interventions designed to align institutional vision with operational realities, improving both culture and outcomes.",
-      image: "/images/Meeting.jpg"
+      id: "employability",
+      icon: Award,
+      title: "Campus-to-Corporate Employability Bootcamps",
+      tagline: "Bridge Academic Theory with High-Stakes Corporate Execution.",
+      desc: "Equipping graduating students with the psychological resilience, interview acumen, and professional polish required to crack competitive corporate recruitment drives and thrive during their first 90 days in enterprise roles.",
+      image: "/images/audience.jpg",
+      cohort: "Final & Pre-Final Year Engineering & MBA Students",
+      deliverables: [
+        "Aptitude, Group Discussion (GD) & Mock HR Interviews",
+        "Executive Business Communication & Corporate Etiquette",
+        "Emotional Resilience & Stress Mastery during Placements",
+        "Problem-Solving Mindset & Professional Ownership"
+      ]
     }
   ];
 
   return (
-    <main className="flex min-h-screen flex-col bg-white">
+    <main className="flex min-h-screen flex-col bg-brand-foundation text-brand-ivory selection:bg-brand-accent selection:text-brand-foundation">
       <Navbar />
-      
+
       {/* Cinematic Hero */}
-      <section className="relative pt-40 pb-32 bg-brand-foundation text-white overflow-hidden">
-        <div className="absolute inset-0 w-full h-full animate-slow-zoom origin-center z-0">
-          <Image 
+      <section className="relative pt-40 pb-32 bg-brand-foundation overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
             src="/images/group-pic.jpg"
             alt="Educational Institutions Transformation"
             fill
-            sizes="100vw"
-            quality={60}
-            className="object-cover opacity-30 mix-blend-luminosity"
+            className="object-cover opacity-20 mix-blend-luminosity scale-105"
             priority
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-foundation/90 via-brand-foundation/80 to-brand-foundation z-10" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-foundation via-brand-foundation/70 to-brand-foundation/30 z-0" />
-        
-        <div className="container mx-auto px-6 md:px-12 max-w-5xl text-center relative z-10">
+
+        <div className="container mx-auto px-6 md:px-12 max-w-6xl text-center relative z-20">
           <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8"
+          >
+            <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
+            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-gray-300">
+              Higher Education & Academic Interventions
+            </span>
+          </motion.div>
+
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-black tracking-tight leading-[1.05] mb-8"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-8">
-              <span className="inline-block bg-brand-accent text-brand-foundation px-6 py-2 transform -skew-x-6 shadow-[0_0_20px_rgba(252,163,17,0.3)]">
-                For Educational Institutions.
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
-              The quality of an educational institution cannot exceed the quality of its educators and leaders. We bring world-class transformation methodologies to the academic sector.
-            </p>
-          </motion.div>
+            Elevating the Standards of <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-amber-200 to-brand-accent">
+              Academic Excellence.
+            </span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed mb-12"
+          >
+            With over 300+ universities, engineering colleges, and business schools transformed across India, we bring world-class corporate capability methodologies to higher education.
+          </motion.p>
+
+          <div className="flex flex-wrap justify-center gap-4 text-xs font-semibold uppercase tracking-wider text-gray-300">
+            <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10">300+ Colleges & Universities</span>
+            <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10">10,000+ Educators Empowered</span>
+            <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10">Campus Placement Acceleration</span>
+          </div>
         </div>
       </section>
 
-      {/* Dynamic Offerings - Split Layout */}
-      <section className="py-32 px-6 bg-brand-ivory/30 relative">
-        <div className="absolute inset-0 z-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03]" />
-        
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="space-y-24">
-            {offerings.map((item, idx) => (
-              <motion.div 
+      {/* Solutions Showcase */}
+      <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-brand-foundation via-[#0c121e] to-brand-foundation relative">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-accent mb-3 block">
+              Academic Intervention Catalog
+            </span>
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+              Empowering Educators & Students Alike
+            </h2>
+            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+              Interventions custom-tailored to improve teaching impact, institutional accreditations, and graduate placement conversion rates.
+            </p>
+          </div>
+
+          <div className="space-y-16">
+            {institutionalPillars.map((item, idx) => (
+              <motion.div
                 key={item.id}
                 id={item.id}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8 }}
-                className="flex flex-col lg:flex-row items-center gap-16 group"
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className={`flex flex-col ${
+                  idx % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                } gap-12 items-center bg-white/[0.02] border border-white/10 rounded-3xl p-8 md:p-12 hover:border-brand-accent/40 transition-all duration-500`}
               >
-                {/* Image Half */}
-                <div className={`w-full lg:w-1/2 relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-2xl ${idx % 2 !== 0 ? 'lg:order-last' : ''}`}>
-                  <Image 
+                {/* Visual Half */}
+                <div className="w-full lg:w-1/2 relative h-72 sm:h-96 rounded-2xl overflow-hidden group">
+                  <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    quality={70}
-                    priority={idx === 0}
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                   />
-                  <div className="absolute inset-0 bg-brand-foundation/20 mix-blend-multiply transition-colors duration-500 group-hover:bg-brand-foundation/10" />
-                  
-                  {/* Floating Icon Badge */}
-                  <div className="absolute top-6 left-6 w-16 h-16 bg-white/90 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-lg transform -translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                    <item.icon className="w-8 h-8 text-brand-accent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-foundation via-brand-foundation/60 to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
+                    <div className="w-12 h-12 rounded-xl bg-brand-accent text-brand-foundation flex items-center justify-center shadow-lg">
+                      <item.icon className="w-6 h-6" />
+                    </div>
+                    <span className="text-xs font-bold uppercase tracking-wider text-white bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
+                      {item.cohort}
+                    </span>
                   </div>
                 </div>
 
                 {/* Content Half */}
                 <div className="w-full lg:w-1/2">
-                  <h4 className="text-3xl md:text-4xl font-display font-bold text-brand-foundation mb-6 group-hover:text-brand-accent transition-colors duration-300">
+                  <div className="text-xs font-bold uppercase tracking-widest text-brand-accent mb-2">
+                    {item.tagline}
+                  </div>
+                  <h3 className="text-2xl md:text-4xl font-display font-bold text-white mb-4">
                     {item.title}
-                  </h4>
-                  <p className="text-gray-600 text-xl leading-relaxed mb-10 pl-6 border-l-4 border-brand-accent">
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-300 leading-relaxed mb-8">
                     {item.desc}
                   </p>
-                  <Link 
-                    href="/programs" 
-                    className="inline-flex items-center px-8 py-4 bg-brand-foundation text-white font-medium rounded-full hover:bg-brand-accent transition-all duration-300 hover:shadow-lg"
-                  >
-                    VIEW RELATED PROGRAMS <ArrowRight className="w-5 h-5 ml-3" />
-                  </Link>
+
+                  <div className="mb-8">
+                    <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">
+                      Core Methodological Deliverables
+                    </div>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {item.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} className="text-xs text-gray-300 flex items-center gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-brand-accent flex-shrink-0" />
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="flex flex-wrap items-center gap-4">
+                    <Link
+                      href={`/contact?institution=${encodeURIComponent(item.title)}`}
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-accent text-brand-foundation text-xs font-black uppercase tracking-wider hover:bg-white transition-all shadow-lg"
+                    >
+                      Book for Your Institution
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -125,29 +215,32 @@ export default function InstitutionsPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-32 bg-brand-foundation text-center px-6 relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="/images/audience.jpg"
-            alt="CTA Background"
-            fill
-            sizes="100vw"
-            quality={60}
-            className="object-cover opacity-10 mix-blend-luminosity grayscale"
-          />
-        </div>
-        <div className="container mx-auto max-w-3xl relative z-10">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-10">
-            Ready to transform your institution?
+      {/* Institutional Partnership CTA */}
+      <section className="py-24 px-6 md:px-12 bg-gradient-to-r from-brand-foundation via-[#161f33] to-brand-foundation border-t border-white/10 text-center">
+        <div className="container mx-auto max-w-4xl">
+          <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-accent mb-4 block">
+            Academic Empowerment
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-6">
+            Partner With India&apos;s Leading Transformation Center
           </h2>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-10 py-5 bg-brand-accent text-brand-foundation font-bold rounded-full hover:bg-white transition-colors text-lg"
-          >
-            START THE CONVERSATION
-            <ArrowRight className="w-6 h-6 ml-3" />
-          </Link>
+          <p className="text-gray-300 text-base md:text-xl font-light mb-10 max-w-2xl mx-auto">
+            Discuss your upcoming academic semester, FDP requirements, or campus placement preparation with our educational leadership team.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="w-full sm:w-auto px-8 py-4 bg-brand-accent text-brand-foundation font-display font-black text-sm uppercase tracking-widest rounded-full hover:bg-white hover:text-brand-foundation transition-all shadow-xl shadow-brand-accent/20"
+            >
+              Inquire for College or University
+            </Link>
+            <Link
+              href="/programs"
+              className="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/20 text-white font-display font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white/10 transition-all"
+            >
+              Browse Complete Interventions
+            </Link>
+          </div>
         </div>
       </section>
 

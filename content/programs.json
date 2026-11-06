@@ -1,74 +1,552 @@
 [
   {
-    "id": "awaken-your-giant-within",
-    "title": "Awaken Your Giant Within",
-    "category": "Motivation and Personal Transformation",
-    "description": "A transformational program designed to help individuals discover their true potential and break through self-imposed boundaries.",
-    "forWhom": "Individuals, executives, and leaders seeking profound personal and professional breakthroughs.",
-    "outcome": "Enhanced self-awareness, elevated confidence, and the mindset required to achieve world-class results.",
-    "format": "Experiential Workshop"
-  },
-  {
-    "id": "achieving-world-class",
-    "title": "Achieving World-Class",
-    "category": "Motivation and Personal Transformation",
-    "description": "A flagship program that challenges participants to raise their standards and adopt the habits of world-class performers.",
-    "forWhom": "High-potential employees, managers, and organizational leaders.",
-    "outcome": "A culture of excellence, improved execution, and sustained high performance.",
-    "format": "Interactive Seminar / Workshop"
-  },
-  {
-    "id": "catch-your-dreams",
-    "title": "Catch Your Dreams – The Goal Setting Workshop",
-    "category": "Motivation and Personal Transformation",
-    "description": "A highly practical workshop focused on defining clear, actionable goals and the strategies to achieve them.",
-    "forWhom": "Anyone looking to align their daily actions with their long-term vision.",
-    "outcome": "Clarity of purpose, actionable blueprints, and renewed motivation.",
-    "format": "Workshop"
+    "id": "leadership-excellence",
+    "title": "Leadership Excellence",
+    "tagline": "Inspire. Influence. Lead with Impact.",
+    "category": "Leadership & Strategic Governance",
+    "duration": "2 Days",
+    "targetAudience": "Senior Executives, Business Unit Heads, Functional Directors & High-Potential Managers",
+    "description": "A transformative immersion designed to shift managerial perspectives into high-impact leadership. Participants cultivate the mindset, emotional intelligence, and strategic presence required to inspire teams, navigate systemic change, and drive lasting organizational performance.",
+    "keyFeatures": [
+      "Leadership Mindset & Self-Awareness: Shift from tactical oversight to visionary empowerment",
+      "Strategic Influence & Trust Architecture: Build authentic followership across matrix structures",
+      "Agile Change Leadership: Lead through volatility, ambiguity, and complex organizational transitions",
+      "Accountability & Ethical Courage: Establish leadership by example and high-standard culture"
+    ],
+    "outcomes": [
+      "Elevated executive presence and high-stakes decision-making confidence",
+      "Significant boost in team engagement, retention, and discretionary effort",
+      "Institutionalization of trust, accountability, and psychological safety"
+    ],
+    "format": "Interactive Executive Workshop / Experiential Simulation / 360 Feedback",
+    "evaluationMetric": "Kirkpatrick Level 3 & 4: Leadership Effectiveness Index & Team Retention"
   },
   {
     "id": "transformational-leadership",
-    "title": "Transformational Leadership",
-    "category": "Leadership Development and Managerial Effectiveness",
-    "description": "Develop leaders who inspire, challenge the status quo, and drive meaningful change within their organizations.",
-    "forWhom": "Senior executives, managers, and team leaders.",
-    "outcome": "Enhanced leadership capability, stronger team alignment, and improved organizational culture.",
-    "format": "Leadership Intervention"
+    "title": "Transformational Leadership Masterclass",
+    "tagline": "Challenge the Status Quo. Drive Systemic Breakthroughs.",
+    "category": "Leadership & Strategic Governance",
+    "duration": "1 - 2 Days",
+    "targetAudience": "C-Suite, Managing Directors, VPs and Business Heads",
+    "description": "Moving decisively beyond transactional management, this masterclass equips senior leaders to articulate compelling futures, dismantle self-limiting paradigms, and orchestrate deep institutional transformation.",
+    "keyFeatures": [
+      "Paradigm Disruption: Uncovering latent institutional blind spots and cognitive biases",
+      "Inspirational Communication: Rallying multi-generational workforces around an audacious purpose",
+      "Empowerment Ecosystems: Cultivating autonomous, high-accountability decision-makers",
+      "Resilient Execution: Balancing long-term transformation with short-term operational targets"
+    ],
+    "outcomes": [
+      "Clear strategic roadmap for enterprise transformation",
+      "Accelerated adoption of innovation and continuous improvement practices",
+      "Stronger bench strength for succession planning"
+    ],
+    "format": "Strategic Intervention / Case Analysis / Executive Retreat",
+    "evaluationMetric": "Kirkpatrick Level 4: Enterprise Strategy Alignment & Transformation Velocity"
   },
   {
-    "id": "vmosa-workshop",
-    "title": "The VMOSA Workshop",
-    "category": "Leadership Development and Managerial Effectiveness",
-    "description": "A strategic workshop covering Vision, Mission, Objectives, Strategies, and Action Plan to align organizational direction.",
-    "forWhom": "Leadership teams and organizational heads.",
-    "outcome": "A unified strategic direction and a clear roadmap for execution.",
-    "format": "Strategic Workshop"
+    "id": "vmosa-framework-workshop",
+    "title": "The VMOSA Strategic Framework",
+    "tagline": "Vision, Mission, Objectives, Strategies, and Action Plans.",
+    "category": "Leadership & Strategic Governance",
+    "duration": "1 - 2 Days",
+    "targetAudience": "Board Members, Executive Committees, Division Heads, and Strategy Teams",
+    "description": "A rigorous, hands-on strategic retreat where executive teams align completely on organizational North Stars. Through structured workshops, teams turn abstract visions into quantifiable objectives and cascading, accountable execution roadmaps.",
+    "keyFeatures": [
+      "Vision & Mission Articulation: Defining what truly matters and why the organization exists",
+      "Quantifiable Objective Setting: Establishing balanced scorecards and stretch milestones",
+      "Strategy Formulation: Crafting competitive differentiation and resource allocation models",
+      "Action Planning Matrix: Establishing cross-functional ownership and milestone reviews"
+    ],
+    "outcomes": [
+      "Unified executive vision eliminating conflicting priorities",
+      "Granular, time-bound execution blueprint for all functional departments",
+      "Clear governance mechanism for monthly and quarterly strategic tracking"
+    ],
+    "format": "Strategic Facilitation Workshop / War-Room Planning",
+    "evaluationMetric": "Kirkpatrick Level 4: Strategic Goal Realization & Cross-Functional Alignment"
   },
   {
-    "id": "high-performance-leadership",
-    "title": "High Performance Leadership",
-    "category": "Leadership Development and Managerial Effectiveness",
-    "description": "Focuses on the behaviors and mindsets necessary to lead high-performing teams consistently.",
-    "forWhom": "Current and emerging leaders.",
-    "outcome": "Improved decision-making, better team dynamics, and consistent achievement of KRAs.",
-    "format": "Leadership Program"
+    "id": "executive-coaching-advisory",
+    "title": "Executive Coaching & CXO Breakthroughs",
+    "tagline": "Personalized 1-on-1 Transformation for High-Impact Leaders.",
+    "category": "Leadership & Strategic Governance",
+    "duration": "6 - 12 Month Engagement",
+    "targetAudience": "Founders, CEOs, Managing Directors, and Enterprise CXOs",
+    "description": "High-confidentiality, bespoke advisory and coaching led directly by Soumitra Chatterjee. Focuses on resolving executive isolation, sharpening decision intelligence, navigating high-stakes negotiations, and mastering inner resilience.",
+    "keyFeatures": [
+      "Inner Equilibrium & Stress De-escalation: Staying calm and decisive under extreme pressure",
+      "Strategic Blind Spot Diagnosis: Overcoming cognitive and emotional bottlenecks",
+      "Boardroom Communication & Stakeholder Diplomacy: Building consensus across complex ecosystems",
+      "Legacy & Purpose Integration: Aligning personal values with corporate impact"
+    ],
+    "outcomes": [
+      "Unflappable clarity in high-consequence decision making",
+      "Substantial elevation in leadership stamina, focus, and life balance",
+      "Superior stakeholder alignment across boards, investors, and leadership teams"
+    ],
+    "format": "Confidential 1-on-1 Sessions / Shadowing / Strategic Deep Dives",
+    "evaluationMetric": "Kirkpatrick Level 3 & 4: Executive 360-Review & Organizational Stability"
   },
   {
-    "id": "triple-your-business-growth",
-    "title": "Triple Your Business Growth by Building a World-Class Salesforce",
-    "category": "Sales and Marketing",
-    "description": "Our Sales Academy Certification Program designed to fundamentally transform sales capability and execution.",
-    "forWhom": "Sales leaders, managers, and sales teams.",
-    "outcome": "Significant revenue growth, improved conversion rates, and a high-performance sales culture.",
-    "format": "Certification Program"
+    "id": "execution-excellence",
+    "title": "Execution Excellence",
+    "tagline": "Drive Strategy into Action. Deliver Results Consistently.",
+    "category": "Execution, Management & Team Synergy",
+    "duration": "1 Day",
+    "targetAudience": "Operations Heads, Project Managers, Department Leads, and Execution Teams",
+    "description": "Strategy without execution is merely wishful thinking. This intervention installs the operational discipline, cadences, and radical accountability required to turn corporate strategic intent into tangible bottom-line results.",
+    "keyFeatures": [
+      "Strategy-to-Action Translation: Breaking macro goals into daily sprint priorities",
+      "Radical Accountability Cadence: Establishing non-negotiable review and milestone tracking",
+      "Bottleneck Demolition: Identifying and eliminating operational friction points in real-time",
+      "Execution Mindset: Cultivating a relentless finish-line orientation across the workforce"
+    ],
+    "outcomes": [
+      "30-40% reduction in project delivery slippage and timeline overruns",
+      "Heightened team responsiveness and proactive escalation of roadblocks",
+      "Predictable, repeatable achievement of organizational targets"
+    ],
+    "format": "Interactive Workshop / Rapid Problem-Solving Exercises / Implementation Toolkit",
+    "evaluationMetric": "Kirkpatrick Level 3 & 4: Target Realization Rate & Project Turnaround Time"
+  },
+  {
+    "id": "managerial-skill-development",
+    "title": "Managerial Skill Development (MSD)",
+    "tagline": "Build Core Managerial Competencies to Lead Teams Effectively.",
+    "category": "Execution, Management & Team Synergy",
+    "duration": "1 - 2 Days",
+    "targetAudience": "Mid-Level Managers, Newly Promoted People Managers, and Team Leads",
+    "description": "Great individual contributors often struggle when transitioning to managing people. MSD bridges this critical gap by instilling the 4 core pillars of managerial capability: Planning, Delegating, Coaching, and Performance Management.",
+    "keyFeatures": [
+      "Planning & Prioritization: Setting clear SMART targets and organizing team workflow",
+      "The Art of Delegation: Empowering subordinates while maintaining quality control",
+      "Developmental Coaching: Transitioning from 'telling' to 'inquiry-based coaching'",
+      "Performance Governance: Conducting constructive performance dialogues and managing capability gaps"
+    ],
+    "outcomes": [
+      "Seamless transition from individual performer to empowering manager",
+      "Noticeable reduction in managerial burnout through effective task delegation",
+      "Consistent team productivity gains and higher team morale"
+    ],
+    "format": "Classroom Workshop / Role-Play Simulations / Real-World Managerial Toolkits",
+    "evaluationMetric": "Kirkpatrick Level 2 & 3: Competency Assessment & Managerial Effectiveness Score"
+  },
+  {
+    "id": "breaking-silos",
+    "title": "Breaking Silos & Cross-Functional Synergy",
+    "tagline": "Collaborate Across Boundaries. Achieve More Together.",
+    "category": "Execution, Management & Team Synergy",
+    "duration": "1 Day",
+    "targetAudience": "Inter-departmental Teams, Plant vs. Corporate, Sales vs. Supply Chain, IT vs. Business",
+    "description": "Departmental silos bleed profitability and poison culture. This high-impact intervention breaks down territorial barriers, fosters mutual empathy, and establishes collaborative protocols that align conflicting functions toward shared organizational success.",
+    "keyFeatures": [
+      "Empathy Mapping & Interdepartmental Audits: Understanding upstream and downstream pain points",
+      "Cross-Functional SLA Contracts: Establishing clear service-level agreements between internal teams",
+      "Collective Problem Solving: Tackling live enterprise challenges with mixed-function task forces",
+      "Shared Scorecards: Tying departmental performance to unified corporate milestones"
+    ],
+    "outcomes": [
+      "Eradication of finger-pointing and defensive departmental posturing",
+      "Accelerated interdepartmental communication and cycle times",
+      "Substantial cost savings and operational synergies across value streams"
+    ],
+    "format": "Experiential Workshop / Cross-Functional Working Labs / Joint Action Planning",
+    "evaluationMetric": "Kirkpatrick Level 3 & 4: Inter-Departmental Net Promoter Score (NPS) & Cross-Flow Velocity"
+  },
+  {
+    "id": "building-champion-teams",
+    "title": "Building Champion Teams",
+    "tagline": "Build High-Performing Teams that Outperform Together.",
+    "category": "Execution, Management & Team Synergy",
+    "duration": "1 Day",
+    "targetAudience": "Intact Teams, Cross-Functional Project Teams, and Emerging Business Units",
+    "description": "High performance does not happen by accident; it is engineered through psychological safety, shared purpose, and peer accountability. This experiential program galvanizes teams to transition from disjointed groups into unified champion units.",
+    "keyFeatures": [
+      "Psychological Safety Architecture: Creating spaces for honest debate and creative risk",
+      "Shared Purpose & Identity: Defining the team's non-negotiable charter and identity",
+      "Peer-to-Peer Accountability: Fostering mutual responsibility without managerial policing",
+      "Synergistic Problem Solving: Harnessing cognitive diversity to out-innovate competitors"
+    ],
+    "outcomes": [
+      "Deepened interpersonal trust and genuine team cohesion",
+      "Higher resilience during stressful sprints and organizational disruptions",
+      "Quantifiable leaps in group output and collective goal attainment"
+    ],
+    "format": "Immersive Experiential Labs / Team Challenges / Collective Action Blueprints",
+    "evaluationMetric": "Kirkpatrick Level 3: Team Cohesion Index & Collective Target Achievement"
+  },
+  {
+    "id": "kra-kpi-setting-governance",
+    "title": "KRA & KPI Architecture & Governance",
+    "tagline": "Measure What Matters. Track What You Measure.",
+    "category": "Execution, Management & Team Synergy",
+    "duration": "1 Day (or two Half-Day modules)",
+    "targetAudience": "Business Heads, HR Leaders, Department Managers, and Supervisors",
+    "description": "Unclear Key Result Areas (KRAs) and ambiguous KPIs lead to misdirected effort and frustration. This practical intervention trains leaders to structure meaningful leading and lagging metrics, set objective benchmarks, and implement a living governance cadence.",
+    "keyFeatures": [
+      "Role Clarity & KRA Definition: Establishing unambiguous boundaries and success definitions",
+      "Leading vs. Lagging Indicators: Designing predictive KPIs rather than post-mortem reports",
+      "Cascading Metrics: Harmonizing executive scorecards down to the frontline worker",
+      "Performance Governance Rhythm: Establishing agile weekly and monthly review dashboards"
+    ],
+    "outcomes": [
+      "100% role clarity across all participating functions",
+      "Elimination of subjective performance reviews in favor of transparent data",
+      "Direct linkage between individual daily output and company revenue/profitability"
+    ],
+    "format": "Technical Workshop / Metric Blueprinting / Hands-On Scorecard Drafting",
+    "evaluationMetric": "Kirkpatrick Level 3 & 4: Performance Review Accuracy & KPI Achievement Index"
+  },
+  {
+    "id": "time-management-deep-focus",
+    "title": "Time Mastery & Deep Work Focus",
+    "tagline": "Manage Time Better. Achieve More. Reduce Stress.",
+    "category": "Execution, Management & Team Synergy",
+    "duration": "1 Day",
+    "targetAudience": "Executives, Knowledge Workers, Team Leads, and Project Managers",
+    "description": "In an era of hyper-connectivity and cognitive fragmentation, the ability to manage attention is the ultimate competitive advantage. This workshop equips professionals with battle-tested frameworks to conquer distraction, prioritize ruthlessly, and execute high-value work.",
+    "keyFeatures": [
+      "Eisenhower Matrix & Pareto Focus: Distinguishing between the urgent and the truly impactful",
+      "Deep Work Protocols: Structuring distraction-free focus blocks for complex problem solving",
+      "Energy & Cognitive Rhythms: Aligning high-focus tasks with peak biological performance",
+      "Boundary Setting & Meeting Hygiene: Slashing wasteful meetings and email fatigue"
+    ],
+    "outcomes": [
+      "2-3 productive hours reclaimed per employee every single day",
+      "Substantial reduction in workplace overwhelm and cognitive fatigue",
+      "Higher quality output delivered with shorter turnaround windows"
+    ],
+    "format": "Interactive Workshop / Digital Habit Audits / Personal Productivity Architecture",
+    "evaluationMetric": "Kirkpatrick Level 2 & 3: Productivity Self-Efficacy & Task Completion Velocity"
+  },
+  {
+    "id": "triple-your-business-growth-sales-academy",
+    "title": "Triple Your Business Growth – Sales Academy",
+    "tagline": "Master the Art of Selling. Create Value. Close More Deals.",
+    "category": "Sales, Commercial & Retail Transformation",
+    "duration": "2 - 3 Days (Certification Program)",
+    "targetAudience": "Sales Directors, B2B Account Managers, Business Development Executives, and Sales Teams",
+    "description": "Dhruvsatya's flagship commercial transformation academy. Moves sales teams away from commodity push-selling into elite consultative value creation. Participants master the end-to-end psychology of prospecting, diagnostic questioning, objection neutralization, and confident deal closing.",
+    "keyFeatures": [
+      "High-Conversion Prospecting: Pipeline qualification and ICP (Ideal Customer Profile) targeting",
+      "Diagnostic Needs Discovery: Asking high-yield questions that uncover hidden corporate pain",
+      "Value Framing vs. Price Haggling: Positioning solutions as indispensable ROI investments",
+      "Objection De-escalation & Closing: Overcoming skepticism and sealing commitments with integrity"
+    ],
+    "outcomes": [
+      "25-45% increase in pipeline conversion velocity and win rates",
+      "Preservation of gross margins by eliminating panic discounting",
+      "Institutionalization of a high-energy, proactive commercial culture"
+    ],
+    "format": "Intensive Sales Bootcamp / Live Deal Simulation / Role-Play Objections / Certification",
+    "evaluationMetric": "Kirkpatrick Level 4: Revenue Growth, Win Rates & Average Deal Size"
+  },
+  {
+    "id": "negotiation-skills-win-win",
+    "title": "Strategic Negotiation Skills",
+    "tagline": "Negotiate with Confidence. Create Win-Win Outcomes.",
+    "category": "Sales, Commercial & Retail Transformation",
+    "duration": "1 Day",
+    "targetAudience": "Procurement Specialists, Sales Professionals, Contract Negotiators, and Business Heads",
+    "description": "Negotiation is not warfare; it is the art of mutual value expansion. This program deconstructs high-stakes negotiation psychology, helping professionals anchor effectively, defend margins, identify non-monetary trade-offs, and cultivate enduring commercial partnerships.",
+    "keyFeatures": [
+      "BATNA & ZOPA Architecture: Scientific preparation before entering the negotiation room",
+      "Tactical Empathy & Concession Strategy: Preserving value without burning relationships",
+      "Managing Hardball Tactics: Countering intimidation, artificial deadlines, and ultimatums",
+      "Contract Closure & Relationship Safeguarding: Sealing agreements that stick without post-deal friction"
+    ],
+    "outcomes": [
+      "Significant margin protection in high-stakes vendor and customer discussions",
+      "Confidence to engage with aggressive negotiators without conceding core terms",
+      "Long-term relationship retention and win-win supplier/client partnerships"
+    ],
+    "format": "Interactive Workshop / Live Bilateral Negotiations / Video Debriefing",
+    "evaluationMetric": "Kirkpatrick Level 3 & 4: Commercial Contract Margin Improvement"
+  },
+  {
+    "id": "lpg-distributor-retail-excellence",
+    "title": "LPG Retail & Distributor Excellence Program",
+    "tagline": "Skilled People. Safe Operations. Satisfied Customers. Sustainable Growth.",
+    "category": "Sales, Commercial & Retail Transformation",
+    "duration": "1 - 2 Days (Modular)",
+    "targetAudience": "LPG Distributors, Showroom Managers, Field Staff, and Retail Network Operators",
+    "description": "A field-tested, comprehensive capability intervention developed in deep partnership with India's leading energy corporations (IOCL, HPCL). Tailored specifically for the unique operational, safety, customer service, and commercial dynamics of LPG retail distribution.",
+    "keyFeatures": [
+      "LPG Distributor Business Mastery: Profitability optimization, stock management, and local area marketing",
+      "Showroom Manager Excellence: Counter operations, digital billing, customer onboarding, and grievance handling",
+      "Delivery Workforce Professionalism: Frontline customer courtesy, home safety inspection, and delivery etiquette",
+      "SHE Compliance in Retail: Cylinder handling, godown safety protocols, and emergency response"
+    ],
+    "outcomes": [
+      "Dramatic enhancement in customer CSAT and distributor turnaround times",
+      "Zero-defect cylinder handling and exemplary safety record across distributor godowns",
+      "Measurable increase in commercial non-fuel sales and ancillary revenues"
+    ],
+    "format": "Classroom & On-the-Job Blended Learning / Field Demonstration / Vernacular Modules",
+    "evaluationMetric": "Kirkpatrick Level 3 & 4: Distributor Audit Scores, Customer CSAT, Safety Zero-Incident Rate"
+  },
+  {
+    "id": "customer-service-excellence-retail",
+    "title": "Customer Service Excellence in Retail & Forecourts",
+    "tagline": "Turn Every Customer Interaction into a Brand Advantage.",
+    "category": "Sales, Commercial & Retail Transformation",
+    "duration": "1 Day",
+    "targetAudience": "Retail Store Associates, Customer Care Representatives, Frontline Service Staff",
+    "description": "Exceptional customer experience is the only durable moat in retail. This highly energetic workshop instills pride, empathy, active listening, and service recovery habits in frontline personnel, ensuring customers feel genuinely valued and loyal.",
+    "keyFeatures": [
+      "The Customer-Centric Mindset: Recognizing the lifetime value of every customer visit",
+      "Verbal & Non-Verbal Polish: Welcoming posture, eye contact, respectful tone, and attentiveness",
+      "Service Recovery Framework (LAST): Listen, Apologize, Solve, Thank during service failures",
+      "Customer Retention & Advocacy: Creating memorable micro-moments that drive repeat footfall"
+    ],
+    "outcomes": [
+      "Marked improvement in Mystery Shopping audit scores and Google/NPS ratings",
+      "Prompt, de-escalated resolution of customer complaints on the frontlines",
+      "Elevated employee pride and reduced attrition among frontline customer-facing staff"
+    ],
+    "format": "Interactive Workshop / Service Simulation Exercises / Scripted Role-Plays",
+    "evaluationMetric": "Kirkpatrick Level 3 & 4: Retail NPS & Repeat Customer Transaction Rate"
+  },
+  {
+    "id": "behaviour-based-safety-bbs",
+    "title": "Behaviour Based Safety (BBS) & Zero Harm",
+    "tagline": "Safety Isn't Just a Priority; It's Our Behaviour.",
+    "category": "Behavior-Based Safety (BBS) & Operations",
+    "duration": "1 - 2 Days",
+    "targetAudience": "Plant Heads, Safety Officers, Supervisors, Factory Workers, Logistics & Fleet Crews",
+    "description": "Most industrial accidents are caused not by mechanical failures, but by human behaviour. Dhruvsatya's acclaimed BBS intervention instills a psychological culture of proactive care, vigilant hazard awareness, and peer intervention, driving industrial plants toward genuine Zero Harm.",
+    "keyFeatures": [
+      "Human Factor in Safety: Understanding subconscious risk normalization and complacency",
+      "Hazard Spotting & Risk Assessment: Training the eye to catch latent safety threats immediately",
+      "The Observation & Peer-Intervention Cycle: Empowering any worker to safely pause unsafe acts without fear",
+      "Positive Reinforcement Architecture: Rewarding proactive safety reporting and continuous compliance"
+    ],
+    "outcomes": [
+      "Dramatic reduction in near-misses, First Aid Cases (FAC), and Lost Time Injuries (LTI)",
+      "Evolution from policing safety to voluntary, peer-driven safety ownership",
+      "Exemplary safety audit compliance across oil refineries, plants, and manufacturing sites"
+    ],
+    "format": "Experiential Workshop / Shopfloor Walkthroughs / Behavioral Simulation / Safety Pledges",
+    "evaluationMetric": "Kirkpatrick Level 4: Incident Rate Reduction, Near-Miss Reporting Velocity, Zero Harm Compliance"
   },
   {
     "id": "skyrocketing-plant-productivity",
     "title": "Skyrocketing Plant Productivity",
-    "category": "Manufacturing Excellence",
-    "description": "A revolutionary dashboard-driven program that guarantees enhancement of plant productivity.",
-    "forWhom": "Plant heads, operations managers, and manufacturing teams.",
-    "outcome": "Guaranteed enhancement of plant productivity and operational efficiency.",
-    "format": "Consulting and Training Intervention"
+    "tagline": "Eliminate Operational Waste. Maximize Output per Machine-Hour.",
+    "category": "Behavior-Based Safety (BBS) & Operations",
+    "duration": "Multi-Week Consulting & Workshop Intervention",
+    "targetAudience": "Plant Directors, Manufacturing Heads, Maintenance Engineers, and Shopfloor Supervisors",
+    "description": "A dashboard-driven industrial intervention that directly targets Overall Equipment Effectiveness (OEE), throughput bottlenecks, changeover delays, and shopfloor disengagement to unlock guaranteed productivity gains.",
+    "keyFeatures": [
+      "Shopfloor Diagnostic Audits: Uncovering the 7 Deadly Wastes (Muda, Muri, Mura)",
+      "Daily Work Management (DWM): Instilling 15-minute morning standups and rapid visual controls",
+      "OEE Acceleration: Minimizing micro-stoppages and streamlining changeover procedures",
+      "Operator Capability Building: Fostering autonomous maintenance and frontline problem-solving"
+    ],
+    "outcomes": [
+      "Guaranteed 15-25% elevation in shopfloor throughput without capital expenditure",
+      "Substantial drop in machine downtime and rejection rates",
+      "Empowered shopfloor supervisors running self-sustaining daily improvement cycles"
+    ],
+    "format": "Shopfloor Consulting / Gemba Walks / Data-Driven Dashboards / Technical Modules",
+    "evaluationMetric": "Kirkpatrick Level 4: OEE Percentage Increase & Manufacturing Cost per Unit"
+  },
+  {
+    "id": "diversity-and-inclusion-culture",
+    "title": "Diversity, Equity & Inclusion (DE&I)",
+    "tagline": "Build an Inclusive Culture Where Everyone Belongs and Thrives.",
+    "category": "Workplace Culture, Communication & Wellness",
+    "duration": "Half Day / 1 Day",
+    "targetAudience": "All Employees, People Managers, Talent Acquisition Teams, and HR Leaders",
+    "description": "Diversity is having a seat at the table; inclusion is having a voice; equity is having that voice heard and valued. This program dismantles unconscious biases, fosters deep mutual respect, and equips managers to lead diverse, innovative teams.",
+    "keyFeatures": [
+      "Unconscious Bias Deconstruction: Unveiling hidden cognitive stereotypes and assumptions",
+      "Inclusive Leadership Behaviors: Creating an environment where every voice is invited to contribute",
+      "Cross-Generational Synergy: Bridging perspectives across Gen Z, Millennials, and Veteran leaders",
+      "Equitable Talent Practices: Ensuring fair opportunity, psychological safety, and equal respect"
+    ],
+    "outcomes": [
+      "Strengthened employee sense of belonging and heightened cross-demographic collaboration",
+      "Increased innovation stemming from safe diversity of thought and constructive friction",
+      "Reputational enhancement as a progressive, modern employer of choice"
+    ],
+    "format": "Interactive Workshop / Empathy Exercises / Scenario-Based Case Studies",
+    "evaluationMetric": "Kirkpatrick Level 2 & 3: Inclusion Climate Survey & Retention Parity"
+  },
+  {
+    "id": "posh-compliance-safe-workplace",
+    "title": "POSH (Prevention of Sexual Harassment) Mastery",
+    "tagline": "Create a Safe, Respectful, and Legally Compliant Workplace.",
+    "category": "Workplace Culture, Communication & Wellness",
+    "duration": "2 - 4 Hours (Awareness & IC Member Specialized Training)",
+    "targetAudience": "Mandatory for All Employees; Specialized Cohorts for Internal Committee (IC) Members",
+    "description": "Essential legal compliance coupled with profound cultural sensitivity. Beyond ticking regulatory boxes under the POSH Act, this program establishes a zero-tolerance ethos of dignity, mutual respect, and transparent grievance resolution.",
+    "keyFeatures": [
+      "Legal Framework & Definitions: Clear understanding of quid pro quo and hostile work environment",
+      "Behavioral Boundaries & Nuances: Distinguishing friendly interactions from inappropriate conduct",
+      "The Internal Committee (IC) Masterclass: Inquiry protocols, conciliation, natural justice, and report writing",
+      "Zero-Tolerance Safeguarding: Fostering employee trust and bystander intervention"
+    ],
+    "outcomes": [
+      "100% statutory compliance with government and organizational POSH mandates",
+      "Empowered employees with total clarity on reporting channels and protective measures",
+      "Thoroughly trained Internal Committee capable of conducting fair, legally sound inquiries"
+    ],
+    "format": "Interactive Awareness Session / Case Studies / IC Legal Clinic",
+    "evaluationMetric": "Kirkpatrick Level 1 & 2: Compliance Certification & Employee Workplace Safety Index"
+  },
+  {
+    "id": "high-impact-business-communication",
+    "title": "High-Impact Business Communication",
+    "tagline": "Communicate Clearly. Confidently. Professionally.",
+    "category": "Workplace Culture, Communication & Wellness",
+    "duration": "1 Day",
+    "targetAudience": "Executives, Analysts, Client-Facing Professionals, and Cross-Functional Teams",
+    "description": "Poor communication costs organizations millions in rework and lost trust. This practical, drill-based intervention sharpens executive clarity, professional email etiquette, assertive verbal expression, and disciplined active listening.",
+    "keyFeatures": [
+      "Pyramid Principle of Communication: Structuring ideas top-down for rapid executive comprehension",
+      "Professional Email & Digital Etiquette: Crafting crisp, actionable correspondence that gets read",
+      "Assertive vs. Aggressive Communication: Articulating firm positions while upholding professional respect",
+      "Active Listening & Reflective Inquiry: Eliminating misinterpretation before errors occur"
+    ],
+    "outcomes": [
+      "Marked reduction in cross-departmental miscommunications and email back-and-forth",
+      "Clear, professional client representation across verbal and written touchpoints",
+      "Faster consensus-building in internal and external business meetings"
+    ],
+    "format": "Workshop / Writing Clinics / Audio-Visual Feedback Drills",
+    "evaluationMetric": "Kirkpatrick Level 2 & 3: Communication Competency Index & Internal Stakeholder Feedback"
+  },
+  {
+    "id": "executive-presentation-storytelling",
+    "title": "Executive Presentation & Storytelling",
+    "tagline": "Present Ideas that Inspire, Influence, and Engage.",
+    "category": "Workplace Culture, Communication & Wellness",
+    "duration": "1 Day",
+    "targetAudience": "Managers, Business Development Leads, Project Directors, and Emerging Leaders",
+    "description": "Transform dry data and bullet points into compelling narratives that captivate boardroom audiences and spur decisive action. Participants overcome stage anxiety, master stage presence, and learn the architectural science of visual persuasion.",
+    "keyFeatures": [
+      "Overcoming Stage Anxiety: Somatic grounding and vocal warmups for unflappable poise",
+      "Narrative Architecture: Crafting hooks, tension arcs, and decisive calls-to-action",
+      "Visual Slide Discipline: Designing slides that amplify the speaker rather than distracting from them",
+      "Q&A Mastery: Handling difficult questions and hostile inquiries with calm authority"
+    ],
+    "outcomes": [
+      "Dramatic boost in executive poise, vocal projection, and audience command",
+      "Higher approval rates for business cases, project pitches, and investment proposals",
+      "Elimination of 'death by PowerPoint' across organizational presentations"
+    ],
+    "format": "Classroom Workshop / Recorded Presentations / Personalized Coaching & Video Review",
+    "evaluationMetric": "Kirkpatrick Level 2 & 3: Presentation Effectiveness Score & Stakeholder Engagement"
+  },
+  {
+    "id": "conflict-resolution-difficult-conversations",
+    "title": "Constructive Conflict Resolution & Feedback",
+    "tagline": "Resolve Friction. Give Feedback that Inspires Growth.",
+    "category": "Workplace Culture, Communication & Wellness",
+    "duration": "Half Day to 1 Day",
+    "targetAudience": "People Managers, Project Leads, HR Professionals, and Team Members",
+    "description": "Conflict is inevitable; destructive conflict is a choice. This workshop teaches professionals how to lean into difficult conversations without defensiveness, separate people from problems, and deliver candid developmental feedback that builds trust.",
+    "keyFeatures": [
+      "Conflict Resolution Styles (Thomas-Kilmann Model): Choosing when to collaborate, compromise, or hold firm",
+      "Separating Emotion from Objective Facts: The SBI (Situation-Behavior-Impact) feedback model",
+      "Depersonalizing Heated Arguments: Reframing disputes as shared puzzles to be solved together",
+      "The Art of Receiving Feedback: Overcoming defensiveness and leveraging critique for rapid personal growth"
+    ],
+    "outcomes": [
+      "Substantial drop in unresolved workplace friction and passive-aggressive office politics",
+      "Managers holding timely, courageous feedback dialogues rather than postponing reviews",
+      "A culture of open, transparent feedback and psychological safety"
+    ],
+    "format": "Interactive Workshop / Live Conflict Simulation / Feedback Triads",
+    "evaluationMetric": "Kirkpatrick Level 3: Interpersonal Harmony Score & Feedback Frequency Velocity"
+  },
+  {
+    "id": "employee-wellness-stress-resilience",
+    "title": "Holistic Employee Wellness & Stress Resilience",
+    "tagline": "Manage Stress Effectively. Build Emotional Stamina.",
+    "category": "Workplace Culture, Communication & Wellness",
+    "duration": "Half Day / 1 Day",
+    "targetAudience": "All Corporate Employees, High-Stress Technical Teams, and Customer-Facing Crews",
+    "description": "A grounded, scientifically sound wellness intervention focused on mental clarity, physiological energy management, and emotional stamina. Employees build actionable toolkits to prevent burnout and sustain high performance over decades.",
+    "keyFeatures": [
+      "The Biology of Stress: Recognizing the difference between productive arousal and chronic burnout",
+      "Cognitive Reframing Techniques: Overcoming catastrophic thinking and mental rumination",
+      "Micro-Recovery Practices: Incorporating 2-minute breathwork and mindfulness resets into the workday",
+      "Work-Life Integration: Setting healthy boundaries to preserve personal renewal and family well-being"
+    ],
+    "outcomes": [
+      "Significant decrease in stress-related absenteeism and burnout indicators",
+      "Noticeable improvement in day-to-day focus, mood, and office positivity",
+      "Higher employee gratitude and loyalty toward the organization"
+    ],
+    "format": "Classroom / Experiential Mindfulness Labs / Personal Habit Diagnostic",
+    "evaluationMetric": "Kirkpatrick Level 1 & 2: Well-being Index & Reduced Burnout Attrition"
+  },
+  {
+    "id": "faculty-development-program-fdp",
+    "title": "Faculty Development Program (FDP)",
+    "tagline": "Empower Educators. Transform Classrooms. Inspire the Next Generation.",
+    "category": "Higher Education & Academic Excellence",
+    "duration": "1 - 3 Days",
+    "targetAudience": "Professors, Assistant Professors, Lecturers, and School Teachers",
+    "description": "The quality of an institution cannot exceed the quality of its teachers. With a legacy of serving over 300+ colleges and universities, Dhruvsatya's FDP equips educators with modern experiential pedagogies, student mentoring skills, and inspirational classroom presence.",
+    "keyFeatures": [
+      "From Monologue to Engagement: Moving beyond rote lectures to case-based, participatory learning",
+      "Empathetic Student Mentorship: Guiding Gen Z students through academic anxiety and career dilemmas",
+      "Research & Academic Leadership: Aligning personal scholarly pursuits with institutional accreditation (NAAC/NBA)",
+      "Vocal Dynamics & Classroom Authority: Inspiring respect and intellectual curiosity in large classrooms"
+    ],
+    "outcomes": [
+      "Significant boost in student attendance, classroom engagement, and exam performance",
+      "Higher institutional scores in academic accreditation audits",
+      "Re-energized faculty morale and cross-departmental collaboration"
+    ],
+    "format": "Academic Workshop / Teaching Demonstration Labs / Peer Pedagogical Audits",
+    "evaluationMetric": "Kirkpatrick Level 3: Student Feedback Ratings & NAAC Pedagogical Criteria Scores"
+  },
+  {
+    "id": "academic-leadership-institutional-governance",
+    "title": "Academic Leadership & Governance Masterclass",
+    "tagline": "Lead with Vision. Manage Complexity. Build World-Class Institutions.",
+    "category": "Higher Education & Academic Excellence",
+    "duration": "1 - 2 Days",
+    "targetAudience": "Deans, Directors, Principals, Registrars, and Heads of Departments (HODs)",
+    "description": "Designed for higher-education leadership teams navigating competitive enrollments, evolving AI technologies, regulatory compliance, and faculty alignment. Helps academic heads transition from administrative routine to visionary institutional building.",
+    "keyFeatures": [
+      "Institutional Visioning: Formulating strategic roadmaps that attract top-tier students and faculty",
+      "Departmental Synergy & Resource Optimization: Eliminating academic silos between engineering, science, and humanities",
+      "Industry-Academia Bridge: Structuring high-value corporate partnerships, internships, and research grants",
+      "Conflict Resolution in Academia: Managing tenure friction, administrative disputes, and student affairs"
+    ],
+    "outcomes": [
+      "Unified institutional strategy supported by all department chairs and deans",
+      "Higher corporate placement rates and industry collaboration initiatives",
+      "Elevated national and global institutional reputation"
+    ],
+    "format": "Executive Roundtable / Case Studies of Premier Global Universities / Strategic Roadmapping",
+    "evaluationMetric": "Kirkpatrick Level 4: Placement Percentages & Institutional Accreditation Rankings"
+  },
+  {
+    "id": "campus-to-corporate-employability",
+    "title": "Campus-to-Corporate Employability & Life Skills",
+    "tagline": "Bridging Academic Knowledge with Corporate Execution.",
+    "category": "Higher Education & Academic Excellence",
+    "duration": "2 - 5 Days (Intensive Bootcamps)",
+    "targetAudience": "Final & Pre-Final Year Engineering, MBA, and Degree College Students",
+    "description": "Equips graduating students with the psychological resilience, interview mastery, corporate etiquette, and problem-solving mindset required to clear competitive recruitment drives and excel during their first 90 days on the job.",
+    "keyFeatures": [
+      "Corporate Mindset & Professional Demeanor: Understanding corporate accountability and expectations",
+      "Aptitude & Interview Mastery: Cracking group discussions (GD) and technical/HR personal interviews",
+      "Business Etiquette & Communication: Professional dress codes, email hygiene, and verbal clarity",
+      "Emotional Resilience: Overcoming rejection and maintaining high confidence throughout placement drives"
+    ],
+    "outcomes": [
+      "Substantial jump in student campus placement conversion percentages",
+      "Rave reviews from visiting corporate recruiters regarding student polish and readiness",
+      "Empowered, confident graduates stepping into the industry as top performers"
+    ],
+    "format": "Bootcamp / Mock GDs / Mock HR Interviews / Video Feedback / Peer Debriefs",
+    "evaluationMetric": "Kirkpatrick Level 4: Campus Placement Rate & Day-1 Employer Satisfaction"
   }
 ]
