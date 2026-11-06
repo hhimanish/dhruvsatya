@@ -58,16 +58,22 @@ export function Navbar() {
       >
         <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="flex items-center z-50 group py-1">
-            <Image
-              src="/logo.png"
-              alt="DhruvSatya Center for Personal Transformation"
-              width={260}
-              height={80}
-              priority
-              unoptimized
-              className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-[0_2px_12px_rgba(0,149,219,0.22)]"
-            />
+          <Link
+            href="/"
+            className="flex items-center shrink-0 z-50 group py-1 min-w-[160px] sm:min-w-[190px] md:min-w-[220px]"
+            aria-label="DhruvSatya Home"
+          >
+            <div className="relative h-10 sm:h-12 md:h-14 w-[160px] sm:w-[190px] md:w-[220px] shrink-0">
+              <Image
+                src="/logo.png"
+                alt="DhruvSatya Center for Personal Transformation"
+                fill
+                priority
+                unoptimized
+                className="object-contain object-left transition-transform duration-300 group-hover:scale-105 drop-shadow-[0_2px_12px_rgba(0,149,219,0.25)]"
+                sizes="(max-width: 640px) 160px, (max-width: 768px) 190px, 220px"
+              />
+            </div>
           </Link>
 
           {/* Desktop Nav */}
@@ -128,16 +134,18 @@ export function Navbar() {
           >
             {/* Overlay Header */}
             <div className="container mx-auto px-6 md:px-12 flex justify-between items-center mb-8 border-b border-white/10 pb-4">
-              <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-                <Image
-                  src="/logo.png"
-                  alt="DhruvSatya Center for Personal Transformation"
-                  width={220}
-                  height={68}
-                  priority
-                  unoptimized
-                  className="h-10 sm:h-11 w-auto object-contain drop-shadow-[0_2px_12px_rgba(0,149,219,0.2)]"
-                />
+              <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center shrink-0">
+                <div className="relative h-10 w-[160px] shrink-0">
+                  <Image
+                    src="/logo.png"
+                    alt="DhruvSatya Center for Personal Transformation"
+                    fill
+                    priority
+                    unoptimized
+                    className="object-contain object-left drop-shadow-[0_2px_12px_rgba(0,149,219,0.25)]"
+                    sizes="160px"
+                  />
+                </div>
               </Link>
               <button
                 className="text-white p-2 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 transition-all"

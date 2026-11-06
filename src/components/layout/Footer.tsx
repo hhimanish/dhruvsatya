@@ -13,14 +13,16 @@ export function Footer() {
           {/* Brand Column */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block mb-6 group">
-              <Image
-                src="/logo.png"
-                unoptimized
-                alt="DhruvSatya Center for Personal Transformation"
-                width={240}
-                height={74}
-                className="h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-[0_2px_12px_rgba(0,149,219,0.2)]"
-              />
+              <div className="relative h-12 md:h-14 w-[190px] md:w-[220px]">
+                <Image
+                  src="/logo.png"
+                  alt="DhruvSatya Center for Personal Transformation"
+                  fill
+                  unoptimized
+                  className="object-contain object-left transition-transform duration-300 group-hover:scale-105 drop-shadow-[0_2px_12px_rgba(0,149,219,0.2)]"
+                  sizes="220px"
+                />
+              </div>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-8 pr-4">
               Center for Personal Transformation. <br />
