@@ -14,11 +14,12 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block mb-6 group">
               <Image
-                src="/images/logo-horizontal.png"
+                src="/logo.png"
+                unoptimized
                 alt="DhruvSatya Center for Personal Transformation"
                 width={240}
                 height={74}
-                className="h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                className="h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-[0_2px_12px_rgba(0,149,219,0.2)]"
               />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-8 pr-4">

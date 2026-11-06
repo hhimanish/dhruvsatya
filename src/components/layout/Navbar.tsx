@@ -60,12 +60,13 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center z-50 group py-1">
             <Image
-              src="/images/logo-horizontal.png"
+              src="/logo.png"
               alt="DhruvSatya Center for Personal Transformation"
-              width={240}
-              height={74}
+              width={260}
+              height={80}
               priority
-              className="h-9 sm:h-11 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              unoptimized
+              className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-[0_2px_12px_rgba(0,149,219,0.22)]"
             />
           </Link>
 
@@ -129,11 +130,13 @@ export function Navbar() {
             <div className="container mx-auto px-6 md:px-12 flex justify-between items-center mb-8 border-b border-white/10 pb-4">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
                 <Image
-                  src="/images/logo-horizontal.png"
+                  src="/logo.png"
                   alt="DhruvSatya Center for Personal Transformation"
-                  width={200}
-                  height={62}
-                  className="h-10 w-auto object-contain"
+                  width={220}
+                  height={68}
+                  priority
+                  unoptimized
+                  className="h-10 sm:h-11 w-auto object-contain drop-shadow-[0_2px_12px_rgba(0,149,219,0.2)]"
                 />
               </Link>
               <button

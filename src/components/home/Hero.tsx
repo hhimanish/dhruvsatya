@@ -52,7 +52,16 @@ export function Hero() {
           className="mb-8"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-xl md:rounded-full bg-brand-cyan/10 backdrop-blur-md shadow-[0_0_25px_rgba(0,149,219,0.2)] group gradient-border-card transition-all">
-            <span className="w-2.5 h-2.5 rounded-full bg-brand-accent mr-2.5 animate-pulse flex-shrink-0 shadow-[0_0_10px_rgba(248,166,18,0.9)]" />
+            <Image
+              src="/logo.png"
+              alt="DhruvSatya Logo"
+              width={32}
+              height={32}
+              unoptimized
+              priority
+              className="h-4 sm:h-5 w-auto object-contain mr-2.5 drop-shadow-[0_0_8px_rgba(0,149,219,0.4)]"
+            />
+            <span className="w-2 h-2 rounded-full bg-brand-accent mr-2 animate-pulse flex-shrink-0 shadow-[0_0_10px_rgba(248,166,18,0.9)]" />
             <span className="text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase text-gray-200 leading-snug">
               DhruvSatya Center for Personal Transformation
             </span>
