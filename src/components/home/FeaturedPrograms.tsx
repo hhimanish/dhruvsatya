@@ -61,7 +61,7 @@ export function FeaturedPrograms() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-4">
-              <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse shadow-[0_0_8px_#F8A612]" />
               <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-gray-300">
                 Core Interventions
               </span>

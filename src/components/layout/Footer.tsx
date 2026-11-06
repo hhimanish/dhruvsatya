@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-brand-foundation text-white pt-24 pb-12">
+    <footer className="bg-brand-foundation text-white pt-24 pb-12 border-t border-brand-cyan/20 relative">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
@@ -23,7 +23,7 @@ export function Footer() {
               Center for Personal Transformation. <br />
               Transforming Lives. Reinventing Organisations. Generating Breakthroughs.
             </p>
-            <div className="text-brand-accent font-medium text-sm tracking-widest uppercase">
+            <div className="text-sm font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-sky-300 to-brand-accent">
               Transform. Achieve. Contribute.
             </div>
           </div>

@@ -1,10 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-foundation: #0A1128; /* Deep Royal Navy: Trustful, Expert, Commanding */
-  --color-brand-accent: #FFD700; /* True Yellow: Joyful, Magnanimous, Assured */
-  --color-brand-secondary: #14213D; /* Lighter Navy for rhythm */
-  --color-brand-ivory: #F8FAFC; /* Crisp Assured White */
+  --color-brand-foundation: #070D1E; /* Deep Midnight Navy: Trustful, Executive, Grounded */
+  --color-brand-secondary: #0F1D38; /* Rich Navy for layered depth */
+  --color-brand-accent: #F8A612; /* Official Warm Satya Gold from Logo */
+  --color-brand-gold: #F8A612; /* Warm Satya Gold */
+  --color-brand-cyan: #0095DB; /* Official Transformation Azure/Cyan from Logo */
+  --color-brand-azure: #0095DB; /* Official Transformation Azure */
+  --color-brand-ivory: #F8FAFC; /* Crisp Executive White */
   
   --font-display: var(--font-display);
   --font-sans: var(--font-inter);
@@ -12,13 +15,13 @@
   --animate-slow-zoom: slow-zoom 30s linear infinite;
   @keyframes slow-zoom {
     0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+    50% { transform: scale(1.08); }
   }
 }
 
 @layer base {
   body {
-    @apply bg-white text-gray-900 font-sans antialiased selection:bg-brand-accent selection:text-white overflow-x-hidden w-full;
+    @apply bg-brand-foundation text-gray-100 font-sans antialiased selection:bg-brand-accent selection:text-brand-foundation overflow-x-hidden w-full;
   }
 
   /* Prevent iOS zoom on focus */
@@ -27,6 +30,6 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight text-brand-foundation;
+    @apply font-display tracking-tight text-white;
   }
 }

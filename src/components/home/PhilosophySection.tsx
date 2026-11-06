@@ -49,8 +49,8 @@ export function PhilosophySection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-sm font-semibold text-brand-accent tracking-[0.3em] uppercase mb-6 flex items-center">
-                <span className="w-8 h-[1px] bg-brand-accent mr-4"></span>
+              <h2 className="text-sm font-semibold text-brand-cyan tracking-[0.3em] uppercase mb-6 flex items-center">
+                <span className="w-8 h-[1px] bg-gradient-to-r from-brand-cyan to-brand-accent mr-4"></span>
                 The DhruvSatya Way
               </h2>
               <h3 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-white mb-10 md:mb-16 leading-[1.1]">
@@ -94,7 +94,7 @@ export function PhilosophySection() {
               {/* Internal glowing orb */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-accent/30 blur-[100px] rounded-full pointer-events-none" />
 
-              <div className="absolute top-8 left-8 text-6xl text-brand-accent/30 font-serif leading-none font-bold">"</div>
+              <div className="absolute top-8 left-8 text-6xl text-brand-cyan/30 font-serif leading-none font-bold">"</div>
               
               <div className="relative z-10 min-h-[150px] flex items-center">
                 <AnimatePresence mode="wait">
@@ -118,7 +118,7 @@ export function PhilosophySection() {
             </div>
 
             {/* Decorative geometrical accent */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-brand-accent/50 z-0 hidden md:block" />
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-brand-cyan/40 z-0 hidden md:block" />
             <div className="absolute -bottom-3 -right-3 w-32 h-32 border-2 border-brand-accent/70 z-0 hidden md:block" />
             <div className="absolute -bottom-8 -right-8 w-4 h-4 bg-brand-accent z-0 hidden md:block animate-pulse" />
           </div>

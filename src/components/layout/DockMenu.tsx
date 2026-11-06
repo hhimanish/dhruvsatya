@@ -31,7 +31,7 @@ export function DockMenu() {
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 200, damping: 20, delay: 0.5 }}
-        className="pointer-events-auto flex items-center justify-center gap-2 md:gap-4 px-4 py-3 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl"
+        className="pointer-events-auto flex items-center justify-center gap-2 md:gap-4 px-4 py-3 rounded-2xl bg-brand-foundation/80 backdrop-blur-2xl border border-brand-cyan/30 shadow-[0_15px_40px_rgba(0,0,0,0.6)]"
       >
         {dockItems.map((item) => {
           const isActive = pathname === item.href;
@@ -59,7 +59,7 @@ export function DockMenu() {
                 {isActive && (
                   <motion.div 
                     layoutId="dock-active"
-                    className="absolute -bottom-1.5 w-1 h-1 rounded-full bg-brand-accent"
+                    className="absolute -bottom-1.5 w-1.5 h-1.5 rounded-full bg-brand-cyan shadow-[0_0_8px_#0095DB]"
                   />
                 )}
               </motion.div>

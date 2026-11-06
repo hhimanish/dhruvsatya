@@ -51,7 +51,10 @@ export function CredibilityBand() {
   }, []);
 
   return (
-    <section id="credibility-band" className="py-20 bg-brand-foundation border-b border-white/5 relative z-10">
+    <section id="credibility-band" className="py-20 md:py-24 bg-brand-foundation border-b border-brand-cyan/15 relative z-10 overflow-hidden">
+      {/* Ambient background glows */}
+      <div className="absolute -top-24 left-1/4 w-72 h-72 bg-brand-cyan/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute -bottom-24 right-1/4 w-72 h-72 bg-brand-accent/10 rounded-full blur-[100px] pointer-events-none" />
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 md:gap-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
           {stats.map((stat, index) => (
@@ -64,7 +67,7 @@ export function CredibilityBand() {
             >
               <div className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-black text-white mb-4 tracking-tighter flex items-center justify-center">
                 <Counter value={stat.value} inView={inView} />
-                <span className="text-brand-accent">{stat.suffix}</span>
+                <span className={index % 2 === 0 ? "text-brand-accent" : "text-brand-cyan"}>{stat.suffix}</span>
               </div>
               <div className="text-xs md:text-sm font-bold text-gray-400 tracking-[0.2em] uppercase">
                 {stat.label}

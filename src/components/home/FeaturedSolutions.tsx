@@ -51,7 +51,7 @@ export function FeaturedSolutions() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-4">
-              <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-brand-cyan animate-pulse" />
               <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-gray-300">
                 Strategic Solutions
               </span>
@@ -63,7 +63,7 @@ export function FeaturedSolutions() {
 
           <Link
             href="/solutions"
-            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-accent hover:text-white transition-colors group"
+            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-cyan hover:text-brand-accent transition-colors group"
           >
             Explore All Pathways
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
@@ -93,18 +93,30 @@ export function FeaturedSolutions() {
 
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-brand-accent/15 border border-brand-accent/30 flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-foundation transition-all duration-300">
+                  <div className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-300 ${
+                    idx % 2 === 0
+                      ? "bg-brand-cyan/15 border border-brand-cyan/30 text-brand-cyan group-hover:bg-brand-cyan group-hover:text-brand-foundation"
+                      : "bg-brand-accent/15 border border-brand-accent/30 text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-foundation"
+                  }`}>
                     <path.icon className="w-6 h-6" />
                   </div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-brand-accent px-2.5 py-1 rounded-full bg-brand-accent/10 border border-brand-accent/20">
+                  <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border ${
+                    idx % 2 === 0
+                      ? "text-brand-cyan bg-brand-cyan/10 border-brand-cyan/25"
+                      : "text-brand-accent bg-brand-accent/10 border-brand-accent/25"
+                  }`}>
                     {path.badge}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-display font-bold text-white mb-2 group-hover:text-brand-accent transition-colors">
+                <h3 className={`text-xl font-display font-bold text-white mb-2 transition-colors ${
+                  idx % 2 === 0 ? "group-hover:text-brand-cyan" : "group-hover:text-brand-accent"
+                }`}>
                   {path.title}
                 </h3>
-                <div className="text-[11px] font-semibold uppercase tracking-wider text-brand-accent/90 mb-4">
+                <div className={`text-[11px] font-semibold uppercase tracking-wider mb-4 ${
+                  idx % 2 === 0 ? "text-brand-cyan/90" : "text-brand-accent/90"
+                }`}>
                   {path.tagline}
                 </div>
                 <p className="text-xs text-gray-300 leading-relaxed mb-6">
@@ -115,7 +127,11 @@ export function FeaturedSolutions() {
               <div className="relative z-10 pt-4 border-t border-white/5 flex items-center justify-between">
                 <Link
                   href={path.href}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-accent hover:text-white transition-colors"
+                  className={`inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider transition-colors ${
+                    idx % 2 === 0
+                      ? "text-brand-cyan hover:text-white"
+                      : "text-brand-accent hover:text-white"
+                  }`}
                 >
                   Explore Solution
                   <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

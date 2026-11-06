@@ -131,7 +131,7 @@ export default function SolutionsPage() {
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-black tracking-tight leading-[1.05] mb-8"
           >
             Capabilities That Drive <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-amber-200 to-brand-accent">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-sky-300 to-brand-accent">
               Measurable Business Results.
             </span>
           </motion.h1>

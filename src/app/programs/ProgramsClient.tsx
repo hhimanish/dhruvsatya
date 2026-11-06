@@ -166,7 +166,7 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-black tracking-tight leading-[1.05] mb-8"
           >
             Interventions Engineered for <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-amber-200 to-brand-accent">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-sky-300 to-brand-accent">
               Permanent Transformation.
             </span>
           </motion.h1>
@@ -188,19 +188,19 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
             className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto bg-white/[0.03] backdrop-blur-md p-6 rounded-3xl border border-white/10"
           >
             <div>
-              <div className="text-3xl md:text-4xl font-display font-black text-brand-accent">25+</div>
+              <div className="text-3xl md:text-4xl font-display font-black text-brand-cyan">25+</div>
               <div className="text-xs text-gray-400 uppercase tracking-widest mt-1">Years of Legacy</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-display font-black text-white">700+</div>
+              <div className="text-3xl md:text-4xl font-display font-black text-brand-accent">700+</div>
               <div className="text-xs text-gray-400 uppercase tracking-widest mt-1">Corporate Interventions</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-display font-black text-brand-accent">300+</div>
+              <div className="text-3xl md:text-4xl font-display font-black text-brand-cyan">300+</div>
               <div className="text-xs text-gray-400 uppercase tracking-widest mt-1">Academic Institutions</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-display font-black text-white">100k+</div>
+              <div className="text-3xl md:text-4xl font-display font-black text-brand-accent">100k+</div>
               <div className="text-xs text-gray-400 uppercase tracking-widest mt-1">Leaders Transformed</div>
             </div>
           </motion.div>
