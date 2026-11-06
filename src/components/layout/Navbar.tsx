@@ -52,8 +52,8 @@ export function Navbar() {
       <header
         className={`fixed top-0 w-full z-[100] transition-all duration-300 ${
           isScrolled
-            ? "bg-brand-foundation/95 backdrop-blur-md shadow-xl border-b border-brand-cyan/20 py-4"
-            : "bg-transparent py-6"
+            ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 py-3.5"
+            : "bg-white/80 backdrop-blur-sm border-b border-slate-100/60 py-4"
         }`}
       >
         <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
@@ -75,7 +75,7 @@ export function Navbar() {
               <div key={link.name} className="relative group">
                 <Link
                   href={link.href}
-                  className="text-[11px] xl:text-xs font-bold tracking-widest uppercase text-gray-300 hover:text-brand-accent transition-colors flex items-center gap-1 whitespace-nowrap"
+                  className="text-[11px] xl:text-xs font-bold tracking-widest uppercase text-slate-700 hover:text-brand-cyan font-bold transition-colors flex items-center gap-1 whitespace-nowrap"
                 >
                   {link.name}
                   {link.dropdown && <ChevronDown className="w-4 h-4 ml-1" />}
@@ -83,12 +83,12 @@ export function Navbar() {
                 
                 {/* Dropdown */}
                 {link.dropdown && (
-                  <div className="absolute top-full left-0 mt-4 w-64 bg-brand-secondary border border-brand-cyan/25 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-2 group-hover:translate-y-0 rounded-2xl overflow-hidden backdrop-blur-xl">
+                  <div className="absolute top-full left-0 mt-4 w-64 bg-white border border-slate-100 shadow-2xl rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-2 group-hover:translate-y-0 rounded-2xl overflow-hidden backdrop-blur-xl">
                     {link.dropdown.map((dropLink) => (
                       <Link
                         key={dropLink.name}
                         href={dropLink.href}
-                        className="block px-6 py-4 text-sm font-medium text-gray-200 hover:bg-brand-cyan/10 hover:text-brand-accent transition-colors border-b border-white/5 last:border-b-0"
+                        className="block px-6 py-4 text-sm font-medium text-slate-700 hover:bg-sky-50 hover:text-brand-cyan transition-colors border-b border-slate-50 last:border-b-0"
                       >
                         {dropLink.name}
                       </Link>
@@ -99,7 +99,7 @@ export function Navbar() {
             ))}
             <Link
               href="/contact"
-              className="px-6 py-3 bg-brand-accent text-brand-foundation text-[11px] xl:text-xs font-black tracking-widest uppercase rounded-full hover:bg-white hover:shadow-[0_0_20px_rgba(248,166,18,0.4)] transition-all whitespace-nowrap"
+              className="px-6 py-3 bg-gradient-to-r from-brand-accent to-amber-500 text-white text-[11px] xl:text-xs font-black tracking-widest uppercase rounded-full hover:shadow-lg hover:shadow-amber-500/25 transition-all whitespace-nowrap"
             >
               START A CONVERSATION
             </Link>
@@ -107,7 +107,7 @@ export function Navbar() {
 
           {/* Mobile Toggle */}
           <button
-            className="lg:hidden z-[100] text-white p-2"
+            className="lg:hidden z-[100] text-slate-800 p-2"
             onClick={() => setMobileMenuOpen(true)}
             aria-label="Open Menu"
           >
@@ -123,10 +123,10 @@ export function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 min-h-screen min-h-[100dvh] w-full bg-brand-foundation/98 backdrop-blur-2xl z-[999] flex flex-col pt-6 pb-[calc(2rem+env(safe-area-inset-bottom))] overflow-y-auto"
+            className="fixed inset-0 min-h-screen min-h-[100dvh] w-full bg-white/98 backdrop-blur-2xl z-[999] flex flex-col pt-6 pb-[calc(2rem+env(safe-area-inset-bottom))] overflow-y-auto text-slate-900"
           >
             {/* Overlay Header */}
-            <div className="container mx-auto px-6 md:px-12 flex justify-between items-center mb-8 border-b border-white/10 pb-4">
+            <div className="container mx-auto px-6 md:px-12 flex justify-between items-center mb-8 border-b border-slate-100 pb-4">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
                 <Image
                   src="/images/logo-horizontal.png"
@@ -137,7 +137,7 @@ export function Navbar() {
                 />
               </Link>
               <button
-                className="text-white p-2 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 transition-all"
+                className="text-slate-700 p-2 rounded-full bg-slate-100 hover:bg-slate-200 active:scale-95 transition-all"
                 onClick={() => setMobileMenuOpen(false)}
                 aria-label="Close Menu"
               >
@@ -150,7 +150,7 @@ export function Navbar() {
                 <div key={link.name} className="flex flex-col space-y-3">
                   <Link
                     href={link.href}
-                    className="text-2xl font-display text-white hover:text-brand-accent transition-colors"
+                    className="text-2xl font-display font-bold text-slate-900 hover:text-brand-cyan transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.name}
@@ -161,7 +161,7 @@ export function Navbar() {
                         <Link
                           key={dropLink.name}
                           href={dropLink.href}
-                          className="text-lg text-gray-300 hover:text-brand-cyan transition-colors"
+                          className="text-lg text-slate-600 hover:text-brand-cyan transition-colors"
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {dropLink.name}
@@ -176,7 +176,7 @@ export function Navbar() {
             <div className="mt-auto pt-8 px-6 md:px-12">
               <Link
                 href="/contact"
-                className="block w-full text-center px-6 py-4 bg-brand-accent text-brand-foundation text-base font-black tracking-widest uppercase hover:bg-white transition-all rounded-full shadow-lg"
+                className="block w-full text-center px-6 py-4 bg-gradient-to-r from-brand-accent to-amber-500 text-white text-base font-black tracking-widest uppercase hover:shadow-xl transition-all rounded-full shadow-md"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 START A CONVERSATION

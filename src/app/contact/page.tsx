@@ -44,7 +44,7 @@ export default function ContactPage() {
     <main className="flex min-h-screen flex-col bg-white">
       <Navbar />
       
-      <section className="pt-32 pb-20 bg-brand-foundation text-white">
+      <section className="pt-32 pb-20 bg-gradient-to-b from-[#F0F7FF] via-[#FFFFFF] to-[#FFFDF7] text-slate-900 border-b border-slate-100">
         <div className="container mx-auto px-6 md:px-12 max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             
@@ -121,7 +121,7 @@ export default function ContactPage() {
                         required
                         type="text" 
                         id="name"
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors text-gray-900"
+                        className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors text-gray-900"
                         value={formState.name}
                         onChange={(e) => setFormState({...formState, name: e.target.value})}
                       />
@@ -134,7 +134,7 @@ export default function ContactPage() {
                           required
                           type="email" 
                           id="email"
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors text-gray-900"
+                          className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors text-gray-900"
                           value={formState.email}
                           onChange={(e) => setFormState({...formState, email: e.target.value})}
                         />
@@ -144,7 +144,7 @@ export default function ContactPage() {
                         <input 
                           type="text" 
                           id="company"
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors text-gray-900"
+                          className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors text-gray-900"
                           value={formState.company}
                           onChange={(e) => setFormState({...formState, company: e.target.value})}
                         />
@@ -155,7 +155,7 @@ export default function ContactPage() {
                       <label htmlFor="intent" className="block text-sm font-medium text-gray-700 mb-1">Primary Area of Interest</label>
                       <select 
                         id="intent"
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors bg-white"
+                        className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors bg-white"
                         value={formState.intent}
                         onChange={(e) => setFormState({...formState, intent: e.target.value})}
                       >
@@ -173,7 +173,7 @@ export default function ContactPage() {
                       <textarea 
                         id="message"
                         rows={4}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors resize-none"
+                        className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-colors resize-none"
                         value={formState.message}
                         onChange={(e) => setFormState({...formState, message: e.target.value})}
                       />
@@ -183,7 +183,7 @@ export default function ContactPage() {
                   <button 
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full flex items-center justify-center px-8 py-4 bg-brand-foundation text-white font-medium rounded-lg hover:bg-brand-accent transition-colors disabled:opacity-70"
+                    className="w-full flex items-center justify-center px-8 py-4 bg-gradient-to-r from-brand-accent to-amber-500 text-white font-bold rounded-xl hover:shadow-lg shadow-md transition-all disabled:opacity-70"
                   >
                     {isSubmitting ? "SUBMITTING..." : "SUBMIT REQUEST"}
                     {!isSubmitting && <ArrowRight className="w-5 h-5 ml-2" />}

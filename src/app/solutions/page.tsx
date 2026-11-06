@@ -95,20 +95,20 @@ export default function SolutionsPage() {
   ];
 
   return (
-    <main className="flex min-h-screen flex-col bg-brand-foundation text-brand-ivory selection:bg-brand-accent selection:text-brand-foundation">
+    <main className="flex min-h-screen flex-col bg-white text-slate-800 selection:bg-brand-accent selection:text-white">
       <Navbar />
 
       {/* Cinematic Hero */}
-      <section className="relative pt-40 pb-32 bg-brand-foundation overflow-hidden">
+      <section className="relative pt-40 pb-32 bg-gradient-to-b from-[#F0F7FF] via-[#FFFFFF] to-[#FFFDF7] text-slate-900 overflow-hidden border-b border-slate-100">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/Focus.jpg"
             alt="DhruvSatya Solutions Architecture"
             fill
-            className="object-cover opacity-20 mix-blend-luminosity scale-105"
+            className="object-cover opacity-10 mix-blend-multiply scale-105"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-foundation/90 via-brand-foundation/80 to-brand-foundation z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#F0F7FF]/90 via-white/80 to-[#FFFDF7] z-10" />
         </div>
 
         <div className="container mx-auto px-6 md:px-12 max-w-6xl text-center relative z-20">
@@ -116,7 +116,7 @@ export default function SolutionsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-sky-200 shadow-xs mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
             <span className="text-xs uppercase tracking-[0.25em] font-semibold text-gray-300">
@@ -140,7 +140,7 @@ export default function SolutionsPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed mb-10"
+            className="text-lg md:text-2xl text-slate-600 max-w-3xl mx-auto font-normal leading-relaxed mb-10"
           >
             Choose the transformation pathway aligned to your exact organizational context. From enterprise-wide cultural shifts to executive advisory and specialized industrial safety.
           </motion.p>
@@ -148,7 +148,7 @@ export default function SolutionsPage() {
       </section>
 
       {/* Pathways Grid */}
-      <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-brand-foundation via-[#0c121e] to-brand-foundation relative">
+      <section className="py-24 px-6 md:px-12 bg-slate-50/70 text-slate-900 relative">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {pathways.map((path, index) => (
@@ -187,7 +187,7 @@ export default function SolutionsPage() {
                   <div className="text-xs font-semibold uppercase tracking-wider text-brand-accent/90 mb-4">
                     {path.tagline}
                   </div>
-                  <p className="text-sm text-gray-300 leading-relaxed mb-8">
+                  <p className="text-sm text-slate-600 leading-relaxed mb-8">
                     {path.desc}
                   </p>
 

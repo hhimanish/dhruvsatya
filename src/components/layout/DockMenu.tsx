@@ -31,7 +31,7 @@ export function DockMenu() {
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 200, damping: 20, delay: 0.5 }}
-        className="pointer-events-auto flex items-center justify-center gap-2 md:gap-4 px-4 py-3 rounded-2xl bg-brand-foundation/80 backdrop-blur-2xl border border-brand-cyan/30 shadow-[0_15px_40px_rgba(0,0,0,0.6)]"
+        className="pointer-events-auto flex items-center justify-center gap-2 md:gap-4 px-4 py-2.5 rounded-2xl bg-white/90 backdrop-blur-xl border border-slate-200/90 shadow-2xl"
       >
         {dockItems.map((item) => {
           const isActive = pathname === item.href;
@@ -40,17 +40,19 @@ export function DockMenu() {
           return (
             <Link key={item.name} href={item.href}>
               <motion.div
-                whileHover={!isMobile ? { scale: 1.3, y: -10 } : {}}
-                whileTap={{ scale: 0.9 }}
-                className="relative group flex flex-col items-center justify-center p-2 rounded-xl transition-colors hover:bg-white/10"
+                whileHover={!isMobile ? { scale: 1.25, y: -8 } : {}}
+                whileTap={{ scale: 0.92 }}
+                className="relative group flex flex-col items-center justify-center p-2 rounded-xl transition-colors hover:bg-slate-100/70"
               >
-                <div className={`p-2 rounded-xl transition-colors ${isActive ? 'bg-brand-accent text-brand-foundation' : 'text-white'}`}>
-                  <Icon className="w-5 h-5 md:w-6 md:h-6" strokeWidth={isActive ? 2.5 : 2} />
+                <div className={`p-2 rounded-xl transition-all shadow-xs ${
+                  isActive ? 'bg-gradient-to-br from-brand-accent to-amber-500 text-white shadow-md shadow-amber-500/20' : 'text-slate-600 hover:text-brand-cyan'
+                }`}>
+                  <Icon className="w-5 h-5 md:w-5 md:h-5" strokeWidth={isActive ? 2.5 : 2} />
                 </div>
                 
                 {/* Tooltip for desktop */}
                 {!isMobile && (
-                  <div className="absolute -top-10 opacity-0 group-hover:opacity-100 transition-opacity bg-brand-foundation text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1.5 rounded shadow-lg pointer-events-none whitespace-nowrap">
+                  <div className="absolute -top-10 opacity-0 group-hover:opacity-100 transition-opacity bg-slate-900 text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-lg shadow-lg pointer-events-none whitespace-nowrap">
                     {item.name}
                   </div>
                 )}
@@ -59,7 +61,7 @@ export function DockMenu() {
                 {isActive && (
                   <motion.div 
                     layoutId="dock-active"
-                    className="absolute -bottom-1.5 w-1.5 h-1.5 rounded-full bg-brand-cyan shadow-[0_0_8px_#0095DB]"
+                    className="absolute -bottom-1 w-1.5 h-1.5 rounded-full bg-brand-cyan shadow-[0_0_8px_#0095DB]"
                   />
                 )}
               </motion.div>

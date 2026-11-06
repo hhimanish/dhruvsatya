@@ -1,13 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-foundation: #070D1E; /* Deep Midnight Navy: Trustful, Executive, Grounded */
-  --color-brand-secondary: #0F1D38; /* Rich Navy for layered depth */
+  --color-brand-foundation: #0F172A; /* Deep Slate 900 for sharp corporate contrast */
+  --color-brand-secondary: #1E293B; /* Slate 800 */
   --color-brand-accent: #F8A612; /* Official Warm Satya Gold from Logo */
   --color-brand-gold: #F8A612; /* Warm Satya Gold */
   --color-brand-cyan: #0095DB; /* Official Transformation Azure/Cyan from Logo */
   --color-brand-azure: #0095DB; /* Official Transformation Azure */
-  --color-brand-ivory: #F8FAFC; /* Crisp Executive White */
+  --color-brand-ivory: #FFFFFF; /* Crisp Pure White */
+  --color-brand-light-bg: #F8FAFC; /* Crisp bright background */
+  --color-brand-sky-bg: #F0F7FF; /* Joyful airy sky tint */
+  --color-brand-warm-bg: #FFFDF7; /* Joyful warm sunshine tint */
   
   --font-display: var(--font-display);
   --font-sans: var(--font-inter);
@@ -15,13 +18,13 @@
   --animate-slow-zoom: slow-zoom 30s linear infinite;
   @keyframes slow-zoom {
     0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.08); }
+    50% { transform: scale(1.06); }
   }
 }
 
 @layer base {
   body {
-    @apply bg-brand-foundation text-gray-100 font-sans antialiased selection:bg-brand-accent selection:text-brand-foundation overflow-x-hidden w-full;
+    @apply bg-white text-slate-800 font-sans antialiased selection:bg-brand-accent selection:text-white overflow-x-hidden w-full;
   }
 
   /* Prevent iOS zoom on focus */
@@ -30,6 +33,6 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight text-white;
+    @apply font-display tracking-tight text-slate-900;
   }
 }

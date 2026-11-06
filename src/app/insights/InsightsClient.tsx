@@ -23,11 +23,11 @@ export function InsightsClient({ insights }: { insights: any[] }) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <main className="flex min-h-screen flex-col bg-brand-foundation overflow-x-hidden">
+    <main className="flex min-h-screen flex-col bg-white text-slate-800 overflow-x-hidden">
       <Navbar />
       
       {/* Editorial Hero */}
-      <section className="pt-40 pb-20 bg-brand-foundation text-white relative z-10 border-b border-white/10">
+      <section className="pt-40 pb-20 bg-gradient-to-b from-[#F0F7FF] via-[#FFFFFF] to-[#FFFDF7] text-slate-900 relative z-10 border-b border-slate-100">
         <div className="absolute inset-0 z-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.05] pointer-events-none" />
         <div className="container mx-auto px-6 md:px-12 max-w-5xl">
           <motion.div
@@ -48,7 +48,7 @@ export function InsightsClient({ insights }: { insights: any[] }) {
       </section>
 
       {/* The Hover Accordion Layout */}
-      <section className="relative w-full h-auto min-h-screen md:h-[75vh] md:min-h-[600px] flex flex-col md:flex-row bg-brand-foundation">
+      <section className="relative w-full h-auto min-h-screen md:h-[75vh] md:min-h-[600px] flex flex-col md:flex-row bg-slate-50 border-b border-slate-200">
         {insights.map((article: any, index: number) => {
           const Icon = icons[index % icons.length];
           const isHovered = hoveredIndex === index;

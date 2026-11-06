@@ -24,11 +24,11 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="flex min-h-screen flex-col bg-brand-ivory/30">
+    <main className="flex min-h-screen flex-col bg-white">
       <Navbar />
       
       {/* Cinematic Hero */}
-      <section className="relative pt-40 pb-32 bg-brand-foundation text-white overflow-hidden">
+      <section className="relative pt-40 pb-32 bg-gradient-to-b from-[#F0F7FF] via-[#FFFFFF] to-[#FFFDF7] text-slate-900 overflow-hidden border-b border-slate-100">
         {/* Parallax Background Image */}
         <motion.div
           animate={{ scale: [1, 1.15, 1] }}
@@ -39,11 +39,11 @@ export default function AboutPage() {
             src="/images/group-2.jpg"
             alt="DhruvSatya Transformation Legacy"
             fill
-            className="object-cover opacity-60"
+            className="object-cover opacity-10 mix-blend-multiply"
             priority
           />
         </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-foundation via-brand-foundation/60 to-transparent z-0" />
+        <div className="absolute inset-0 bg-gradient-to-t from-sky-50/80 via-white/80 to-transparent z-0" />
         
         <div className="container mx-auto px-6 md:px-12 max-w-5xl text-center relative z-10">
           <motion.div
@@ -52,11 +52,11 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-8 leading-[1.2]">
-              <span className="inline-block bg-brand-accent text-brand-foundation px-6 py-2 transform -skew-x-6 mb-4 shadow-[0_0_20px_rgba(252,163,17,0.3)]">
+              <span className="inline-block bg-gradient-to-r from-brand-accent to-amber-500 text-white font-black px-6 py-2 transform -skew-x-6 mb-4 shadow-lg shadow-amber-500/25">
                 25+ Years of Building
               </span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+              <span className="text-slate-900">
                 World-Class Organisations.
               </span>
             </h1>
@@ -161,7 +161,7 @@ export default function AboutPage() {
       </section>
 
       {/* Journey Timeline - Interactive Scroll Connected */}
-      <section className="py-32 px-6 bg-brand-foundation text-white relative overflow-hidden">
+      <section className="py-32 px-6 bg-slate-50/80 text-slate-900 relative overflow-hidden border-t border-slate-200/60">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/audience.jpg"
@@ -209,7 +209,7 @@ export default function AboutPage() {
               >
                 {/* Glowing Node that lights up when scrolled past */}
                 <motion.div 
-                  className="absolute left-[-5px] md:left-1/2 md:-ml-[9px] top-4 w-6 h-6 bg-brand-foundation border-4 border-brand-accent rounded-full z-20 shadow-[0_0_20px_rgba(252,163,17,1)] flex items-center justify-center"
+                  className="absolute left-[-5px] md:left-1/2 md:-ml-[9px] top-4 w-6 h-6 bg-white border-4 border-brand-accent rounded-full z-20 shadow-[0_0_20px_rgba(252,163,17,1)] flex items-center justify-center"
                 >
                   <CheckCircle2 className="w-3 h-3 text-brand-accent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </motion.div>
@@ -225,7 +225,7 @@ export default function AboutPage() {
                     <span className="inline-block text-brand-accent font-display text-4xl md:text-5xl font-black mb-4 tracking-tighter drop-shadow-[0_0_15px_rgba(252,163,17,0.3)]">
                       {milestone.year}
                     </span>
-                    <h4 className="text-3xl font-bold mb-4 text-white group-hover:text-brand-accent transition-colors duration-300 relative z-10">
+                    <h4 className="text-3xl font-bold mb-4 text-slate-900 group-hover:text-brand-accent transition-colors duration-300 relative z-10">
                       {milestone.title}
                     </h4>
                     <p className="text-gray-300 text-lg leading-relaxed relative z-10 font-light">

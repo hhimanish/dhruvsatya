@@ -81,7 +81,7 @@ export default function AnalyzerPage() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col bg-brand-foundation relative">
+    <main className="flex min-h-screen flex-col bg-white text-slate-900 relative">
       <Navbar />
       
       {/* Background Ambience */}

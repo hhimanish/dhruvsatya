@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${montserrat.variable} antialiased font-sans bg-brand-foundation text-brand-ivory overflow-x-hidden w-full`}
+        className={`${inter.variable} ${montserrat.variable} antialiased font-sans bg-white text-slate-800 overflow-x-hidden w-full`}
       >
         <NextTopLoader
           color="#FFD700"

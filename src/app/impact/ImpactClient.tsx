@@ -21,7 +21,7 @@ export function ImpactClient({ caseStudies }: { caseStudies: any[] }) {
       <Navbar />
       
       {/* Dynamic Hero Section */}
-      <section className="relative pt-40 pb-32 bg-brand-foundation text-white overflow-hidden">
+      <section className="relative pt-40 pb-32 bg-gradient-to-b from-[#F0F7FF] via-[#FFFFFF] to-[#FFFDF7] text-slate-900 overflow-hidden border-b border-slate-100">
         {/* Background Image with Parallax & Ken Burns */}
         <motion.div
           animate={{
@@ -38,7 +38,7 @@ export function ImpactClient({ caseStudies }: { caseStudies: any[] }) {
             src="/images/Inspire.jpg"
             alt="DhruvSatya Impact"
             fill
-            className="object-cover opacity-40 mix-blend-luminosity"
+            className="object-cover opacity-10 mix-blend-multiply mix-blend-luminosity"
             priority
           />
         </motion.div>
@@ -161,7 +161,7 @@ export function ImpactClient({ caseStudies }: { caseStudies: any[] }) {
       </section>
 
       {/* Vibrant Trust Bar */}
-      <section className="py-24 bg-brand-foundation text-center border-t border-brand-accent/20 px-6 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-r from-sky-50 via-white to-amber-50 text-center border-t border-slate-200 px-6 relative overflow-hidden text-slate-900">
         <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -264,7 +264,7 @@ export function ImpactClient({ caseStudies }: { caseStudies: any[] }) {
               </div>
             </div>
             
-            <div className="bg-brand-foundation text-white p-10 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] flex flex-col relative transform md:-translate-y-4">
+            <div className="bg-white border-2 border-brand-cyan text-slate-900 p-10 rounded-3xl shadow-xl flex flex-col relative transform md:-translate-y-4">
               <div className="absolute top-8 left-8 text-6xl text-brand-accent/20 font-serif font-black">"</div>
               <p className="text-gray-300 text-lg leading-relaxed mb-8 relative z-10 pt-4 flex-grow">
                 Soumitra's intervention was a watershed moment for our leadership team. He challenged our fundamental assumptions and helped us align our vision with actual, observable behaviours. It was nothing short of transformative.
