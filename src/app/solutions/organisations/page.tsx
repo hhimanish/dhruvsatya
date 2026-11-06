@@ -5,7 +5,6 @@ import { Footer } from "@/components/layout/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CinematicMesh } from "@/components/ui/CinematicMesh";
 import {
   ArrowRight,
   TrendingUp,
@@ -131,9 +130,6 @@ export default function OrganisationsPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brand-foundation/90 via-brand-foundation/80 to-brand-foundation z-10" />
         </div>
-
-        {/* Cinematic Ambient Mesh & Grain (GetLayers.ai Signature) */}
-        <CinematicMesh intensity="medium" showNoise={true} className="z-10" />
 
         <div className="container mx-auto px-6 md:px-12 max-w-6xl text-center relative z-20">
           <motion.div

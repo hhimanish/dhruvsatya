@@ -4,11 +4,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Search, Loader2, Sparkles, TrendingUp, AlertTriangle, Target, Users, ArrowRight, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { Search, Loader2, Sparkles, TrendingUp, AlertTriangle, Target, Users } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import { CinematicMesh } from "@/components/ui/CinematicMesh";
-import { SpotlightCard } from "@/components/ui/SpotlightCard";
 
 type Metric = {
   category: string;
@@ -37,9 +34,10 @@ export default function AnalyzerPage() {
     e.preventDefault();
     if (loading) return;
 
+    // Mock rate limiting
     const lastAnalyze = localStorage.getItem("analyzer_submit_time");
-    if (lastAnalyze && Date.now() - parseInt(lastAnalyze) < 30000) {
-      setError("Please wait 30 seconds before running another diagnostic.");
+    if (lastAnalyze && Date.now() - parseInt(lastAnalyze) < 60000) {
+      setError("Please wait a minute before running another diagnostic to prevent rate limits.");
       return;
     }
 
@@ -75,260 +73,207 @@ export default function AnalyzerPage() {
   };
 
   const getIconForCategory = (category: string) => {
-    if (category.includes("Training") || category.includes("Execution")) return <Target className="w-5 h-5 text-brand-accent" />;
-    if (category.includes("Change") || category.includes("Sales")) return <TrendingUp className="w-5 h-5 text-brand-accent" />;
-    if (category.includes("Transformation") || category.includes("Leadership")) return <Sparkles className="w-5 h-5 text-brand-accent" />;
-    if (category.includes("Motivation") || category.includes("Culture")) return <Users className="w-5 h-5 text-brand-accent" />;
-    if (category.includes("Safety")) return <ShieldCheck className="w-5 h-5 text-brand-accent" />;
-    return <AlertTriangle className="w-5 h-5 text-brand-accent" />;
+    if (category.includes("Training")) return <Target className="w-6 h-6 text-brand-accent" />;
+    if (category.includes("Change")) return <TrendingUp className="w-6 h-6 text-brand-accent" />;
+    if (category.includes("Transformation")) return <Sparkles className="w-6 h-6 text-brand-accent" />;
+    if (category.includes("Motivation")) return <Users className="w-6 h-6 text-brand-accent" />;
+    return <AlertTriangle className="w-6 h-6 text-brand-accent" />;
   };
 
   return (
-    <main className="flex min-h-screen flex-col bg-brand-foundation text-brand-ivory relative selection:bg-brand-accent selection:text-brand-foundation">
+    <main className="flex min-h-screen flex-col bg-brand-foundation relative">
       <Navbar />
-
-      {/* Cinematic Ambient Mesh & Grain (GetLayers.ai Signature) */}
-      <CinematicMesh intensity="medium" showNoise={true} className="fixed z-0" />
-
-      {/* Ambient Grid overlay */}
-      <div className="fixed inset-0 bg-[radial-gradient(rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:32px_32px] pointer-events-none z-0 opacity-30" />
+      
+      {/* Background Ambience */}
+      <div className="fixed inset-0 z-0 opacity-20 pointer-events-none">
+        <Image 
+          src="/images/Inspire.jpg"
+          alt="Background"
+          fill
+          className="object-cover mix-blend-luminosity grayscale"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-foundation via-brand-foundation/90 to-brand-foundation" />
+      </div>
 
       <div className="container mx-auto px-6 md:px-12 max-w-6xl relative z-10 pt-40 pb-32 flex-grow">
+        
         {/* Header */}
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-md shadow-[0_0_20px_rgba(252,163,17,0.15)]">
-            <span className="relative flex h-2 w-2 mr-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-accent" />
-            </span>
-            <span className="text-white/90 text-xs font-bold tracking-[0.2em] uppercase">
-              AI Diagnostic Telemetry
-            </span>
+          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-md">
+            <Sparkles className="w-4 h-4 text-brand-accent mr-2" />
+            <span className="text-white/80 text-sm font-medium tracking-wider uppercase">AI Powered</span>
           </div>
-
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-black text-white tracking-tight leading-[1.05] mb-6">
-            Enterprise Organisational <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-amber-200 to-brand-accent drop-shadow-[0_0_35px_rgba(252,163,17,0.3)]">
-              Diagnostic Engine.
-            </span>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-white mb-6">
+            Organisational <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-200">Diagnostics</span>
           </h1>
-          <p className="text-gray-300 text-base md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
-            Instantly diagnose latent cultural bottlenecks, managerial capability gaps, and execution friction across your organization.
+          <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto font-light">
+            Instantly analyze your organisational footprint to uncover hidden gaps in training, change management, and team motivation.
           </p>
         </motion.div>
 
         {/* Dynamic Layout: Form vs Dashboard */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Input Form Column */}
-          <motion.div
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          {/* Input Form Column (Takes full width if no report, shifts left if report exists) */}
+          <motion.div 
             layout
-            className={`transition-all duration-700 ease-in-out ${
-              report ? "lg:col-span-4" : "lg:col-start-3 lg:col-span-8"
-            }`}
+            className={`transition-all duration-700 ease-in-out ${report ? 'lg:col-span-4' : 'lg:col-start-3 lg:col-span-8'}`}
           >
-            <SpotlightCard
-              spotlightColor="rgba(252, 163, 17, 0.22)"
-              enableTilt={false}
-              className="p-8 relative overflow-hidden"
-            >
-              {/* Animated scanning radar beam if loading */}
-              {loading && (
-                <motion.div
-                  initial={{ top: "-10%" }}
-                  animate={{ top: "110%" }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                  className="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-brand-accent to-transparent z-20 pointer-events-none opacity-80"
-                />
-              )}
-
-              <h2 className="text-xl font-display font-bold text-white mb-6 flex items-center justify-between">
-                <span className="flex items-center gap-2.5">
-                  <Search className="w-5 h-5 text-brand-accent" />
-                  Telemetry Parameters
-                </span>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-brand-accent px-2 py-0.5 rounded-full bg-brand-accent/10 border border-brand-accent/20">
-                  Real-time
-                </span>
+            <div className="bg-white/5 backdrop-blur-xl rounded-[2rem] p-8 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-accent/10 blur-[50px] rounded-full group-hover:bg-brand-accent/20 transition-colors duration-700" />
+              
+              <h2 className="text-2xl font-display font-bold text-white mb-8 flex items-center">
+                <Search className="w-5 h-5 text-brand-accent mr-3" />
+                Input Parameters
               </h2>
-
-              <form onSubmit={handleSubmit} className="space-y-5 relative z-10">
+              
+              <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
                 <div>
-                  <label className="block text-xs font-bold text-gray-300 mb-2 uppercase tracking-wider">
-                    Company LinkedIn URL
-                  </label>
-                  <input
-                    type="text"
+                  <label className="block text-sm font-medium text-gray-300 mb-2 uppercase tracking-wider">Company LinkedIn URL</label>
+                  <input 
+                    type="text" 
                     value={formData.linkedin}
-                    onChange={(e) => setFormData({ ...formData, linkedin: e.target.value })}
+                    onChange={(e) => setFormData({...formData, linkedin: e.target.value})}
                     placeholder="https://linkedin.com/company/..."
-                    className="w-full bg-black/30 border border-white/10 rounded-2xl px-4 py-3.5 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-all"
+                    className="w-full bg-black/20 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-all"
                   />
                 </div>
-
+                
                 <div>
-                  <label className="block text-xs font-bold text-gray-300 mb-2 uppercase tracking-wider">
-                    Company Website URL
-                  </label>
-                  <input
-                    type="text"
+                  <label className="block text-sm font-medium text-gray-300 mb-2 uppercase tracking-wider">Company Website URL</label>
+                  <input 
+                    type="text" 
                     value={formData.website}
-                    onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                    onChange={(e) => setFormData({...formData, website: e.target.value})}
                     placeholder="https://yourcompany.com"
-                    className="w-full bg-black/30 border border-white/10 rounded-2xl px-4 py-3.5 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-all"
+                    className="w-full bg-black/20 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-all"
                   />
                 </div>
-
+                
                 <div>
-                  <label className="block text-xs font-bold text-gray-300 mb-2 uppercase tracking-wider">
-                    Operational Context or Specific Challenges
-                  </label>
-                  <textarea
+                  <label className="block text-sm font-medium text-gray-300 mb-2 uppercase tracking-wider">Specific Scenario / Context</label>
+                  <textarea 
                     value={formData.scenario}
-                    onChange={(e) => setFormData({ ...formData, scenario: e.target.value })}
-                    placeholder="E.g., Recent mergers, siloed cross-functional handoffs, leadership transition, frontline sales underperformance..."
+                    onChange={(e) => setFormData({...formData, scenario: e.target.value})}
+                    placeholder="Describe any current challenges, recent mergers, leadership changes, or cultural shifts..."
                     rows={4}
-                    className="w-full bg-black/30 border border-white/10 rounded-2xl px-4 py-3.5 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-all resize-none"
+                    className="w-full bg-black/20 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-all resize-none"
                   />
                 </div>
 
                 {error && (
-                  <div className="bg-red-500/10 border border-red-500/40 text-red-300 px-4 py-3 rounded-xl text-xs flex items-start gap-2">
-                    <AlertTriangle className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" />
-                    <span>{error}</span>
+                  <div className="bg-red-500/10 border border-red-500/50 text-red-400 px-4 py-3 rounded-lg text-sm flex items-start">
+                    <AlertTriangle className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" />
+                    {error}
                   </div>
                 )}
 
-                <button
+                <button 
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-brand-accent text-brand-foundation font-display font-black text-sm uppercase tracking-widest rounded-2xl px-6 py-4 hover:bg-white hover:text-brand-foundation hover:shadow-[0_0_30px_rgba(252,163,17,0.4)] transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2 group cursor-pointer"
+                  className="w-full bg-brand-accent text-brand-foundation font-bold text-lg rounded-xl px-6 py-4 hover:bg-white hover:shadow-[0_0_20px_rgba(252,163,17,0.4)] transition-all duration-300 disabled:opacity-50 flex items-center justify-center group"
                 >
                   {loading ? (
                     <>
-                      <Loader2 className="w-4 h-4 animate-spin text-brand-foundation" />
-                      Analyzing Telemetry...
+                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                      Analyzing...
                     </>
                   ) : (
                     <>
-                      Run Diagnostic Audit
-                      <Sparkles className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+                      Run Diagnostics
+                      <Sparkles className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
                     </>
                   )}
                 </button>
               </form>
-            </SpotlightCard>
+            </div>
           </motion.div>
 
           {/* Interactive Dashboard Results Column */}
           <AnimatePresence>
             {report && (
-              <motion.div
-                initial={{ opacity: 0, x: 40, scale: 0.96 }}
+              <motion.div 
+                initial={{ opacity: 0, x: 50, scale: 0.95 }}
                 animate={{ opacity: 1, x: 0, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.96 }}
-                transition={{ duration: 0.5, type: "spring", bounce: 0.2 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
                 className="lg:col-span-8 flex flex-col gap-6"
               >
                 {/* Executive Summary Card */}
-                <SpotlightCard
-                  spotlightColor="rgba(252, 163, 17, 0.2)"
-                  className="p-8 border-brand-accent/40 shadow-[0_0_40px_rgba(252,163,17,0.12)]"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-display font-bold text-white flex items-center gap-2.5">
-                      <Target className="w-5 h-5 text-brand-accent" />
-                      Executive Diagnostic Synthesis
-                    </h3>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-brand-accent px-3 py-1 rounded-full bg-brand-accent/15 border border-brand-accent/30">
-                      Audit Complete
-                    </span>
-                  </div>
-                  <p className="text-gray-200 text-sm md:text-base leading-relaxed font-light">
+                <div className="bg-white/5 backdrop-blur-xl rounded-[2rem] p-8 border border-brand-accent/30 shadow-[inset_0_0_20px_rgba(252,163,17,0.05)]">
+                  <h3 className="text-xl font-display font-bold text-white mb-4 flex items-center">
+                    <Target className="w-5 h-5 text-brand-accent mr-3" />
+                    Executive Summary
+                  </h3>
+                  <p className="text-gray-300 text-lg leading-relaxed font-light">
                     {report.executiveSummary}
                   </p>
-                </SpotlightCard>
+                </div>
 
                 {/* Metrics Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {report.metrics.map((metric, idx) => (
-                    <SpotlightCard
+                    <motion.div 
                       key={idx}
-                      spotlightColor="rgba(252, 163, 17, 0.2)"
-                      className="p-6 flex flex-col justify-between"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: idx * 0.1 }}
+                      className="bg-white/5 backdrop-blur-lg rounded-3xl p-6 border border-white/10 hover:border-brand-accent/50 transition-colors group"
                     >
-                      <div>
-                        <div className="flex justify-between items-start mb-5">
-                          <div className="w-10 h-10 rounded-xl bg-brand-accent/15 border border-brand-accent/30 flex items-center justify-center text-brand-accent">
+                      <div className="flex justify-between items-start mb-6">
+                        <div className="flex items-center">
+                          <div className="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center group-hover:bg-brand-accent/20 transition-colors">
                             {getIconForCategory(metric.category)}
                           </div>
-                          <div className="text-right">
-                            <span className="text-3xl font-display font-black text-white">
-                              {metric.score}
-                            </span>
-                            <span className="text-brand-accent font-bold text-sm">/100</span>
-                            <p className="text-[9px] text-gray-400 uppercase tracking-widest mt-0.5">
-                              Urgency Index
-                            </p>
+                        </div>
+                        <div className="text-right">
+                          <span className="text-3xl font-display font-black text-white">{metric.score}</span>
+                          <span className="text-brand-accent font-bold">/100</span>
+                          <p className="text-xs text-gray-500 uppercase tracking-widest mt-1">Urgency Score</p>
+                        </div>
+                      </div>
+                      
+                      <h4 className="text-xl font-bold text-white mb-4 group-hover:text-brand-accent transition-colors">
+                        {metric.category}
+                      </h4>
+                      
+                      <div className="space-y-3 mb-6">
+                        {metric.insights.map((insight, i) => (
+                          <div key={i} className="flex items-start">
+                            <div className="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 mr-3 flex-shrink-0" />
+                            <p className="text-gray-400 text-sm">{insight}</p>
                           </div>
-                        </div>
-
-                        <h4 className="text-base font-display font-bold text-white mb-3">
-                          {metric.category}
-                        </h4>
-
-                        <div className="space-y-2 mb-6">
-                          {metric.insights.map((insight, i) => (
-                            <div key={i} className="flex items-start gap-2">
-                              <span className="w-1.5 h-1.5 rounded-full bg-brand-accent mt-1.5 flex-shrink-0" />
-                              <p className="text-gray-300 text-xs leading-relaxed">{insight}</p>
-                            </div>
-                          ))}
-                        </div>
+                        ))}
                       </div>
 
                       <div className="pt-4 border-t border-white/10 mt-auto">
-                        <span className="text-[10px] uppercase tracking-widest text-brand-accent font-bold mb-1.5 block">
-                          Recommended Action Plan
-                        </span>
-                        <p className="text-white text-xs font-medium leading-snug">
-                          {metric.actionPlan}
-                        </p>
+                        <span className="text-xs uppercase tracking-widest text-brand-accent font-bold mb-2 block">Recommended Action Plan</span>
+                        <p className="text-white/90 text-sm font-medium">{metric.actionPlan}</p>
                       </div>
-                    </SpotlightCard>
+                    </motion.div>
                   ))}
                 </div>
 
-                {/* Strategic Advantage & CTA Footer */}
-                <div className="p-8 rounded-3xl bg-gradient-to-r from-brand-accent/15 via-white/[0.04] to-transparent border border-brand-accent/30 flex flex-col md:flex-row items-center justify-between gap-6">
-                  <div className="flex items-start gap-4">
-                    <Sparkles className="w-6 h-6 text-brand-accent flex-shrink-0 mt-1" />
-                    <div>
-                      <h4 className="text-white font-display font-bold text-lg mb-1">
-                        The DhruvSatya Strategic Advantage
-                      </h4>
-                      <p className="text-gray-300 text-xs md:text-sm leading-relaxed max-w-xl">
-                        {report.strategicAdvantage}
-                      </p>
-                    </div>
+                {/* Strategic Advantage Footer */}
+                <div className="bg-gradient-to-r from-brand-accent/10 to-transparent rounded-2xl p-6 border-l-4 border-brand-accent flex items-start">
+                  <Sparkles className="w-6 h-6 text-brand-accent mr-4 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="text-white font-bold mb-2">The DhruvSatya Strategic Advantage</h4>
+                    <p className="text-gray-400">{report.strategicAdvantage}</p>
                   </div>
-
-                  <Link
-                    href={`/contact?audit=${encodeURIComponent("Custom Diagnostic Followup")}`}
-                    className="w-full md:w-auto px-6 py-3 rounded-full bg-brand-accent text-brand-foundation text-xs font-black uppercase tracking-wider hover:bg-white hover:text-brand-foundation transition-all shadow-lg flex-shrink-0 text-center"
-                  >
-                    Discuss With Advisor
-                  </Link>
                 </div>
+
               </motion.div>
             )}
           </AnimatePresence>
+
         </div>
       </div>
-
+      
       <Footer />
     </main>
   );

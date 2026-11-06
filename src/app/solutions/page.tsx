@@ -21,8 +21,6 @@ import {
   PhoneCall
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { SpotlightCard } from "@/components/ui/SpotlightCard";
-import { CinematicMesh } from "@/components/ui/CinematicMesh";
 
 export default function SolutionsPage() {
   const pathways = [
@@ -113,9 +111,6 @@ export default function SolutionsPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-brand-foundation/90 via-brand-foundation/80 to-brand-foundation z-10" />
         </div>
 
-        {/* Cinematic Ambient Mesh & Grain (GetLayers.ai Signature) */}
-        <CinematicMesh intensity="medium" showNoise={true} className="z-10" />
-
         <div className="container mx-auto px-6 md:px-12 max-w-6xl text-center relative z-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -157,11 +152,13 @@ export default function SolutionsPage() {
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {pathways.map((path, index) => (
-              <SpotlightCard
+              <motion.div
                 key={index}
-                spotlightColor="rgba(252, 163, 17, 0.22)"
-                enableTilt={true}
-                className="p-8 md:p-10 flex flex-col justify-between"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+                className="group relative rounded-3xl overflow-hidden bg-white/[0.03] border border-white/10 hover:border-brand-accent/50 p-8 md:p-10 flex flex-col justify-between transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:-translate-y-2"
               >
                 {/* Background Image Ambient Glow */}
                 <div className="absolute inset-0 z-0 opacity-10 group-hover:opacity-20 transition-opacity duration-700">
@@ -227,7 +224,7 @@ export default function SolutionsPage() {
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
-              </SpotlightCard>
+              </motion.div>
             ))}
           </div>
         </div>
