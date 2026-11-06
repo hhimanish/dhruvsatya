@@ -129,21 +129,21 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
   }, [programs, selectedCategory, searchQuery, activeAudience]);
 
   return (
-    <main className="flex min-h-screen flex-col bg-white text-slate-800 selection:bg-brand-accent selection:text-white">
+    <main className="flex min-h-screen flex-col bg-brand-foundation text-brand-ivory selection:bg-brand-accent selection:text-brand-foundation">
       <Navbar />
 
       {/* Cinematic Executive Hero */}
-      <section className="relative pt-40 pb-28 md:pt-48 md:pb-36 bg-gradient-to-b from-[#F0F7FF] via-[#FFFFFF] to-[#FFFDF7] text-slate-900 overflow-hidden border-b border-slate-100">
+      <section className="relative pt-40 pb-28 md:pt-48 md:pb-36 bg-brand-foundation overflow-hidden">
         {/* Ambient Photographic Background */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/achieving-world-class.jpg"
             alt="Dhruvsatya Capability Interventions"
             fill
-            className="object-cover object-center opacity-10 mix-blend-multiply scale-105"
+            className="object-cover object-center opacity-20 mix-blend-luminosity grayscale scale-105"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#F0F7FF]/90 via-white/80 to-[#FFFDF7] z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-foundation/90 via-brand-foundation/80 to-brand-foundation z-10" />
         </div>
 
         <div className="container mx-auto px-6 md:px-12 max-w-6xl relative z-20 text-center">
@@ -151,7 +151,7 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-sky-200 shadow-xs mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
             <span className="text-xs uppercase tracking-[0.25em] font-semibold text-gray-300">
@@ -185,30 +185,30 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto bg-white/90 shadow-sm p-6 rounded-3xl border border-slate-200"
+            className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto bg-white/[0.03] backdrop-blur-md p-6 rounded-3xl border border-white/10"
           >
             <div>
               <div className="text-3xl md:text-4xl font-display font-black text-brand-cyan">25+</div>
-              <div className="text-xs text-slate-500 uppercase tracking-widest mt-1 font-bold">Years of Legacy</div>
+              <div className="text-xs text-gray-400 uppercase tracking-widest mt-1">Years of Legacy</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-display font-black text-brand-accent">700+</div>
-              <div className="text-xs text-slate-500 uppercase tracking-widest mt-1 font-bold">Corporate Interventions</div>
+              <div className="text-xs text-gray-400 uppercase tracking-widest mt-1">Corporate Interventions</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-display font-black text-brand-cyan">300+</div>
-              <div className="text-xs text-slate-500 uppercase tracking-widest mt-1 font-bold">Academic Institutions</div>
+              <div className="text-xs text-gray-400 uppercase tracking-widest mt-1">Academic Institutions</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-display font-black text-brand-accent">100k+</div>
-              <div className="text-xs text-slate-500 uppercase tracking-widest mt-1 font-bold">Leaders Transformed</div>
+              <div className="text-xs text-gray-400 uppercase tracking-widest mt-1">Leaders Transformed</div>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Control Bar: Search & Filtering Matrix */}
-      <section className="sticky top-20 z-40 bg-white/95 backdrop-blur-xl border-y border-slate-200/80 py-5 px-4 md:px-12 shadow-sm">
+      <section className="sticky top-20 z-40 bg-brand-foundation/95 backdrop-blur-xl border-y border-white/10 py-6 px-4 md:px-12 shadow-2xl">
         <div className="container mx-auto max-w-7xl">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search Input */}
@@ -219,7 +219,7 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
                 placeholder="Search interventions, skills, or topics..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-brand-accent/80 focus:ring-1 focus:ring-brand-accent/80 transition-all"
+                className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-gray-400 text-sm focus:outline-none focus:border-brand-accent/80 focus:ring-1 focus:ring-brand-accent/80 transition-all"
               />
               {searchQuery && (
                 <button
@@ -233,7 +233,7 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
 
             {/* Audience Filter Pills */}
             <div className="flex items-center gap-2 overflow-x-auto w-full lg:w-auto pb-2 lg:pb-0 scrollbar-none">
-              <span className="text-xs uppercase tracking-wider text-slate-600 font-bold whitespace-nowrap mr-2 flex items-center gap-1">
+              <span className="text-xs uppercase tracking-wider text-gray-400 font-semibold whitespace-nowrap mr-2 flex items-center gap-1">
                 <Users className="w-3.5 h-3.5 text-brand-accent" />
                 Audience:
               </span>
@@ -244,7 +244,7 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
                   className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
                     activeAudience === aud
                       ? "bg-brand-accent text-brand-foundation font-bold shadow-md shadow-brand-accent/20"
-                      : "bg-slate-100 text-slate-600 hover:bg-slate-200/80 border border-slate-200/60"
+                      : "bg-white/5 text-gray-300 hover:bg-white/10 border border-white/5"
                   }`}
                 >
                   {aud}
@@ -254,15 +254,15 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
           </div>
 
           {/* Domain Category Tabs */}
-          <div className="flex gap-2 overflow-x-auto mt-6 pt-4 border-t border-slate-100 pb-1 scrollbar-none">
+          <div className="flex gap-2 overflow-x-auto mt-6 pt-4 border-t border-white/5 pb-1 scrollbar-none">
             {CATEGORIES.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold whitespace-nowrap transition-all flex items-center gap-2 ${
                   selectedCategory === cat
-                    ? "bg-gradient-to-r from-brand-accent to-amber-500 text-white shadow-md shadow-amber-500/25 font-bold"
-                    : "bg-slate-50 text-slate-600 hover:bg-white hover:text-brand-cyan border border-slate-200"
+                    ? "bg-brand-accent text-brand-foundation shadow-lg shadow-brand-accent/20 font-bold"
+                    : "bg-white/[0.04] text-gray-300 hover:bg-white/10 hover:text-white border border-white/5"
                 }`}
               >
                 {cat}
@@ -278,10 +278,10 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
           {/* Header count & context */}
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12 gap-4 pb-6 border-b border-white/10">
             <div>
-              <h2 className="text-2xl md:text-3xl font-display font-bold text-slate-900">
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-white">
                 {selectedCategory === "All Interventions" ? "Complete Capability Interventions" : selectedCategory}
               </h2>
-              <p className="text-sm text-slate-500 mt-1">
+              <p className="text-sm text-gray-400 mt-1">
                 Showing {filteredPrograms.length} customized enterprise learning frameworks
               </p>
             </div>
@@ -344,7 +344,7 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
                         </span>
                       </div>
 
-                      <h3 className="text-2xl font-display font-bold text-slate-900 mb-2 group-hover:text-brand-cyan transition-colors">
+                      <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-brand-accent transition-colors">
                         {program.title}
                       </h3>
                       <p className="text-xs font-semibold text-brand-accent/90 tracking-wide uppercase mb-4">
@@ -422,7 +422,7 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
                     </div>
 
                     {/* Bottom Action Footer */}
-                    <div className="pt-6 border-t border-slate-100 flex items-center justify-between gap-4 mt-auto">
+                    <div className="pt-6 border-t border-white/5 flex items-center justify-between gap-4 mt-auto">
                       <button
                         onClick={() => setExpandedProgramId(isExpanded ? null : program.id)}
                         className="text-xs font-bold uppercase tracking-wider text-gray-300 hover:text-white flex items-center gap-1.5 transition-colors"
@@ -448,13 +448,13 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
       </section>
 
       {/* The Kirkpatrick 4-Level Evaluation & Delivery Excellence Architecture */}
-      <section className="py-24 px-6 md:px-12 bg-slate-50/80 border-t border-slate-200/60 relative overflow-hidden text-slate-900">
+      <section className="py-24 px-6 md:px-12 bg-brand-foundation border-t border-white/10 relative overflow-hidden">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-accent mb-3 block">
               The Science of Transformation
             </span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
               Our 4-Level Kirkpatrick ROI Framework
             </h2>
             <p className="text-gray-300 text-base md:text-lg leading-relaxed">
@@ -500,7 +500,7 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
                 <div className="text-xs font-black uppercase tracking-widest text-brand-accent mb-2">
                   {card.level}
                 </div>
-                <h3 className="text-xl font-display font-bold text-slate-900 mb-3">
+                <h3 className="text-xl font-display font-bold text-white mb-3">
                   {card.title}
                 </h3>
                 <div className="text-xs font-semibold text-gray-400 mb-4 pb-4 border-b border-white/5">
@@ -518,7 +518,7 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
 
           {/* Flexible Delivery Modes */}
           <div className="mt-20 p-10 md:p-14 rounded-3xl bg-white/[0.02] border border-white/10 max-w-5xl mx-auto">
-            <h3 className="text-2xl font-display font-bold text-slate-900 text-center mb-4">
+            <h3 className="text-2xl font-display font-bold text-white text-center mb-4">
               Flexible Deployment & Delivery Modes
             </h3>
             <p className="text-sm text-gray-300 text-center max-w-2xl mx-auto mb-10">
@@ -533,7 +533,7 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
                 { title: "Executive 1-on-1 Advisory", desc: "Confidential CXO retreats, shadow coaching, and board alignment interventions." }
               ].map((mode, mIdx) => (
                 <div key={mIdx} className="p-6 rounded-2xl bg-white/[0.02] border border-white/5">
-                  <h4 className="text-base font-bold text-slate-900 mb-2">{mode.title}</h4>
+                  <h4 className="text-base font-bold text-white mb-2">{mode.title}</h4>
                   <p className="text-xs text-gray-400 leading-relaxed">{mode.desc}</p>
                 </div>
               ))}
@@ -548,7 +548,7 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
           <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-accent mb-4 block">
             Partner With India's Foremost T&D Pioneer
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-slate-900 mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-white mb-8">
             Ready to Build a High-Performance Culture?
           </h2>
           <p className="text-base md:text-xl text-gray-300 font-light leading-relaxed mb-10 max-w-2xl mx-auto">

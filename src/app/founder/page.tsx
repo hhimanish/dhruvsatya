@@ -13,20 +13,20 @@ export default function FounderPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 bg-gradient-to-b from-[#F0F7FF] via-[#FFFFFF] to-[#FFFDF7] text-slate-900 overflow-hidden border-b border-slate-100">
+      <section className="relative pt-32 pb-24 bg-brand-foundation text-white overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-brand-accent/5 to-transparent pointer-events-none" />
         <div className="container mx-auto px-6 md:px-12 relative z-10 flex flex-col md:flex-row items-center gap-16">
           <div className="w-full md:w-1/2">
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold mb-6 leading-tight">
-              <span className="inline-block bg-gradient-to-r from-brand-accent to-amber-500 text-white font-black px-6 py-2 transform -skew-x-6 mb-2 shadow-lg shadow-amber-500/25">
+              <span className="inline-block bg-brand-accent text-brand-foundation px-6 py-2 transform -skew-x-6 mb-2 shadow-[0_0_20px_rgba(252,163,17,0.3)]">
                 Meet the Mind Behind the
               </span>
               <br />
-              <span className="text-slate-900">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
                 Transformation.
               </span>
             </h1>
-            <p className="text-xl text-slate-600 mb-10 max-w-lg font-normal leading-relaxed">
+            <p className="text-xl text-gray-300 mb-10 max-w-lg font-light leading-relaxed">
               Soumitra Chatterjee has consulted over 600 organisations and impacted more than 600,000 lives across India and overseas.
             </p>
             <Link 
@@ -58,7 +58,7 @@ export default function FounderPage() {
                 className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-110"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent transition-colors duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-foundation/80 via-transparent to-transparent group-hover:from-brand-foundation/60 transition-colors duration-700" />
             </div>
           </motion.div>
         </div>
@@ -92,7 +92,7 @@ export default function FounderPage() {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-10 rounded-3xl shadow-xl">
+            <div className="bg-brand-foundation text-white p-10 rounded-2xl">
               <h3 className="text-xl font-medium mb-8 border-b border-white/20 pb-4">
                 Areas of Expertise
               </h3>
@@ -124,7 +124,7 @@ export default function FounderPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-r from-sky-50 via-white to-amber-50 text-center text-slate-900 px-6 border-t border-slate-200">
+      <section className="py-24 bg-brand-foundation text-center text-white px-6">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-5xl font-display font-medium mb-8">
             Bring this thinking to your organisation.

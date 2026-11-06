@@ -31,51 +31,45 @@ export function PhilosophySection() {
   const [active, setActive] = useState(philosophies[0].id);
 
   return (
-    <section className="py-20 md:py-32 bg-slate-50/70 text-slate-900 relative overflow-hidden border-t border-slate-200/60">
+    <section className="py-20 md:py-32 bg-brand-foundation text-brand-ivory relative overflow-hidden">
       
       {/* Background massive text watermarks */}
-      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-full overflow-hidden opacity-[0.03] pointer-events-none flex flex-col">
-        <span className="text-[20rem] font-display font-black leading-none whitespace-nowrap -ml-20 text-slate-900">TRUTH</span>
-        <span className="text-[20rem] font-display font-black leading-none whitespace-nowrap ml-32 text-slate-900">ACTION</span>
+      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-full overflow-hidden opacity-[0.03] pointer-events-none flex flex-col pointer-events-none">
+        <span className="text-[20rem] font-display font-black leading-none whitespace-nowrap -ml-20">TRUTH</span>
+        <span className="text-[20rem] font-display font-black leading-none whitespace-nowrap ml-32">ACTION</span>
       </div>
 
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+        <div className="flex flex-col lg:flex-row gap-20 lg:gap-32 items-start">
           
-          <div className="w-full lg:w-5/12 pt-6">
+          <div className="w-full lg:w-5/12 pt-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-sm font-bold text-brand-cyan tracking-[0.3em] uppercase mb-4 flex items-center">
-                <span className="w-8 h-[2px] bg-gradient-to-r from-brand-cyan to-brand-accent mr-3"></span>
+              <h2 className="text-sm font-semibold text-brand-cyan tracking-[0.3em] uppercase mb-6 flex items-center">
+                <span className="w-8 h-[1px] bg-gradient-to-r from-brand-cyan to-brand-accent mr-4"></span>
                 The DhruvSatya Way
               </h2>
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-slate-900 mb-8 md:mb-12 leading-[1.15]">
-                Philosophy that drives <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-amber-500">execution.</span>
+              <h3 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-white mb-10 md:mb-16 leading-[1.1]">
+                Philosophy that drives <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-200">execution.</span>
               </h3>
             </motion.div>
 
-            <div className="space-y-3">
+            <div className="space-y-4">
               {philosophies.map((phil) => (
                 <div 
                   key={phil.id}
-                  className="cursor-pointer group relative overflow-hidden rounded-xl"
+                  className="cursor-pointer group relative overflow-hidden rounded-lg"
                   onClick={() => setActive(phil.id)}
                   onMouseEnter={() => setActive(phil.id)}
                 >
-                  <div className={`absolute inset-0 rounded-xl transition-all duration-300 ${
-                    active === phil.id ? 'bg-white shadow-md border-l-4 border-brand-accent' : 'bg-transparent hover:bg-white/60'
-                  }`} />
-                  <div className="px-6 py-4 flex items-center relative z-10">
-                    <span className={`w-2.5 h-2.5 rounded-full mr-4 transition-all duration-300 ${
-                      active === phil.id ? 'bg-brand-accent shadow-[0_0_8px_rgba(248,166,18,0.8)] scale-100' : 'bg-slate-300 scale-75'
-                    }`} />
-                    <h4 className={`text-xl sm:text-2xl font-display font-bold tracking-tight transition-colors duration-300 ${
-                      active === phil.id ? "text-slate-900" : "text-slate-500 group-hover:text-slate-800"
-                    }`}>
+                  <div className={`absolute inset-0 rounded-xl transition-all duration-500 ease-out ${active === phil.id ? 'bg-white/10 backdrop-blur-md border border-white/20 shadow-xl' : 'bg-transparent'}`} />
+                  <div className={`px-6 py-5 flex items-center relative z-10`}>
+                    <span className={`w-2 h-2 rounded-full mr-4 transition-all duration-300 ${active === phil.id ? 'bg-brand-accent shadow-[0_0_10px_rgba(252,163,17,0.8)] scale-100' : 'bg-white/20 scale-50'}`} />
+                    <h4 className={`text-xl sm:text-2xl md:text-3xl font-display font-bold tracking-tight transition-colors duration-300 ${active === phil.id ? "text-brand-accent drop-shadow-md" : "text-white/60 group-hover:text-white"}`}>
                       {phil.title}
                     </h4>
                   </div>
@@ -85,15 +79,22 @@ export function PhilosophySection() {
           </div>
 
           <div className="w-full lg:w-7/12 relative">
-            {/* Dynamic Joyful Card */}
-            <div className="relative w-full aspect-square md:aspect-[4/3] bg-white border border-slate-200/90 rounded-3xl p-10 md:p-16 flex flex-col justify-center overflow-hidden shadow-xl">
+            {/* Dynamic Glassmorphic Card with Photographic Background */}
+            <div className="relative w-full aspect-square md:aspect-[4/3] border border-white/10 p-10 md:p-16 flex flex-col justify-center overflow-hidden">
               
-              <div className="absolute inset-0 bg-gradient-to-br from-sky-50/50 via-white to-amber-50/50" />
+              <Image 
+                src="/images/team-conference.jpg"
+                alt="DhruvSatya Team Deliberation"
+                fill
+                className="object-cover opacity-40 mix-blend-luminosity"
+              />
+              <div className="absolute inset-0 bg-brand-foundation/70" />
+              <div className="absolute inset-0 bg-brand-secondary/40 backdrop-blur-md" />
 
-              {/* Internal joyful glow */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-amber-100/60 blur-[80px] rounded-full pointer-events-none" />
+              {/* Internal glowing orb */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-accent/30 blur-[100px] rounded-full pointer-events-none" />
 
-              <div className="absolute top-8 left-8 text-7xl text-brand-cyan/20 font-serif leading-none font-black">"</div>
+              <div className="absolute top-8 left-8 text-6xl text-brand-cyan/30 font-serif leading-none font-bold">"</div>
               
               <div className="relative z-10 min-h-[150px] flex items-center">
                 <AnimatePresence mode="wait">
@@ -101,12 +102,12 @@ export function PhilosophySection() {
                     active === phil.id && (
                       <motion.div
                         key={phil.id}
-                        initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+                        initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                        exit={{ opacity: 0, y: -20, filter: "blur(6px)" }}
-                        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                        exit={{ opacity: 0, y: -30, filter: "blur(10px)" }}
+                        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                       >
-                        <p className="text-2xl sm:text-3xl md:text-5xl text-slate-900 font-display font-medium leading-[1.2] tracking-tight">
+                        <p className="text-2xl sm:text-3xl md:text-5xl text-white font-display font-medium leading-[1.2] tracking-tight">
                           {phil.description}
                         </p>
                       </motion.div>
@@ -117,7 +118,9 @@ export function PhilosophySection() {
             </div>
 
             {/* Decorative geometrical accent */}
-            <div className="absolute -bottom-4 -right-4 w-28 h-28 border-2 border-brand-accent/40 rounded-3xl z-0 hidden md:block" />
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-brand-cyan/40 z-0 hidden md:block" />
+            <div className="absolute -bottom-3 -right-3 w-32 h-32 border-2 border-brand-accent/70 z-0 hidden md:block" />
+            <div className="absolute -bottom-8 -right-8 w-4 h-4 bg-brand-accent z-0 hidden md:block animate-pulse" />
           </div>
           
         </div>

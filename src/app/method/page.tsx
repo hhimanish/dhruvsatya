@@ -50,7 +50,7 @@ export default function MethodPage() {
       <Navbar />
       
       {/* Cinematic Hero - Fresh Asset */}
-      <section className="relative pt-40 pb-32 bg-gradient-to-b from-[#F0F7FF] via-[#FFFFFF] to-[#FFFDF7] text-slate-900 overflow-hidden border-b border-slate-100">
+      <section className="relative pt-40 pb-32 bg-brand-foundation text-white overflow-hidden">
         <div className="absolute inset-0 w-full h-full animate-slow-zoom origin-center z-0">
           <Image 
             src="/images/Group1.jpg"
@@ -214,7 +214,7 @@ export default function MethodPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-32 bg-gradient-to-r from-sky-50 via-white to-amber-50 text-center px-6 relative overflow-hidden border-t border-slate-200 text-slate-900">
+      <section className="py-32 bg-brand-foundation text-center px-6 relative overflow-hidden">
         <div className="absolute inset-0 z-0" aria-hidden="true">
           <Image 
             src="/images/audience.jpg"

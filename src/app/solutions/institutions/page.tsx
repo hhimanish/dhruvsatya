@@ -68,20 +68,20 @@ export default function InstitutionsPage() {
   ];
 
   return (
-    <main className="flex min-h-screen flex-col bg-white text-slate-800 selection:bg-brand-accent selection:text-white">
+    <main className="flex min-h-screen flex-col bg-brand-foundation text-brand-ivory selection:bg-brand-accent selection:text-brand-foundation">
       <Navbar />
 
       {/* Cinematic Hero */}
-      <section className="relative pt-40 pb-32 bg-gradient-to-b from-[#F0F7FF] via-[#FFFFFF] to-[#FFFDF7] text-slate-900 overflow-hidden border-b border-slate-100">
+      <section className="relative pt-40 pb-32 bg-brand-foundation overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/group-pic.jpg"
             alt="Educational Institutions Transformation"
             fill
-            className="object-cover opacity-10 mix-blend-multiply scale-105"
+            className="object-cover opacity-20 mix-blend-luminosity scale-105"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#F0F7FF]/90 via-white/80 to-[#FFFDF7] z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-foundation/90 via-brand-foundation/80 to-brand-foundation z-10" />
         </div>
 
         <div className="container mx-auto px-6 md:px-12 max-w-6xl text-center relative z-20">
@@ -89,7 +89,7 @@ export default function InstitutionsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-sky-200 shadow-xs mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
             <span className="text-xs uppercase tracking-[0.25em] font-semibold text-gray-300">
@@ -133,7 +133,7 @@ export default function InstitutionsPage() {
             <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-accent mb-3 block">
               Academic Intervention Catalog
             </span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
               Empowering Educators & Students Alike
             </h2>
             <p className="text-gray-300 text-sm md:text-base leading-relaxed">
@@ -221,7 +221,7 @@ export default function InstitutionsPage() {
           <span className="text-xs uppercase tracking-[0.25em] font-bold text-brand-accent mb-4 block">
             Academic Empowerment
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-slate-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-6">
             Partner With India&apos;s Leading Transformation Center
           </h2>
           <p className="text-gray-300 text-base md:text-xl font-light mb-10 max-w-2xl mx-auto">

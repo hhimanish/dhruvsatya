@@ -8,8 +8,11 @@ import {
   TrendingUp,
   Mountain,
   Target,
+  Sparkles,
+  ArrowUpRight,
+  CheckCircle2,
   Clock,
-  ArrowUpRight
+  ChevronRight
 } from "lucide-react";
 
 export function FeaturedPrograms() {
@@ -53,24 +56,24 @@ export function FeaturedPrograms() {
   ];
 
   return (
-    <section className="py-24 md:py-28 px-4 md:px-12 bg-white text-slate-900 relative overflow-hidden border-t border-slate-200/60">
+    <section className="py-28 px-4 md:px-12 bg-gradient-to-b from-brand-foundation via-[#0c121e] to-brand-foundation text-brand-ivory relative overflow-hidden border-t border-white/10">
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 shadow-sm mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-4">
               <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse shadow-[0_0_8px_#F8A612]" />
-              <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-slate-700">
+              <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-gray-300">
                 Core Interventions
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-black tracking-tight text-slate-900">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-black tracking-tight text-white">
               Flagship Capability Programs.
             </h2>
           </div>
 
           <Link
             href="/programs"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-brand-accent to-amber-500 text-white font-display font-black text-xs uppercase tracking-widest hover:shadow-lg hover:shadow-amber-500/25 transition-all shadow-md"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-accent text-brand-foundation font-display font-black text-xs uppercase tracking-widest hover:bg-white transition-all shadow-lg shadow-brand-accent/20"
           >
             Browse All 25 Interventions
             <ArrowRight className="w-4 h-4" />
@@ -81,56 +84,54 @@ export function FeaturedPrograms() {
           {flagshipPrograms.map((prog, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="group relative rounded-3xl overflow-hidden bg-slate-50/70 border border-slate-200/90 hover:border-brand-accent/60 hover:bg-white p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 min-h-[420px] shadow-sm"
+              className="group relative rounded-3xl bg-white/[0.03] border border-white/10 hover:border-brand-accent/50 p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
             >
-              <div className="relative z-10">
-                <div className="flex items-center justify-between mb-5">
-                  <div className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-300 shadow-sm ${
-                    idx % 2 === 0
-                      ? "bg-amber-50 text-brand-accent border border-amber-200 group-hover:bg-brand-accent group-hover:text-white"
-                      : "bg-sky-50 text-brand-cyan border border-sky-200 group-hover:bg-brand-cyan group-hover:text-white"
-                  }`}>
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-brand-accent/15 border border-brand-accent/30 flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-foundation transition-all duration-300">
                     <prog.icon className="w-6 h-6" />
                   </div>
-                  <div className="flex items-center gap-1 text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-full border border-slate-200 shadow-xs">
-                    <Clock className={`w-3.5 h-3.5 ${idx % 2 === 0 ? "text-brand-accent" : "text-brand-cyan"}`} />
-                    <span>{prog.duration}</span>
-                  </div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-brand-accent px-2.5 py-1 rounded-full bg-brand-accent/10 border border-brand-accent/20">
+                    {prog.duration}
+                  </span>
                 </div>
 
-                <div className={`text-[10px] font-black uppercase tracking-widest mb-2 ${
-                  idx % 2 === 0 ? "text-brand-accent" : "text-brand-cyan"
-                }`}>
-                  {prog.category}
+                <div className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">
+                  {prog.category.split("&")[0]}
                 </div>
-                <h3 className={`text-xl font-display font-bold text-slate-900 mb-2 transition-colors ${
-                  idx % 2 === 0 ? "group-hover:text-brand-accent" : "group-hover:text-brand-cyan"
-                }`}>
+                <h3 className="text-xl font-display font-bold text-white mb-2 group-hover:text-brand-accent transition-colors">
                   {prog.title}
                 </h3>
-                <div className="text-[11px] font-semibold text-slate-500 italic mb-4">
-                  "{prog.tagline}"
+                <div className="text-[11px] font-semibold text-brand-accent/90 mb-4">
+                  {prog.tagline}
                 </div>
-                <p className="text-xs text-slate-600 leading-relaxed mb-6 font-normal">
+                <p className="text-xs text-gray-300 leading-relaxed mb-6">
                   {prog.desc}
                 </p>
+
+                <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5 mb-6">
+                  <div className="text-[10px] uppercase font-bold text-gray-400 mb-0.5">Demography</div>
+                  <div className="text-xs text-gray-300 font-medium">{prog.target}</div>
+                </div>
               </div>
 
-              <div className="relative z-10 pt-4 border-t border-slate-200/60 flex items-center justify-between">
+              <div className="pt-4 border-t border-white/5 flex items-center justify-between">
+                <Link
+                  href={`/contact?program=${encodeURIComponent(prog.title)}`}
+                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-accent hover:text-white transition-colors"
+                >
+                  Inquire Now
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
                 <Link
                   href="/programs"
-                  className={`inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider transition-colors ${
-                    idx % 2 === 0
-                      ? "text-brand-accent hover:text-amber-600"
-                      : "text-brand-cyan hover:text-blue-700"
-                  }`}
+                  className="text-xs text-gray-400 hover:text-white transition-colors"
                 >
                   View Details
-                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               </div>
             </motion.div>
