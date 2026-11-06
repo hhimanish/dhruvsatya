@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans, Syne } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import { CookieConsent } from "@/components/layout/CookieConsent";
 import { WhatsAppWidget } from "@/components/layout/WhatsAppWidget";
 import { BackToTop } from "@/components/layout/BackToTop";
@@ -11,19 +11,12 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
 });
 
-const plusJakarta = Plus_Jakarta_Sans({
+const montserrat = Montserrat({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["500", "700", "800"],
-});
-
-const syne = Syne({
-  variable: "--font-syne",
-  subsets: ["latin"],
-  weight: ["700", "800"],
+  weight: ["400", "500", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -59,10 +52,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${plusJakarta.variable} ${syne.variable} antialiased font-sans bg-brand-foundation text-brand-ivory overflow-x-hidden w-full`}
+        className={`${inter.variable} ${montserrat.variable} antialiased font-sans bg-brand-foundation text-brand-ivory overflow-x-hidden w-full`}
       >
         <NextTopLoader
-          color="#D4AF37"
+          color="#FFD700"
           initialPosition={0.08}
           crawlSpeed={200}
           height={3}
