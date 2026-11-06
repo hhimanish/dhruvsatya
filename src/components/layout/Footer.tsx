@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export function Footer() {
@@ -9,8 +10,14 @@ export function Footer() {
           
           {/* Brand Column */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
-            <Link href="/" className="inline-block font-display font-black text-2xl tracking-widest uppercase mb-6 text-white">
-              DHRUVSATYA
+            <Link href="/" className="inline-block mb-6 group">
+              <Image
+                src="/images/logo-horizontal.png"
+                alt="DhruvSatya Center for Personal Transformation"
+                width={240}
+                height={74}
+                className="h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-8 pr-4">
               Center for Personal Transformation. <br />

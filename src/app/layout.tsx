@@ -74,7 +74,7 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "DhruvSatya Center for Personal Transformation",
               "url": "https://thecpt.co.in",
-              "logo": "https://thecpt.co.in/images/logo-vertical.png",
+              "logo": "https://thecpt.co.in/images/logo-horizontal.png",
               "description": "Transforming Lives | Reinventing Organisations | Generating Breakthroughs. 25 years of world-class training and consulting.",
               "address": {
                 "@type": "PostalAddress",

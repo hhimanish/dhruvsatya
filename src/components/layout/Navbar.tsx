@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -57,10 +58,15 @@ export function Navbar() {
     >
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2 z-50">
-          <span className="font-display font-black text-2xl tracking-tighter text-white">
-            DHRUVSATYA
-          </span>
+        <Link href="/" className="flex items-center z-50 group py-1">
+          <Image
+            src="/images/logo-horizontal.png"
+            alt="DhruvSatya Center for Personal Transformation"
+            width={240}
+            height={74}
+            priority
+            className="h-9 sm:h-11 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -122,9 +128,15 @@ export function Navbar() {
           >
             {/* Overlay Header */}
             <div className="container mx-auto px-6 md:px-12 flex justify-between items-center mb-8">
-              <span className="font-display font-black text-2xl tracking-tighter text-brand-foundation">
-                DHRUVSATYA
-              </span>
+              <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+                <Image
+                  src="/images/logo-horizontal.png"
+                  alt="DhruvSatya Center for Personal Transformation"
+                  width={200}
+                  height={62}
+                  className="h-10 w-auto object-contain"
+                />
+              </Link>
               <button
                 className="text-brand-foundation"
                 onClick={() => setMobileMenuOpen(false)}
