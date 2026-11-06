@@ -1,27 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-foundation: #070D1E; /* Deep Midnight Navy: Trustful, Executive, Grounded */
-  --color-brand-secondary: #0F1D38; /* Rich Navy for layered depth */
-  --color-brand-accent: #F8A612; /* Official Warm Satya Gold from Logo */
-  --color-brand-gold: #F8A612; /* Warm Satya Gold */
-  --color-brand-cyan: #0095DB; /* Official Transformation Azure/Cyan from Logo */
-  --color-brand-azure: #0095DB; /* Official Transformation Azure */
-  --color-brand-ivory: #F8FAFC; /* Crisp Executive White */
+  --color-brand-foundation: #0B0F17; /* Deep Obsidian Canvas */
+  --color-brand-canvas: #0B0F17;
+  --color-brand-secondary: #141B26; /* Elevated Obsidian */
+  --color-brand-accent: #D4AF37; /* Breakthrough Gold */
+  --color-brand-gold: #D4AF37;
+  --color-brand-amber: #F59E0B;
+  --color-brand-alabaster: #F8F6F0; /* Warm Alabaster */
+  --color-brand-mist: #94A3B8; /* Slate Mist */
+  --color-brand-cyan: #0095DB; /* Azure Cyan */
+  --color-brand-ivory: #F8F6F0;
   
   --font-display: var(--font-display);
+  --font-syne: var(--font-syne);
   --font-sans: var(--font-inter);
   
   --animate-slow-zoom: slow-zoom 30s linear infinite;
   @keyframes slow-zoom {
     0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.08); }
+    50% { transform: scale(1.06); }
   }
 }
 
 @layer base {
   body {
-    @apply bg-brand-foundation text-gray-100 font-sans antialiased selection:bg-brand-accent selection:text-brand-foundation overflow-x-hidden w-full;
+    @apply bg-[#0B0F17] text-[#F8F6F0] font-sans antialiased selection:bg-[#D4AF37] selection:text-[#0B0F17] overflow-x-hidden w-full;
   }
 
   /* Prevent iOS zoom on focus */
@@ -30,6 +34,28 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight text-white;
+    @apply font-display tracking-tight text-[#F8F6F0];
   }
+}
+
+/* Glassmorphism Surface Token */
+.glass-surface {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.glass-surface-gold {
+  background: rgba(212, 175, 55, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+/* Gold Gradient Text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA771C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
