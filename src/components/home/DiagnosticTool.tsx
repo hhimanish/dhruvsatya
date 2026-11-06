@@ -18,7 +18,10 @@ export function DiagnosticTool() {
   const [selected, setSelected] = useState<string | null>(null);
 
   return (
-    <section className="py-20 md:py-32 bg-brand-foundation text-white border-y border-white/5 relative">
+    <section className="py-20 md:py-32 bg-brand-foundation text-white relative overflow-hidden">
+      {/* Top and Bottom Animated Gradient Hairlines */}
+      <div className="absolute top-0 left-0 right-0 h-[1.5px] gradient-hairline-animated" />
+      <div className="absolute bottom-0 left-0 right-0 h-[1.5px] gradient-hairline-animated" />
       {/* Decorative gradient */}
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-brand-accent/5 to-transparent pointer-events-none" />
       
@@ -64,7 +67,7 @@ export function DiagnosticTool() {
               </p>
               <Link
                 href={options.find(o => o.id === selected)?.href || "/contact"}
-                className="inline-flex items-center px-10 py-5 bg-brand-accent text-brand-foundation font-bold text-sm tracking-widest uppercase hover:bg-white transition-colors"
+                className="shimmer-button btn-gradient-animated inline-flex items-center px-10 py-5 text-brand-foundation font-bold text-sm tracking-widest uppercase rounded-full shadow-2xl"
               >
                 LET'S EXPLORE
                 <ArrowRight className="w-5 h-5 ml-3" />

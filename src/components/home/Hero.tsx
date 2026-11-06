@@ -26,12 +26,16 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-brand-foundation via-brand-foundation/80 to-brand-foundation/60 z-0" />
       </div>
 
-      {/* Atmospheric Ambient Glows Inspired Directly by the Logo (Azure Cyan + Satya Gold) */}
+      {/* Living Atmospheric Aurora System (Azure Cyan + Satya Gold + Indigo Harmony) */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        {/* Azure Blue Orb (Left) */}
-        <div className="absolute top-[10%] -left-[15%] w-[55%] h-[55%] rounded-full bg-brand-cyan/20 blur-[150px] mix-blend-screen" />
-        {/* Satya Gold Orb (Right) */}
-        <div className="absolute bottom-[5%] -right-[15%] w-[55%] h-[55%] rounded-full bg-brand-accent/20 blur-[150px] mix-blend-screen" />
+        {/* Living Cyan Aurora Sphere (Top Left) */}
+        <div className="absolute -top-[15%] -left-[10%] w-[65vw] h-[65vw] max-w-[850px] max-h-[850px] rounded-full aurora-sphere-cyan mix-blend-screen" />
+        
+        {/* Living Satya Gold Aurora Sphere (Bottom Right) */}
+        <div className="absolute -bottom-[15%] -right-[10%] w-[65vw] h-[65vw] max-w-[850px] max-h-[850px] rounded-full aurora-sphere-gold mix-blend-screen" />
+
+        {/* Indigo/Violet Chromatic Depth Harmonizer (Center) */}
+        <div className="absolute top-[25%] left-[25%] w-[50vw] h-[50vw] max-w-[650px] max-h-[650px] rounded-full aurora-sphere-violet mix-blend-screen" />
       </div>
 
       {/* Subtle Grid and Hairline Accent */}
@@ -47,8 +51,8 @@ export function Hero() {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="mb-8"
         >
-          <div className="inline-flex items-center px-4 py-2 border border-brand-cyan/35 rounded-xl md:rounded-full bg-brand-cyan/10 backdrop-blur-md shadow-[0_0_20px_rgba(0,149,219,0.15)] group hover:border-brand-accent/60 transition-colors">
-            <span className="w-2 h-2 rounded-full bg-brand-accent mr-2.5 animate-pulse flex-shrink-0 shadow-[0_0_8px_rgba(248,166,18,0.8)]" />
+          <div className="inline-flex items-center px-4 py-2 rounded-xl md:rounded-full bg-brand-cyan/10 backdrop-blur-md shadow-[0_0_25px_rgba(0,149,219,0.2)] group gradient-border-card transition-all">
+            <span className="w-2.5 h-2.5 rounded-full bg-brand-accent mr-2.5 animate-pulse flex-shrink-0 shadow-[0_0_10px_rgba(248,166,18,0.9)]" />
             <span className="text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase text-gray-200 leading-snug">
               DhruvSatya Center for Personal Transformation
             </span>
@@ -77,10 +81,10 @@ export function Hero() {
                 }}
                 className={`inline-block mr-3 md:mr-8 last:mr-0 pb-2 ${
                   isTransformation
-                    ? "text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-sky-300 to-brand-accent drop-shadow-[0_0_30px_rgba(0,149,219,0.25)]"
+                    ? "text-gradient-animated drop-shadow-[0_0_35px_rgba(0,149,219,0.35)]"
                     : isWithin
-                    ? "text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-300 drop-shadow-[0_0_30px_rgba(248,166,18,0.35)]"
-                    : "text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400"
+                    ? "text-gold-animated drop-shadow-[0_0_35px_rgba(248,166,18,0.40)]"
+                    : "text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-100 to-slate-400"
                 }`}
               >
                 {word}
@@ -107,17 +111,16 @@ export function Hero() {
         >
           <Link
             href="/contact"
-            className="group relative inline-flex items-center justify-center px-8 py-4 md:px-10 md:py-5 bg-brand-accent text-brand-foundation font-display font-black text-xs md:text-sm tracking-wider uppercase overflow-hidden rounded-full shadow-[0_0_25px_rgba(248,166,18,0.3)] hover:shadow-[0_0_40px_rgba(248,166,18,0.5)] transition-all duration-300"
+            className="shimmer-button btn-gradient-animated inline-flex items-center justify-center px-8 py-4 md:px-10 md:py-5 text-brand-foundation font-display font-black text-xs md:text-sm tracking-wider uppercase rounded-full shadow-[0_0_30px_rgba(248,166,18,0.35)]"
           >
-            <span className="absolute inset-0 w-full h-full bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-[0.16,1,0.3,1]" />
-            <span className="relative flex items-center font-black">
+            <span className="relative z-10 flex items-center font-black">
               START A CONVERSATION
-              <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2.5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2.5 group-hover:translate-x-1.5 transition-transform" />
             </span>
           </Link>
           <Link
             href="/solutions"
-            className="group inline-flex items-center justify-center px-8 py-4 md:px-10 md:py-5 bg-brand-cyan/10 border border-brand-cyan/35 text-white font-display font-bold text-xs md:text-sm tracking-wider uppercase hover:bg-brand-cyan/20 hover:border-brand-cyan hover:text-brand-cyan rounded-full transition-all duration-300 backdrop-blur-md"
+            className="group relative inline-flex items-center justify-center px-8 py-4 md:px-10 md:py-5 rounded-full backdrop-blur-md bg-white/[0.04] border border-brand-cyan/40 hover:border-brand-accent/80 hover:bg-brand-cyan/15 text-white font-display font-bold text-xs md:text-sm tracking-wider uppercase transition-all duration-300 shadow-[0_0_20px_rgba(0,149,219,0.15)] hover:shadow-[0_0_30px_rgba(248,166,18,0.3)]"
           >
             EXPLORE PATHWAYS
           </Link>
@@ -134,7 +137,7 @@ export function Hero() {
         <span className="text-[9px] uppercase tracking-[0.25em] font-semibold text-gray-400 mb-3 rotate-90">
           Scroll
         </span>
-        <div className="w-[1.5px] h-12 bg-gradient-to-b from-brand-cyan via-brand-accent to-transparent" />
+        <div className="w-[2px] h-14 bg-gradient-to-b from-brand-cyan via-brand-accent to-transparent animate-pulse shadow-[0_0_10px_rgba(0,149,219,0.5)]" />
       </motion.div>
     </section>
   );

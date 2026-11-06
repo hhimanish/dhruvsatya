@@ -32,6 +32,8 @@ export function PhilosophySection() {
 
   return (
     <section className="py-20 md:py-32 bg-brand-foundation text-brand-ivory relative overflow-hidden">
+      {/* Top Animated Gradient Hairline */}
+      <div className="absolute top-0 left-0 right-0 h-[1.5px] gradient-hairline-animated" />
       
       {/* Background massive text watermarks */}
       <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-full overflow-hidden opacity-[0.03] pointer-events-none flex flex-col pointer-events-none">
@@ -50,11 +52,11 @@ export function PhilosophySection() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-sm font-semibold text-brand-cyan tracking-[0.3em] uppercase mb-6 flex items-center">
-                <span className="w-8 h-[1px] bg-gradient-to-r from-brand-cyan to-brand-accent mr-4"></span>
+                <span className="w-10 h-[2px] gradient-hairline-animated mr-4 rounded-full"></span>
                 The DhruvSatya Way
               </h2>
               <h3 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-white mb-10 md:mb-16 leading-[1.1]">
-                Philosophy that drives <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-200">execution.</span>
+                Philosophy that drives <span className="text-gold-animated">execution.</span>
               </h3>
             </motion.div>
 
@@ -92,7 +94,7 @@ export function PhilosophySection() {
               <div className="absolute inset-0 bg-brand-secondary/40 backdrop-blur-md" />
 
               {/* Internal glowing orb */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-accent/30 blur-[100px] rounded-full pointer-events-none" />
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 aurora-sphere-gold rounded-full pointer-events-none" />
 
               <div className="absolute top-8 left-8 text-6xl text-brand-cyan/30 font-serif leading-none font-bold">"</div>
               

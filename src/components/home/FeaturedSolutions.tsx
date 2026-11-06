@@ -46,7 +46,9 @@ export function FeaturedSolutions() {
   ];
 
   return (
-    <section className="py-28 px-4 md:px-12 bg-brand-foundation text-brand-ivory relative overflow-hidden border-t border-white/10">
+    <section className="py-28 px-4 md:px-12 bg-brand-foundation text-brand-ivory relative overflow-hidden">
+      {/* Top Animated Gradient Hairline */}
+      <div className="absolute top-0 left-0 right-0 h-[1.5px] gradient-hairline-animated" />
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
@@ -78,7 +80,7 @@ export function FeaturedSolutions() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="group relative rounded-3xl overflow-hidden bg-white/[0.03] border border-white/10 hover:border-brand-accent/50 p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 min-h-[420px]"
+              className="group gradient-card-bloom gradient-border-card relative rounded-3xl overflow-hidden bg-white/[0.03] p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 min-h-[420px]"
             >
               {/* Background Ambient Photo */}
               <div className="absolute inset-0 z-0 opacity-15 group-hover:opacity-25 transition-opacity duration-700">
@@ -110,7 +112,7 @@ export function FeaturedSolutions() {
                 </div>
 
                 <h3 className={`text-xl font-display font-bold text-white mb-2 transition-colors ${
-                  idx % 2 === 0 ? "group-hover:text-brand-cyan" : "group-hover:text-brand-accent"
+                  "group-hover:text-gradient-animated"
                 }`}>
                   {path.title}
                 </h3>

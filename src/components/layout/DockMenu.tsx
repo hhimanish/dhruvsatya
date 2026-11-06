@@ -44,7 +44,7 @@ export function DockMenu() {
                 whileTap={{ scale: 0.9 }}
                 className="relative group flex flex-col items-center justify-center p-2 rounded-xl transition-colors hover:bg-white/10"
               >
-                <div className={`p-2 rounded-xl transition-colors ${isActive ? 'bg-brand-accent text-brand-foundation' : 'text-white'}`}>
+                <div className={`p-2 rounded-xl transition-all ${isActive ? 'btn-gradient-animated text-brand-foundation shadow-lg shadow-brand-accent/30' : 'text-white'}`}>
                   <Icon className="w-5 h-5 md:w-6 md:h-6" strokeWidth={isActive ? 2.5 : 2} />
                 </div>
                 

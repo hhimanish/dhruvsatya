@@ -101,6 +101,8 @@ export default function SolutionsPage() {
       {/* Cinematic Hero */}
       <section className="relative pt-40 pb-32 bg-brand-foundation overflow-hidden">
         <div className="absolute inset-0 z-0">
+          <div className="absolute -top-[20%] -left-[10%] w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] rounded-full aurora-sphere-cyan mix-blend-screen pointer-events-none" />
+          <div className="absolute -bottom-[20%] -right-[10%] w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] rounded-full aurora-sphere-gold mix-blend-screen pointer-events-none" />
           <Image
             src="/images/Focus.jpg"
             alt="DhruvSatya Solutions Architecture"
@@ -110,6 +112,7 @@ export default function SolutionsPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brand-foundation/90 via-brand-foundation/80 to-brand-foundation z-10" />
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-[1.5px] gradient-hairline-animated" />
 
         <div className="container mx-auto px-6 md:px-12 max-w-6xl text-center relative z-20">
           <motion.div
@@ -131,7 +134,7 @@ export default function SolutionsPage() {
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-black tracking-tight leading-[1.05] mb-8"
           >
             Capabilities That Drive <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-sky-300 to-brand-accent">
+            <span className="text-gradient-animated">
               Measurable Business Results.
             </span>
           </motion.h1>

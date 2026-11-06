@@ -56,7 +56,9 @@ export function FeaturedPrograms() {
   ];
 
   return (
-    <section className="py-28 px-4 md:px-12 bg-gradient-to-b from-brand-foundation via-[#0c121e] to-brand-foundation text-brand-ivory relative overflow-hidden border-t border-white/10">
+    <section className="py-28 px-4 md:px-12 bg-gradient-to-b from-brand-foundation via-[#0c121e] to-brand-foundation text-brand-ivory relative overflow-hidden">
+      {/* Top Animated Gradient Hairline */}
+      <div className="absolute top-0 left-0 right-0 h-[1.5px] gradient-hairline-animated" />
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
@@ -73,7 +75,7 @@ export function FeaturedPrograms() {
 
           <Link
             href="/programs"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-accent text-brand-foundation font-display font-black text-xs uppercase tracking-widest hover:bg-white transition-all shadow-lg shadow-brand-accent/20"
+            className="shimmer-button btn-gradient-animated inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-brand-foundation font-display font-black text-xs uppercase tracking-widest shadow-xl"
           >
             Browse All 25 Interventions
             <ArrowRight className="w-4 h-4" />

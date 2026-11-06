@@ -134,8 +134,10 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
 
       {/* Cinematic Executive Hero */}
       <section className="relative pt-40 pb-28 md:pt-48 md:pb-36 bg-brand-foundation overflow-hidden">
-        {/* Ambient Photographic Background */}
+        {/* Ambient Photographic Background with Living Aurora */}
         <div className="absolute inset-0 z-0">
+          <div className="absolute -top-[20%] -left-[10%] w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] rounded-full aurora-sphere-cyan mix-blend-screen pointer-events-none" />
+          <div className="absolute -bottom-[20%] -right-[10%] w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] rounded-full aurora-sphere-gold mix-blend-screen pointer-events-none" />
           <Image
             src="/images/achieving-world-class.jpg"
             alt="Dhruvsatya Capability Interventions"
@@ -145,6 +147,7 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brand-foundation/90 via-brand-foundation/80 to-brand-foundation z-10" />
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-[1.5px] gradient-hairline-animated" />
 
         <div className="container mx-auto px-6 md:px-12 max-w-6xl relative z-20 text-center">
           <motion.div
@@ -166,7 +169,7 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-black tracking-tight leading-[1.05] mb-8"
           >
             Interventions Engineered for <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-sky-300 to-brand-accent">
+            <span className="text-gradient-animated">
               Permanent Transformation.
             </span>
           </motion.h1>

@@ -51,10 +51,14 @@ export function CredibilityBand() {
   }, []);
 
   return (
-    <section id="credibility-band" className="py-20 md:py-24 bg-brand-foundation border-b border-brand-cyan/15 relative z-10 overflow-hidden">
-      {/* Ambient background glows */}
-      <div className="absolute -top-24 left-1/4 w-72 h-72 bg-brand-cyan/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute -bottom-24 right-1/4 w-72 h-72 bg-brand-accent/10 rounded-full blur-[100px] pointer-events-none" />
+    <section id="credibility-band" className="py-20 md:py-24 bg-brand-foundation relative z-10 overflow-hidden">
+      {/* Animated Top and Bottom Gradient Hairlines */}
+      <div className="absolute top-0 left-0 right-0 h-[1.5px] gradient-hairline-animated" />
+      <div className="absolute bottom-0 left-0 right-0 h-[1.5px] gradient-hairline-animated" />
+
+      {/* Living Atmospheric Aurora Glows */}
+      <div className="absolute -top-24 left-1/4 w-80 h-80 rounded-full aurora-sphere-cyan pointer-events-none" />
+      <div className="absolute -bottom-24 right-1/4 w-80 h-80 rounded-full aurora-sphere-gold pointer-events-none" />
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 md:gap-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
           {stats.map((stat, index) => (

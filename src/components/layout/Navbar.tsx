@@ -52,7 +52,7 @@ export function Navbar() {
       <header
         className={`fixed top-0 w-full z-[100] transition-all duration-300 ${
           isScrolled
-            ? "bg-brand-foundation/95 backdrop-blur-md shadow-xl border-b border-brand-cyan/20 py-4"
+            ? "bg-brand-foundation/95 backdrop-blur-md shadow-2xl py-4 border-b border-brand-cyan/20"
             : "bg-transparent py-6"
         }`}
       >
@@ -99,7 +99,7 @@ export function Navbar() {
             ))}
             <Link
               href="/contact"
-              className="px-6 py-3 bg-brand-accent text-brand-foundation text-[11px] xl:text-xs font-black tracking-widest uppercase rounded-full hover:bg-white hover:shadow-[0_0_20px_rgba(248,166,18,0.4)] transition-all whitespace-nowrap"
+              className="shimmer-button btn-gradient-animated px-6 py-3 text-brand-foundation text-[11px] xl:text-xs font-black tracking-widest uppercase rounded-full whitespace-nowrap shadow-lg"
             >
               START A CONVERSATION
             </Link>
