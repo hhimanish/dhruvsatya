@@ -67,7 +67,7 @@ export function Hero() {
             </span>
             <span className="hidden sm:inline-block w-[1px] h-3 bg-white/20 mx-2.5" />
             <span className="hidden sm:inline-block text-[10px] font-bold tracking-widest uppercase text-brand-accent">
-              25 Years
+              25+ YEARS
             </span>
           </div>
         </motion.div>

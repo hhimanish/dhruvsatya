@@ -22,7 +22,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   metadataBase: new URL('https://thecpt.co.in'),
   title: "DhruvSatya | Center for Personal Transformation",
-  description: "Transforming Lives | Reinventing Organisations | Generating Breakthroughs. 25 years of world-class training and consulting.",
+  description: "Transforming Lives | Reinventing Organisations | Generating Breakthroughs. 25+ years of world-class training and consulting.",
   alternates: {
     canonical: '/',
   },
@@ -75,7 +75,7 @@ export default function RootLayout({
               "name": "DhruvSatya Center for Personal Transformation",
               "url": "https://thecpt.co.in",
               "logo": "https://thecpt.co.in/images/logo-horizontal.png",
-              "description": "Transforming Lives | Reinventing Organisations | Generating Breakthroughs. 25 years of world-class training and consulting.",
+              "description": "Transforming Lives | Reinventing Organisations | Generating Breakthroughs. 25+ years of world-class training and consulting.",
               "address": {
                 "@type": "PostalAddress",
                 "addressCountry": "IN"
