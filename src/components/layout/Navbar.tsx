@@ -63,11 +63,11 @@ export function Navbar() {
             : "bg-transparent py-5 lg:py-6"
         }`}
       >
-        <div className="w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex items-center justify-start">
+        <div className="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex items-center justify-between">
           {/* Logo - Anchored on Left */}
           <Link
             href="/"
-            className="flex items-center shrink-0 z-50 group py-1 mr-4 lg:mr-6 2xl:mr-8"
+            className="flex items-center shrink-0 z-50 group py-1 mr-4 sm:mr-6 lg:mr-8 xl:mr-10"
             aria-label="DhruvSatya Home"
           >
             <div className="relative h-9 sm:h-10 md:h-11 2xl:h-12 w-[135px] sm:w-[155px] md:w-[175px] 2xl:w-[195px] shrink-0">
@@ -83,8 +83,8 @@ export function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop Nav - Moved to Left Side directly following the Logo */}
-          <nav className="hidden xl:flex items-center gap-1 xl:gap-2 2xl:gap-3.5">
+          {/* Desktop Nav - Spread evenly across the marked section */}
+          <nav className="hidden xl:flex items-center justify-between flex-1">
             {navLinks.map((link) => (
               <div key={link.name} className="relative group">
                 <Link
@@ -119,10 +119,10 @@ export function Navbar() {
               </div>
             ))}
 
-            {/* CTA Button placed directly within the left-aligned toolbar */}
+            {/* CTA Button anchored on the right end of the spread */}
             <Link
               href="/contact"
-              className="shimmer-button btn-gradient-animated px-3.5 xl:px-4.5 2xl:px-5 py-2 xl:py-2.5 text-brand-foundation text-[10px] xl:text-[11px] 2xl:text-xs font-black tracking-wider uppercase rounded-full whitespace-nowrap shadow-lg ml-2 xl:ml-3 shrink-0"
+              className="shimmer-button btn-gradient-animated px-3.5 xl:px-4.5 2xl:px-5 py-2 xl:py-2.5 text-brand-foundation text-[10px] xl:text-[11px] 2xl:text-xs font-black tracking-wider uppercase rounded-full whitespace-nowrap shadow-lg shrink-0"
             >
               START A CONVERSATION
             </Link>
