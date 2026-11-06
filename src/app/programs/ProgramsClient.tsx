@@ -32,6 +32,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useMemo } from "react";
+import { SpotlightCard } from "@/components/ui/SpotlightCard";
+import { CinematicMesh } from "@/components/ui/CinematicMesh";
 
 interface Program {
   id: string;
@@ -145,6 +147,9 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brand-foundation/90 via-brand-foundation/80 to-brand-foundation z-10" />
         </div>
+
+        {/* Cinematic Ambient Mesh & Grain (GetLayers.ai Signature) */}
+        <CinematicMesh intensity="medium" showNoise={true} className="z-10" />
 
         <div className="container mx-auto px-6 md:px-12 max-w-6xl relative z-20 text-center">
           <motion.div
@@ -320,16 +325,14 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
                 const isExpanded = expandedProgramId === program.id;
 
                 return (
-                  <motion.div
+                  <SpotlightCard
                     key={program.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: (idx % 6) * 0.08 }}
-                    className={`group relative rounded-3xl p-8 flex flex-col justify-between transition-all duration-500 border ${
+                    spotlightColor="rgba(252, 163, 17, 0.22)"
+                    enableTilt={false}
+                    className={`p-8 flex flex-col justify-between transition-all duration-500 ${
                       isExpanded
-                        ? "bg-white/[0.08] border-brand-accent shadow-[0_20px_50px_rgba(252,163,17,0.15)] ring-1 ring-brand-accent"
-                        : "bg-white/[0.03] border-white/10 hover:border-brand-accent/40 hover:bg-white/[0.05] hover:shadow-2xl hover:-translate-y-1.5"
+                        ? "border-brand-accent bg-white/[0.08] shadow-[0_20px_50px_rgba(252,163,17,0.2)] ring-1 ring-brand-accent"
+                        : "border-white/10 hover:border-brand-accent/50"
                     }`}
                   >
                     {/* Top Pill & Category */}
@@ -439,7 +442,7 @@ export function ProgramsClient({ programs }: { programs: Program[] }) {
                         <ArrowUpRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                       </Link>
                     </div>
-                  </motion.div>
+                  </SpotlightCard>
                 );
               })}
             </div>

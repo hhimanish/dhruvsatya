@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Building2, User, Fuel, GraduationCap, ArrowRight, ArrowUpRight, Sparkles } from "lucide-react";
+import { SpotlightCard } from "@/components/ui/SpotlightCard";
 
 export function FeaturedSolutions() {
   const pathways = [
@@ -47,10 +48,13 @@ export function FeaturedSolutions() {
 
   return (
     <section className="py-28 px-4 md:px-12 bg-brand-foundation text-brand-ivory relative overflow-hidden border-t border-white/10">
+      {/* Background Ambient Mesh Light */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-brand-accent/[0.04] rounded-full blur-[160px] pointer-events-none" />
+
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-4 backdrop-blur-md">
               <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
               <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-gray-300">
                 Strategic Solutions
@@ -72,16 +76,14 @@ export function FeaturedSolutions() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {pathways.map((path, idx) => (
-            <motion.div
+            <SpotlightCard
               key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="group relative rounded-3xl overflow-hidden bg-white/[0.03] border border-white/10 hover:border-brand-accent/50 p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 min-h-[420px]"
+              spotlightColor="rgba(252, 163, 17, 0.22)"
+              enableTilt={true}
+              className="p-6 sm:p-8 flex flex-col justify-between min-h-[420px]"
             >
-              {/* Background Ambient Photo */}
-              <div className="absolute inset-0 z-0 opacity-15 group-hover:opacity-25 transition-opacity duration-700">
+              {/* Background Ambient Photo with Glass Texture */}
+              <div className="absolute inset-0 z-0 opacity-15 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none">
                 <Image
                   src={path.image}
                   alt={path.title}
@@ -93,10 +95,10 @@ export function FeaturedSolutions() {
 
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-brand-accent/15 border border-brand-accent/30 flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-foundation transition-all duration-300">
+                  <div className="w-12 h-12 rounded-2xl bg-brand-accent/15 border border-brand-accent/30 flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-foundation transition-all duration-300 shadow-[0_0_20px_rgba(252,163,17,0.15)]">
                     <path.icon className="w-6 h-6" />
                   </div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-brand-accent px-2.5 py-1 rounded-full bg-brand-accent/10 border border-brand-accent/20">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-brand-accent px-3 py-1 rounded-full bg-brand-accent/10 border border-brand-accent/20">
                     {path.badge}
                   </span>
                 </div>
@@ -121,7 +123,7 @@ export function FeaturedSolutions() {
                   <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               </div>
-            </motion.div>
+            </SpotlightCard>
           ))}
         </div>
       </div>

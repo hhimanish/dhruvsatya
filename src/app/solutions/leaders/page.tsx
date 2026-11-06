@@ -5,6 +5,8 @@ import { Footer } from "@/components/layout/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { SpotlightCard } from "@/components/ui/SpotlightCard";
+import { CinematicMesh } from "@/components/ui/CinematicMesh";
 import {
   ArrowRight,
   Mountain,
@@ -99,6 +101,9 @@ export default function LeadersPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-brand-foundation/90 via-brand-foundation/80 to-brand-foundation z-10" />
         </div>
 
+        {/* Cinematic Ambient Mesh & Grain (GetLayers.ai Signature) */}
+        <CinematicMesh intensity="medium" showNoise={true} className="z-10" />
+
         <div className="container mx-auto px-6 md:px-12 max-w-6xl text-center relative z-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -152,13 +157,11 @@ export default function LeadersPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {leadershipPillars.map((pillar, index) => (
-              <motion.div
+              <SpotlightCard
                 key={pillar.id}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="group relative rounded-3xl overflow-hidden bg-white/[0.03] border border-white/10 hover:border-brand-accent/50 p-8 md:p-10 flex flex-col justify-between transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
+                spotlightColor="rgba(252, 163, 17, 0.22)"
+                enableTilt={true}
+                className="p-8 md:p-10 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
@@ -205,7 +208,7 @@ export default function LeadersPage() {
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
                   </Link>
                 </div>
-              </motion.div>
+              </SpotlightCard>
             ))}
           </div>
         </div>
