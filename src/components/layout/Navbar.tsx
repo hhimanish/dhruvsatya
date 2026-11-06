@@ -6,14 +6,7 @@ import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-interface NavItem {
-  name: string;
-  href: string;
-  shortName?: string;
-  dropdown?: { name: string; href: string }[];
-}
-
-const navLinks: NavItem[] = [
+const navLinks = [
   { name: "Why DhruvSatya", href: "/about" },
   {
     name: "Solutions",
@@ -25,8 +18,8 @@ const navLinks: NavItem[] = [
     ],
   },
   { name: "Programs", href: "/programs" },
-  { name: "The DhruvSatya Method", shortName: "Method", href: "/method" },
-  { name: "Soumitra Chatterjee", shortName: "Leadership", href: "/founder" },
+  { name: "The DhruvSatya Method", href: "/method" },
+  { name: "Soumitra Chatterjee", href: "/founder" },
   { name: "Impact", href: "/impact" },
   { name: "AI Analyzer", href: "/analyzer" },
   { name: "Insights", href: "/insights" },
@@ -59,18 +52,18 @@ export function Navbar() {
       <header
         className={`fixed top-0 w-full z-[100] transition-all duration-300 ${
           isScrolled
-            ? "bg-brand-foundation/95 backdrop-blur-md shadow-2xl py-3.5 border-b border-brand-cyan/20"
-            : "bg-transparent py-5 lg:py-6"
+            ? "bg-brand-foundation/95 backdrop-blur-md shadow-2xl py-4 border-b border-brand-cyan/20"
+            : "bg-transparent py-6"
         }`}
       >
-        <div className="w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex items-center justify-between">
-          {/* Logo - Anchored on Left */}
+        <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
+          {/* Logo */}
           <Link
             href="/"
-            className="flex items-center shrink-0 z-50 group py-1 mr-4 lg:mr-6"
+            className="flex items-center shrink-0 z-50 group py-1 min-w-[160px] sm:min-w-[190px] md:min-w-[220px]"
             aria-label="DhruvSatya Home"
           >
-            <div className="relative h-9 sm:h-10 md:h-11 xl:h-12 w-[140px] sm:w-[165px] md:w-[185px] xl:w-[200px] shrink-0">
+            <div className="relative h-10 sm:h-12 md:h-14 w-[160px] sm:w-[190px] md:w-[220px] shrink-0">
               <Image
                 src="/logo.png"
                 alt="DhruvSatya Center for Personal Transformation"
@@ -78,33 +71,26 @@ export function Navbar() {
                 priority
                 unoptimized
                 className="object-contain object-left transition-transform duration-300 group-hover:scale-105 drop-shadow-[0_2px_12px_rgba(0,149,219,0.25)]"
-                sizes="(max-width: 640px) 140px, (max-width: 1024px) 165px, 200px"
+                sizes="(max-width: 640px) 160px, (max-width: 768px) 190px, 220px"
               />
             </div>
           </Link>
 
-          {/* Desktop Nav - Aligned to Right Side with Adaptive Spacing */}
-          <nav className="hidden xl:flex items-center gap-1 xl:gap-2 2xl:gap-3.5 ml-auto">
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6 ml-6">
             {navLinks.map((link) => (
               <div key={link.name} className="relative group">
                 <Link
                   href={link.href}
-                  className="text-[10px] xl:text-[11px] 2xl:text-xs font-bold tracking-wider uppercase text-gray-300 hover:text-brand-accent transition-colors flex items-center gap-0.5 whitespace-nowrap px-1.5 xl:px-2 py-1.5 rounded-lg hover:bg-white/[0.04]"
+                  className="text-[11px] xl:text-xs font-bold tracking-widest uppercase text-gray-300 hover:text-brand-accent transition-colors flex items-center gap-1 whitespace-nowrap"
                 >
-                  {link.shortName ? (
-                    <>
-                      <span className="hidden 2xl:inline">{link.name}</span>
-                      <span className="inline 2xl:hidden">{link.shortName}</span>
-                    </>
-                  ) : (
-                    link.name
-                  )}
-                  {link.dropdown && <ChevronDown className="w-3.5 h-3.5 ml-0.5 opacity-70 group-hover:opacity-100 transition-opacity" />}
+                  {link.name}
+                  {link.dropdown && <ChevronDown className="w-4 h-4 ml-1" />}
                 </Link>
                 
                 {/* Dropdown */}
                 {link.dropdown && (
-                  <div className="absolute top-full left-0 mt-3 w-64 bg-brand-secondary border border-brand-cyan/25 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-2 group-hover:translate-y-0 rounded-2xl overflow-hidden backdrop-blur-xl">
+                  <div className="absolute top-full left-0 mt-4 w-64 bg-brand-secondary border border-brand-cyan/25 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-2 group-hover:translate-y-0 rounded-2xl overflow-hidden backdrop-blur-xl">
                     {link.dropdown.map((dropLink) => (
                       <Link
                         key={dropLink.name}
@@ -118,19 +104,17 @@ export function Navbar() {
                 )}
               </div>
             ))}
-
-            {/* Right-most Action CTA */}
             <Link
               href="/contact"
-              className="shimmer-button btn-gradient-animated px-3.5 xl:px-5 py-2 xl:py-2.5 text-brand-foundation text-[10px] xl:text-[11px] 2xl:text-xs font-black tracking-wider uppercase rounded-full whitespace-nowrap shadow-lg ml-1.5 xl:ml-3 shrink-0"
+              className="shimmer-button btn-gradient-animated px-6 py-3 text-brand-foundation text-[11px] xl:text-xs font-black tracking-widest uppercase rounded-full whitespace-nowrap shadow-lg"
             >
               START A CONVERSATION
             </Link>
           </nav>
 
-          {/* Mobile Toggle Button */}
+          {/* Mobile Toggle */}
           <button
-            className="xl:hidden z-[100] text-white p-2 rounded-lg hover:bg-white/10 transition-colors ml-auto"
+            className="lg:hidden z-[100] text-white p-2"
             onClick={() => setMobileMenuOpen(true)}
             aria-label="Open Menu"
           >
@@ -139,17 +123,17 @@ export function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Nav Overlay */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed inset-0 z-[110] bg-brand-foundation/98 backdrop-blur-2xl flex flex-col justify-between p-6 sm:p-10 xl:hidden overflow-y-auto"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed inset-0 min-h-screen min-h-[100dvh] w-full bg-brand-foundation/98 backdrop-blur-2xl z-[999] flex flex-col pt-6 pb-[calc(2rem+env(safe-area-inset-bottom))] overflow-y-auto"
           >
-            <div className="w-full flex justify-between items-center mb-8 border-b border-white/10 pb-4">
+            {/* Overlay Header */}
+            <div className="container mx-auto px-6 md:px-12 flex justify-between items-center mb-8 border-b border-white/10 pb-4">
               <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center shrink-0">
                 <div className="relative h-10 w-[160px] shrink-0">
                   <Image
@@ -168,31 +152,30 @@ export function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 aria-label="Close Menu"
               >
-                <X className="w-6 h-6 text-gray-300" />
+                <X className="w-6 h-6 text-brand-accent" />
               </button>
             </div>
 
-            {/* Mobile Nav Links */}
-            <div className="flex flex-col space-y-4 my-auto">
+            <div className="flex flex-col space-y-6 px-6 md:px-12">
               {navLinks.map((link) => (
-                <div key={link.name} className="border-b border-white/5 pb-2">
+                <div key={link.name} className="flex flex-col space-y-3">
                   <Link
                     href={link.href}
+                    className="text-2xl font-display text-white hover:text-brand-accent transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="text-lg font-semibold tracking-wider uppercase text-white hover:text-brand-accent transition-colors flex justify-between items-center py-2"
                   >
-                    <span>{link.name}</span>
+                    {link.name}
                   </Link>
                   {link.dropdown && (
-                    <div className="pl-4 mt-2 space-y-2 border-l border-brand-cyan/20">
-                      {link.dropdown.map((subLink) => (
+                    <div className="flex flex-col pl-4 space-y-3 border-l-2 border-brand-cyan">
+                      {link.dropdown.map((dropLink) => (
                         <Link
-                          key={subLink.name}
-                          href={subLink.href}
+                          key={dropLink.name}
+                          href={dropLink.href}
+                          className="text-lg text-gray-300 hover:text-brand-cyan transition-colors"
                           onClick={() => setMobileMenuOpen(false)}
-                          className="block text-sm text-gray-400 hover:text-brand-cyan transition-colors py-1"
                         >
-                          {subLink.name}
+                          {dropLink.name}
                         </Link>
                       ))}
                     </div>
@@ -200,13 +183,12 @@ export function Navbar() {
                 </div>
               ))}
             </div>
-
-            {/* Mobile CTA Button */}
-            <div className="mt-8 pt-4 border-t border-white/10">
+            
+            <div className="mt-auto pt-8 px-6 md:px-12">
               <Link
                 href="/contact"
+                className="block w-full text-center px-6 py-4 bg-brand-accent text-brand-foundation text-base font-black tracking-widest uppercase hover:bg-white transition-all rounded-full shadow-lg"
                 onClick={() => setMobileMenuOpen(false)}
-                className="shimmer-button btn-gradient-animated block w-full py-4 text-brand-foundation text-center font-bold tracking-widest uppercase rounded-full shadow-lg"
               >
                 START A CONVERSATION
               </Link>
